@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snehith Infra â€” v7 Aurora Glass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="aurora" aria-hidden="true">
+      <div class="aurora__blob aurora__blob--cyan"></div>
+      <div class="aurora__blob aurora__blob--coral"></div>
+    </div>
+
+    <header class="glass-bar">
+      <a class="brand" href="#">
+        Snehith Infra
+        <small>Software Â· Hyderabad</small>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn-glow" href="#contact">Start a thread</a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+        data-menu-toggle
+      >
+        Menu
+      </button>
+    </header>
+
+    <nav class="mobile-drawer" id="mobile-drawer" data-mobile-nav aria-hidden="true">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="page">
+      <main id="main">
+        <section class="hero-float" aria-label="Introduction">
+          <div class="panel">
+            <h1>Software that stays luminous in production.</h1>
+            <p class="lede">
+              Snehith Infra is a Hyderabad software company: we craft products,
+              embed teams for services work, and maintain the systems your
+              customers depend on.
+            </p>
+            <a class="btn-glow" href="#contact">Book a consultation</a>
+          </div>
+          <aside class="panel panel--accent">
+            <p class="stat-chip">
+              <strong>3</strong>
+              Products Â· Services Â· Maintenance
+            </p>
+            <p class="stat-chip" style="margin-top: 1rem">
+              <strong>IN</strong>
+              Built from Hyderabad for global teams
+            </p>
+          </aside>
+        </section>
+
+        <section class="orbit" id="capabilities" aria-labelledby="cap-title">
+          <h2 id="cap-title">Floating capabilities</h2>
+          <div class="orbit-grid">
+            <article class="panel">
+              <h3>Products</h3>
+              <p>
+                Greenfield and replatform efforts with clear architecture,
+                UX, and release trainsâ€”from MVP to enterprise scale.
+              </p>
+            </article>
+            <article class="panel panel--accent">
+              <h3>Services</h3>
+              <p>
+                Engineers who ship inside your workflow: sprints, reviews, and
+                on-call empathy included.
+              </p>
+            </article>
+            <article class="panel">
+              <h3>Maintenance</h3>
+              <p>
+                Patch cadence, observability, incident playbooks, and cost
+                control for legacy and modern stacks alike.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="approach-glass" id="approach" aria-labelledby="approach-title">
+          <h2 id="approach-title">Our approach</h2>
+          <ol>
+            <li>Align on outcomes and constraints before tooling debates.</li>
+            <li>Ship thin vertical slices with measurable acceptance checks.</li>
+            <li>Hand off runbooksâ€”or stay on retainer for steady-state care.</li>
+          </ol>
+        </section>
+
+        <section class="panel" id="contact" aria-labelledby="contact-title">
+          <div class="contact-panel">
+            <div>
+              <h2 id="contact-title">Contact</h2>
+              <p style="margin: 0; color: var(--muted)">
+                One conversation to scope products, staffing, or maintenance.
+              </p>
+            </div>
+            <div>
+              <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+              <a href="tel:+918341888566">+91 8341888566</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Snehith Infra Private Limited</span>
+        <span>Sample v7 Â· Aurora Glass</span>
+      </footer>
+    </div>
+
+    <nav class="version-chip" aria-label="Design version">
+      <a href="../versions.html">All</a>
+      <a href="../v6/">v6</a>
+      <a class="is-active" href="./index.html" aria-current="page">v7</a>
+      <a href="../v8/">v8</a>
+    </nav>
+
+    <script>
+      const toggle = document.querySelector("[data-menu-toggle]");
+      const drawer = document.querySelector("[data-mobile-nav]");
+      toggle?.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!open));
+        drawer.classList.toggle("is-open", !open);
+        drawer.setAttribute("aria-hidden", String(open));
+      });
+    </script>
+      <script src="../version-nav.js" defer></script>
+  </body>
+</html>

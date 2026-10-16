@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra — rocket launch motion, Hyderabad." />
+    <title>Snehith Infra — Rocket Go v109</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Russo+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="version-chip" href="../versions.html">Versions</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="launch-pad" aria-label="Rocket launch">
+        <h1>Snehith Infra</h1>
+        <p>Hyderabad · T-minus bureaucracy. We launch products like rockets—loud exhaust optional, on-time mandatory.</p>
+        <div class="countdown" id="countdown" aria-live="polite">—</div>
+        <div class="rocket-wrap" id="rocket-wrap">
+          <div class="rocket" aria-hidden="true"></div>
+          <div class="exhaust" id="exhaust" aria-hidden="true"></div>
+        </div>
+        <a class="btn" href="#contact" id="launch-cta">Launch a project</a>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Offer</h2>
+        <div class="grid-3">
+          <article class="card"><h3>Products</h3><p>Orbit-ready apps—from pad to production.</p></article>
+          <article class="card"><h3>Services</h3><p>Mission control for your roadmap.</p></article>
+          <article class="card"><h3>Maintenance</h3><p>Debris removal aka bug fixes.</p></article>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Approach</h2>
+        <p>Preflight checklists · Go/no-go gates · Post-launch telemetry</p>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a href="tel:+918341888566">+91 8341888566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Snehith Infra · Sample v109 Rocket Go</footer>
+
+    <script>
+      (function () {
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var countdownEl = document.getElementById("countdown");
+        var rocket = document.getElementById("rocket-wrap");
+        var exhaust = document.getElementById("exhaust");
+        var cta = document.getElementById("launch-cta");
+
+        for (var p = 0; p < 12; p++) {
+          var particle = document.createElement("span");
+          particle.className = "particle";
+          particle.style.setProperty("--dx", (Math.random() * 40 - 20) + "px");
+          particle.style.animationDelay = (Math.random() * 0.5) + "s";
+          exhaust.appendChild(particle);
+        }
+
+        function launch() {
+          exhaust.classList.add("is-firing");
+          rocket.classList.add("is-launched");
+          countdownEl.textContent = "LIFTOFF!";
+        }
+
+        if (reduced) {
+          countdownEl.textContent = "Ready";
+          return;
+        }
+
+        var seq = ["3", "2", "1", "GO!"];
+        var i = 0;
+        function tick() {
+          if (i < seq.length) {
+            countdownEl.textContent = seq[i];
+            i++;
+            setTimeout(tick, i === seq.length ? 400 : 900);
+          } else {
+            launch();
+          }
+        }
+        setTimeout(tick, 600);
+
+        cta.addEventListener("click", function (e) {
+          if (rocket.classList.contains("is-launched")) return;
+          e.preventDefault();
+          countdownEl.textContent = "GO!";
+          launch();
+          setTimeout(function () { location.hash = "contact"; }, 400);
+        });
+      })();
+    </script>
+    <script src="../version-nav.js" defer></script>
+  </body>
+</html>

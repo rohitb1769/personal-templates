@@ -1,0 +1,214 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--color-silk);
+  background: var(--color-pcb);
+  background-image:
+    linear-gradient(90deg, transparent 49%, rgba(201, 162, 39, 0.15) 49%, rgba(201, 162, 39, 0.15) 51%, transparent 51%),
+    linear-gradient(0deg, transparent 49%, rgba(201, 162, 39, 0.1) 49%, rgba(201, 162, 39, 0.1) 51%, transparent 51%);
+  background-size: 48px 48px;
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+a { color: var(--color-trace); }
+.skip-link {
+  position: absolute; left: -999px; top: 1rem; z-index: 200;
+  padding: 0.5rem 1rem; background: var(--color-trace); color: var(--color-pcb);
+  font-family: var(--font-mono);
+}
+.skip-link:focus { left: 1rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.version-chip {
+  position: fixed; right: 0; top: 50%; z-index: 150;
+  transform: translateY(-50%) rotate(-90deg); transform-origin: right center;
+  padding: 0.5rem 1rem; font-family: var(--font-mono); font-size: 0.6rem;
+  letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  color: var(--color-pcb); background: var(--color-trace);
+}
+
+.site-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid var(--color-trace);
+  background: var(--color-pcb-light);
+}
+
+.nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+.nav a {
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-muted);
+}
+.nav a:hover { color: var(--color-trace); }
+
+.hero {
+  position: relative;
+  padding: 3rem 1.5rem 4rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  right: 10%;
+  width: 120px;
+  height: 80px;
+  border: 2px solid var(--color-trace);
+  border-radius: 4px;
+  opacity: 0.4;
+  animation: trace-pulse 3s ease-in-out infinite;
+}
+
+@keyframes trace-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.3); }
+  50% { box-shadow: 0 0 20px 4px rgba(201, 162, 39, 0.2); }
+}
+
+.hero__brand {
+  font-family: var(--font-mono);
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  letter-spacing: 0.05em;
+  color: var(--color-trace);
+  animation: solder-in 0.8s ease-out both;
+}
+
+.hero__brand span {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.4em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-silk);
+}
+
+@keyframes solder-in {
+  from { opacity: 0; letter-spacing: 0.2em; }
+  to { opacity: 1; letter-spacing: 0.05em; }
+}
+
+.hero__lede {
+  max-width: 32rem;
+  margin: 1.25rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.section { padding: 0 1.5rem 3rem; max-width: var(--max); margin: 0 auto; }
+
+.section__title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-trace);
+  margin: 0 0 1.25rem;
+}
+
+.chip-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.chip {
+  position: relative;
+  padding: 1.75rem 1.5rem;
+  background: var(--color-pcb-light);
+  border: 2px solid var(--color-trace);
+  animation: solder-in 0.6s ease both;
+}
+.chip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  width: 1rem;
+  height: 2px;
+  background: var(--color-trace);
+}
+.chip:nth-child(2) { animation-delay: 0.08s; }
+.chip:nth-child(3) { animation-delay: 0.16s; }
+
+.chip h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.chip p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.approach {
+  margin: 0 1.5rem 3rem;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: 2rem;
+  text-align: center;
+  border: 2px dashed var(--color-trace);
+  background: rgba(15, 77, 58, 0.6);
+}
+
+.approach h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.approach p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.contact-pcb { display: flex; flex-wrap: wrap; gap: 1rem; }
+.contact-pcb a {
+  flex: 1 1 14rem;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--color-pcb);
+  background: var(--color-trace);
+  border: 2px solid var(--color-trace);
+}
+.contact-pcb a:hover { filter: brightness(1.1); }
+
+.site-footer {
+  padding: 2rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  border-top: 1px solid rgba(201, 162, 39, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero::before, .hero__brand, .chip { animation: none; }
+}

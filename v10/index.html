@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snehith Infra — v10 Amber CRT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="crt-wrap">
+      <header class="titlebar">
+        <span class="titlebar__dots">[●][●][●] snehith-infra.sys</span>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">
+          CMD
+        </button>
+        <nav aria-label="Primary" id="top-nav">
+          <a href="#modules">/modules</a>
+          <a href="#approach">/man</a>
+          <a href="#contact">/contact</a>
+        </nav>
+      </header>
+      <nav class="mobile-term" data-mobile-nav aria-hidden="true">
+        <a href="#modules">/modules</a>
+        <a href="#approach">/man</a>
+        <a href="#contact">/contact</a>
+      </nav>
+
+      <main id="main">
+        <section class="term-window hero-term" aria-label="Introduction">
+          <div class="term-window__head">SESSION: hyderabad · software co</div>
+          <div class="term-window__body">
+            <p class="prompt">init product_line</p>
+            <h1>Snehith Infra — build · staff · maintain</h1>
+            <p>
+              Terminal-ready summary: we ship software products, embed engineers
+              for services engagements, and operate maintenance for production
+              workloads. Based in Hyderabad; reachable globally.
+            </p>
+            <a class="btn-crt" href="#contact"
+              >RUN consultation<span class="cursor" aria-hidden="true"></span
+            ></a>
+          </div>
+        </section>
+
+        <section class="modules" id="modules" aria-labelledby="mod-title">
+          <h2 id="mod-title">Loaded modules</h2>
+          <div class="module-stack">
+            <article class="module">
+              <div class="module__bar"><code>products.bin</code> — read/write</div>
+              <p>
+                Custom applications, APIs, admin consoles, and release pipelines
+                with acceptance tests your QA team can run.
+              </p>
+            </article>
+            <article class="module">
+              <div class="module__bar"><code>services.bin</code> — attach</div>
+              <p>
+                Staff augmentation and dedicated squads integrated with your
+                ticketing, git flow, and security reviews.
+              </p>
+            </article>
+            <article class="module">
+              <div class="module__bar"><code>maintenance.bin</code> — daemon</div>
+              <p>
+                24/7-ready runbooks, patching, observability tuning, and
+                incident response for systems already in the wild.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="approach-man" id="approach" aria-labelledby="man-title">
+          <h2 id="man-title">man snehith-approach</h2>
+          <pre>
+SYNOPSIS
+  clarity → incremental delivery → operational handoff
+
+DESCRIPTION
+  Scope and owners are documented before sprint one.
+  Each release is verifiable; maintenance optional but recommended.
+
+SEE ALSO
+  contact(1), hyderabad(7)
+          </pre>
+        </section>
+
+        <section class="contact-term term-window" id="contact" aria-labelledby="contact-title">
+          <div class="term-window__head">/contact — stdout</div>
+          <div class="term-window__body">
+            <h2 id="contact-title">Contact</h2>
+            <span class="prompt">mail</span>
+            <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+            <span class="prompt">tel</span>
+            <a href="tel:+918341888566">+91 8341888566</a>
+            <span class="prompt">loc</span>
+            <span>Hyderabad, Telangana</span>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        SNEHITH INFRA PVT LTD · SAMPLE V10 · AMBER CRT · EOF
+      </footer>
+    </div>
+
+    <nav class="version-chip" aria-label="Design version">
+      <a href="../versions.html">ALL</a>
+      <a href="../v9/">V9</a>
+      <a class="is-active" href="./index.html" aria-current="page">V10</a>
+    </nav>
+
+    <script>
+      const toggle = document.querySelector("[data-menu-toggle]");
+      const mobile = document.querySelector("[data-mobile-nav]");
+      toggle?.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!open));
+        mobile.classList.toggle("is-open", !open);
+        mobile.setAttribute("aria-hidden", String(open));
+      });
+    </script>
+      <script src="../version-nav.js" defer></script>
+  </body>
+</html>

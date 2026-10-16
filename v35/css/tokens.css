@@ -1,0 +1,21 @@
+:root {
+  --bg: #f0f2f5;
+  --surface: #f7f8fa;
+  --surface-raised: #ffffff;
+  --ink: #2d3748;
+  --ink-soft: #718096;
+  --coral: #ff8a7a;
+  --coral-soft: rgba(255, 138, 122, 0.35);
+  --shadow-light: #ffffff;
+  --shadow-dark: rgba(163, 177, 198, 0.45);
+
+  --font-display: "Quicksand", sans-serif;
+  --font-body: "Mulish", "Segoe UI", sans-serif;
+
+  --page: min(1040px, calc(100% - 2.5rem));
+  --radius: 22px;
+  --radius-sm: 14px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 180ms;
+  --med: 350ms;
+}

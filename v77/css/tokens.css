@@ -1,0 +1,18 @@
+:root {
+  --charcoal: #1c1c1e;
+  --charcoal-soft: #2a2a2d;
+  --copper: #b87333;
+  --copper-light: #d4955a;
+  --verdigris: #2a9d8f;
+  --text: #e8e4df;
+  --font-display: "Cinzel Decorative", Georgia, serif;
+  --font-title: "Philosopher", Georgia, serif;
+  --font-body: "Karla", system-ui, sans-serif;
+  --max: 70rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

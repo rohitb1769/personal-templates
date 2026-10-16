@@ -1,0 +1,26 @@
+:root {
+  --color-board: #0a0a0a;
+  --color-panel: #141414;
+  --color-digit: #f5c518;
+  --color-digit-dim: #8a7010;
+  --color-ink: #d4d4d4;
+  --color-mute: #737373;
+
+  --font-mono: "Roboto Mono", "Consolas", monospace;
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-xl: clamp(2.25rem, 6vw, 3.75rem);
+
+  --max: 76rem;
+  --flap-h: 2.75rem;
+}

@@ -1,0 +1,15 @@
+:root {
+  --color-bg: #e8ecf4;
+  --color-ink: #2d3142;
+  --color-muted: #6b7089;
+  --clay-lavender: #c4b5fd;
+  --clay-mint: #86efac;
+  --clay-peach: #fdba74;
+  --clay-shadow: #b8bcc8;
+  --clay-highlight: #ffffff;
+  --font-display: "Varela Round", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+  --max: 68rem;
+  --radius: 24px;
+  --focus: #7c6fd6;
+}

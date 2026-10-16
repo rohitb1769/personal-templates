@@ -1,0 +1,19 @@
+:root {
+  --bg: #f7f4ef;
+  --ink: #1a1a1a;
+  --ink-muted: #5c5650;
+  --vermillion: #c23b22;
+  --line: rgba(26, 26, 26, 0.12);
+
+  --font-serif: "Shippori Mincho", "Georgia", serif;
+  --font-sans: "Outfit", "Segoe UI", sans-serif;
+
+  --space-4: 1rem;
+  --space-5: 1.75rem;
+  --space-6: 3rem;
+  --space-7: 5rem;
+  --text-base: 1.0625rem;
+  --text-hero: clamp(3rem, 10vw, 6.5rem);
+  --page: min(900px, calc(100% - 2.5rem));
+  --dur: 400ms;
+}

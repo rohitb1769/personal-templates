@@ -1,0 +1,262 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--bg);
+  image-rendering: pixelated;
+}
+
+a {
+  color: var(--green);
+}
+
+:focus-visible {
+  outline: 3px solid var(--magenta);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  background: var(--bg);
+  box-shadow: var(--pixel) var(--pixel) 0 var(--ink);
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+.version-chip {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 90;
+  padding: 0.5rem 0.65rem;
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  box-shadow: var(--pixel) var(--pixel) 0 var(--green);
+  text-decoration: none;
+}
+
+.crt-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 70% 50% at 50% 0%,
+    rgba(61, 139, 64, 0.06),
+    transparent 60%
+  );
+  animation: blink-soft 3s step-end infinite;
+}
+
+@keyframes blink-soft {
+  0%,
+  92% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.85;
+  }
+}
+
+.pixel-header {
+  width: var(--page);
+  margin: 0 auto;
+  padding: var(--space-4) 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-5);
+}
+
+.nav a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--ink-muted);
+  transition: color var(--dur);
+}
+
+.nav a:hover {
+  color: var(--magenta);
+}
+
+main {
+  width: var(--page);
+  margin: 0 auto;
+  padding: var(--space-4) 0 var(--space-6);
+}
+
+.frame {
+  padding: var(--space-5);
+  background: var(--bg);
+  box-shadow: var(--pixel) var(--pixel) 0 var(--ink),
+    calc(var(--pixel) * 2) calc(var(--pixel) * 2) 0 var(--ink-muted);
+  border: var(--pixel) solid var(--ink);
+}
+
+.hero-frame {
+  margin-bottom: var(--space-6);
+  animation: pop-in 0.5s steps(4) forwards;
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.label {
+  margin: 0 0 var(--space-4);
+  font-size: 1.1rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+}
+
+.hero-frame h1 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-pixel);
+  font-size: var(--text-title);
+  line-height: 1.8;
+  color: var(--green);
+  text-shadow: var(--pixel) var(--pixel) 0 rgba(0, 0, 0, 0.15);
+}
+
+.intro {
+  margin: 0 0 var(--space-5);
+  max-width: 36rem;
+  font-size: 1.35rem;
+}
+
+.btn-pixel {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  line-height: 1.8;
+  text-decoration: none;
+  color: var(--bg);
+  background: var(--green);
+  border: var(--pixel) solid var(--ink);
+  box-shadow: var(--pixel) var(--pixel) 0 var(--ink);
+  transition: transform var(--dur), box-shadow var(--dur);
+}
+
+.btn-pixel:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.btn-pixel:active {
+  transform: translate(var(--pixel), var(--pixel));
+  box-shadow: none;
+}
+
+.section {
+  margin-bottom: var(--space-6);
+}
+
+.pixel-title {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  line-height: 2;
+  color: var(--magenta);
+}
+
+.offer-grid {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.frame h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  line-height: 2;
+  color: var(--green);
+}
+
+.frame--accent h3 {
+  color: var(--magenta);
+}
+
+.frame p {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.approach-frame ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 1.3rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-frame {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-frame a {
+  font-size: 1.35rem;
+  text-decoration: none;
+}
+
+.contact-frame p {
+  margin: var(--space-4) 0 0;
+  color: var(--ink-muted);
+  font-size: 1.2rem;
+}
+
+.pixel-footer {
+  text-align: center;
+  padding: var(--space-5);
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  line-height: 2;
+  color: var(--ink-muted);
+  animation: marquee-hint 4s ease-in-out infinite alternate;
+}
+
+@keyframes marquee-hint {
+  to {
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-frame h1 {
+    font-size: 0.75rem;
+  }
+}

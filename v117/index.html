@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Snehith Infra — Ping Radar."/>
+<title>Snehith Infra — Ping Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body class="v117">
+<a class="skip-link" href="#main">Skip to content</a>
+<a class="version-chip" href="../versions.html">Versions</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a href="#offer">Offer</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav></header><main id="main"><section class="hero"><h1 class="hero__brand">Snehith Infra</h1><p class="hero__tag">Hyderabad · Latency to your users—measured from our hub, not a slide deck.</p><div class="radar-wrap" aria-hidden="true"><div class="radar-sweep"></div><div class="radar-grid"></div><div class="radar-center"><strong>PING</strong><span>Hyderabad</span></div></div><p class="latency-readout" id="latency-out" aria-live="polite">Sweeping…</p></section><section class="section" id="offer" aria-labelledby="of"><h2 id="of">Offer</h2><div class="cards"><article class="card"><h3>Products</h3><p>Platforms built to spec and deployed on rhythm.</p></article><article class="card"><h3>Services</h3><p>Embedded teams with clear lanes and owners.</p></article><article class="card"><h3>Maintenance</h3><p>Watchers on duty after the fanfare fades.</p></article></div></section><section class="approach" id="approach"><h2>Approach</h2><p>Baseline your SLOs · Trim the round trips · Ship closer to users</p></section><section class="contact" id="contact" aria-labelledby="ct"><h2 id="ct">Contact</h2><a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a><a href="tel:+918341888566">+91 8341888566</a></section></main>
+<footer class="site-footer">© Snehith Infra · Sample v117 Ping Radar</footer>
+<script>
+(function(){
+  var dots=[{x:72,y:18,c:"Mumbai",ms:18},{x:88,y:42,c:"Singapore",ms:62},{x:28,y:35,c:"Dubai",ms:48},{x:15,y:55,c:"London",ms:142},{x:45,y:78,c:"Bengaluru",ms:12},{x:62,y:68,c:"Chennai",ms:14}];
+  var wrap=document.querySelector(".radar-wrap");
+  if(!wrap)return;
+  dots.forEach(function(d){
+    var el=document.createElement("span");el.className="ping";el.style.left=d.x+"%";el.style.top=d.y+"%";el.title=d.c;wrap.appendChild(el);
+    d.el=el;
+  });
+  var out=document.getElementById("latency-out");
+  var i=0;
+  function sweep(){
+    dots.forEach(function(d){d.el.classList.remove("lit");});
+    var d=dots[i%dots.length];d.el.classList.add("lit");
+    if(out)out.textContent=d.c+" · ~"+d.ms+"ms from Hyderabad";
+    i++;
+  }
+  sweep();setInterval(sweep,900);
+})();
+</script>
+<script src="../version-nav.js" defer></script>
+</body>
+</html>

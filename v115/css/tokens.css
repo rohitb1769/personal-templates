@@ -1,0 +1,12 @@
+:root {
+  --bg: #e8faf3;
+  --surface: #ffffff;
+  --text: #1a3d34;
+  --muted: #4a7a6e;
+  --bug: #5c4d3a;
+  --splat: #ff6b6b;
+  --mint: #2dd4a8;
+  --font: "Fredoka", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: #2dd4a8;
+}

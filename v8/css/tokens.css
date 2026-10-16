@@ -1,0 +1,9 @@
+:root {
+  --paper: #ffffff;
+  --ink: #000000;
+  --red: #e30613;
+  --muted: #333333;
+  --rule: 1px solid #000000;
+  --font: "Archivo", system-ui, sans-serif;
+  --max: 80rem;
+}

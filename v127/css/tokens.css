@@ -1,0 +1,13 @@
+:root {
+  --bg: #000000;
+  --surface: #0a0a0a;
+  --ink: #eaffea;
+  --muted: #6b8f6b;
+  --green: #00ff41;
+  --green-dim: #00cc33;
+  --glow: rgba(0, 255, 65, 0.45);
+  --font-display: "Orbitron", system-ui, sans-serif;
+  --font-body: "Exo 2", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--green);
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra — boot deploy motion landing, Hyderabad." />
+    <title>Snehith Infra — Boot Deploy v106</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="version-chip" href="../versions.html">Versions</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Boot sequence">
+        <div class="terminal" role="log" aria-live="polite" aria-label="Deploy boot log">
+          <div class="terminal__bar" aria-hidden="true">
+            <span class="terminal__dot terminal__dot--r"></span>
+            <span class="terminal__dot terminal__dot--y"></span>
+            <span class="terminal__dot terminal__dot--g"></span>
+          </div>
+          <pre id="boot-log"><span class="cursor" id="boot-cursor" aria-hidden="true"></span></pre>
+        </div>
+
+        <div class="hero-reveal" id="hero-reveal" hidden>
+          <h1>Snehith Infra</h1>
+          <p>Hyderabad · We boot ideas like prod: build, push, ship—then keep the lights green.</p>
+          <a class="btn" href="#contact">Deploy a conversation</a>
+        </div>
+        <h1 class="visually-hidden">Snehith Infra</h1>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Offer</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Products</h3>
+            <p>From spec to semver—platforms that survive your first viral Tuesday.</p>
+          </article>
+          <article class="card">
+            <h3>Services</h3>
+            <p>Embedded squads who speak YAML and deadlines fluently.</p>
+          </article>
+          <article class="card">
+            <h3>Maintenance</h3>
+            <p>On-call without drama: patches, upgrades, and honest status pages.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Approach</h2>
+        <p>Written scope · CI from day one · Ship small, ship often · Handoff with runbooks</p>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a href="tel:+918341888566">+91 8341888566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Snehith Infra · Sample v106 Boot Deploy</footer>
+
+    <script>
+      (function () {
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var lines = [
+          { text: "$ snehith-infra init --hyderabad", cls: "" },
+          { text: "yarn install… OK", cls: "ok" },
+          { text: "yarn build… OK", cls: "ok" },
+          { text: "running tests… 142 passed", cls: "ok" },
+          { text: "push edge… OK", cls: "ok" },
+          { text: "deploy prod… SUCCESS", cls: "ok" },
+          { text: "health check… all green ✓", cls: "ok" }
+        ];
+        var log = document.getElementById("boot-log");
+        var cursor = document.getElementById("boot-cursor");
+        var reveal = document.getElementById("hero-reveal");
+
+        function showReveal() {
+          reveal.hidden = false;
+          reveal.classList.add("is-visible");
+          if (cursor) cursor.style.display = "none";
+        }
+
+        if (reduced) {
+          lines.forEach(function (line) {
+            var span = document.createElement("span");
+            if (line.cls) span.className = line.cls;
+            span.textContent = line.text + "\n";
+            log.insertBefore(span, cursor);
+          });
+          showReveal();
+          return;
+        }
+
+        var i = 0;
+        var charIdx = 0;
+        var currentSpan = null;
+
+        function tick() {
+          if (i >= lines.length) {
+            showReveal();
+            return;
+          }
+          var line = lines[i];
+          if (!currentSpan) {
+            currentSpan = document.createElement("span");
+            if (line.cls) currentSpan.className = line.cls;
+            log.insertBefore(currentSpan, cursor);
+            charIdx = 0;
+          }
+          if (charIdx < line.text.length) {
+            currentSpan.textContent += line.text.charAt(charIdx);
+            charIdx++;
+            setTimeout(tick, 18 + Math.random() * 22);
+            return;
+          }
+          currentSpan.textContent += "\n";
+          currentSpan = null;
+          i++;
+          setTimeout(tick, 280);
+        }
+        tick();
+      })();
+    </script>
+    <script src="../version-nav.js" defer></script>
+  </body>
+</html>

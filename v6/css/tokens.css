@@ -1,0 +1,16 @@
+:root {
+  --bg: #ffe566;
+  --ink: #000000;
+  --paper: #ffffff;
+  --border: 3px solid #000000;
+  --shadow: 6px 6px 0 #000000;
+  --font-display: "Archivo Black", system-ui, sans-serif;
+  --font-body: "Archivo", system-ui, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --max: 72rem;
+  --focus: #000000;
+}

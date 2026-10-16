@@ -1,0 +1,11 @@
+:root {
+  --bg: #121212;
+  --surface: #1c1c1c;
+  --ink: #f4f0ea;
+  --muted: #9a9590;
+  --accent: #c9a962;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --max: 42rem;
+  --focus: var(--accent);
+}

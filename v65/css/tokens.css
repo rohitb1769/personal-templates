@@ -1,0 +1,13 @@
+:root {
+  --color-bg: #120818;
+  --color-panel: #1a1024;
+  --color-ink: #f0e8ff;
+  --color-muted: #a89bb8;
+  --neon-pink: #ff2d95;
+  --neon-green: #39ff14;
+  --neon-blue: #00d4ff;
+  --font-display: "Russo One", system-ui, sans-serif;
+  --font-body: "Rubik", system-ui, sans-serif;
+  --max: 68rem;
+  --focus: var(--neon-blue);
+}

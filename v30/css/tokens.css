@@ -1,0 +1,16 @@
+:root {
+  --orange: #ea580c;
+  --blue: #1e3a8a;
+  --white: #ffffff;
+  --white-dim: rgba(255, 255, 255, 0.82);
+  --white-muted: rgba(255, 255, 255, 0.62);
+  --seam: rgba(255, 255, 255, 0.18);
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+
+  --page: min(1140px, calc(100% - 2.5rem));
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 180ms;
+  --med: 420ms;
+}

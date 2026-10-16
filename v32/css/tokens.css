@@ -1,0 +1,17 @@
+:root {
+  --bg: #eef1f5;
+  --surface: #ffffff;
+  --ink: #0f172a;
+  --ink-soft: #475569;
+  --teal: #0f766e;
+  --teal-light: #14b8a6;
+  --teal-glow: rgba(15, 118, 110, 0.25);
+
+  --font: "Outfit", "Segoe UI", sans-serif;
+
+  --page: min(1100px, calc(100% - 2.5rem));
+  --radius: 16px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 180ms;
+  --med: 400ms;
+}

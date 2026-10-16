@@ -1,0 +1,12 @@
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --accent-glow: rgba(37, 99, 235, 0.35);
+  --tick: #10b981;
+  --font: "Outfit", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: #2563eb;
+}

@@ -1,0 +1,185 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: linear-gradient(180deg, var(--color-sky) 0%, #bae6fd 50%, var(--color-sky) 100%);
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+a { color: var(--color-muted); }
+.skip-link {
+  position: absolute; left: -999px; top: 1rem; z-index: 200;
+  padding: 0.5rem 1rem; background: var(--color-ink); color: var(--color-cloud);
+}
+.skip-link:focus { left: 1rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.version-chip {
+  position: fixed; right: 0; top: 50%; z-index: 150;
+  transform: translateY(-50%) rotate(-90deg); transform-origin: right center;
+  padding: 0.5rem 1rem; font-family: var(--font-display); font-weight: 700;
+  font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; color: var(--color-cloud); background: var(--color-ink);
+}
+
+.cloud-deco {
+  position: absolute;
+  top: 4rem;
+  right: 5%;
+  width: 140px;
+  height: 50px;
+  background: var(--color-cloud);
+  border-radius: 50px;
+  opacity: 0.9;
+  animation: cloud-drift 18s ease-in-out infinite;
+}
+.cloud-deco::before,
+.cloud-deco::after {
+  content: "";
+  position: absolute;
+  background: var(--color-cloud);
+  border-radius: 50%;
+}
+.cloud-deco::before { width: 55px; height: 55px; top: -28px; left: 20px; }
+.cloud-deco::after { width: 45px; height: 45px; top: -20px; right: 18px; }
+
+@keyframes cloud-drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-30px); }
+}
+
+.site-header { padding: 1rem 1.5rem; position: relative; }
+.nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.nav a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-muted);
+}
+.nav a:hover { color: var(--color-ink); }
+
+.hero {
+  position: relative;
+  padding: 2rem 1.5rem 4rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.hero__panel {
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(12, 74, 110, 0.08);
+  animation: float-up 0.85s ease-out both;
+}
+
+@keyframes float-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero__brand {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 8vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.hero__lede {
+  margin: 1rem 0 0;
+  max-width: 34rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+}
+
+.section { padding: 0 1.5rem 3rem; max-width: var(--max); margin: 0 auto; }
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 0 0 1.25rem;
+}
+
+.cloud-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.cloud-card {
+  padding: 1.75rem;
+  background: var(--color-cloud);
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(12, 74, 110, 0.06);
+  animation: float-up 0.7s ease both;
+}
+.cloud-card:nth-child(2) { animation-delay: 0.08s; }
+.cloud-card:nth-child(3) { animation-delay: 0.16s; }
+
+.cloud-card h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.cloud-card p { margin: 0; color: var(--color-muted); }
+
+.approach {
+  margin: 0 1.5rem 3rem;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: 2rem;
+  text-align: center;
+  background: var(--color-cloud);
+  border-radius: 24px;
+}
+
+.approach h2 {
+  font-family: var(--font-display);
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+.approach p { margin: 0; font-weight: 600; color: var(--color-muted); }
+
+.contact-soft {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.contact-soft a {
+  flex: 1 1 14rem;
+  padding: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-cloud);
+  background: var(--color-ink);
+  border-radius: 16px;
+  transition: transform 0.2s;
+}
+.contact-soft a:hover { transform: translateY(-2px); }
+
+.site-footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cloud-deco, .hero__panel, .cloud-card { animation: none; }
+  .contact-soft a:hover { transform: none; }
+}

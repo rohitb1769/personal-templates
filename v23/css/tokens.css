@@ -1,0 +1,20 @@
+:root {
+  --font-display: "Sora", system-ui, sans-serif;
+  --color-bg: #fff8f4;
+  --color-bg-soft: #ffece3;
+  --color-ink: #1a1f24;
+  --color-ink-muted: #4a5560;
+  --color-coral: #ff6b4a;
+  --color-peach: #ffb088;
+  --color-teal-soft: #7ecfc4;
+  --color-line: rgba(26, 31, 36, 0.12);
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+  --radius: 1rem;
+  --motion-blob: 18s ease-in-out infinite;
+  --motion-float: 6s ease-in-out infinite;
+  --motion-shimmer: 8s linear infinite;
+}

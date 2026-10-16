@@ -1,0 +1,30 @@
+:root {
+  --color-navy: #0b1f3a;
+  --color-navy-mid: #132d52;
+  --color-white: #ffffff;
+  --color-paper: #f8fafc;
+  --color-ink: #0f172a;
+  --color-mute: #64748b;
+  --color-blue: #2563eb;
+  --color-blue-hover: #1d4ed8;
+  --color-blue-soft: rgba(37, 99, 235, 0.12);
+  --color-line: rgba(11, 31, 58, 0.12);
+
+  --font-sans: "Libre Franklin", "Segoe UI", sans-serif;
+  --font-serif: "Merriweather", Georgia, serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.35rem, 2.5vw, 1.75rem);
+  --text-xl: clamp(2.25rem, 5vw, 3.5rem);
+
+  --radius: 6px;
+  --max: 72rem;
+}

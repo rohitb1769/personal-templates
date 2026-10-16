@@ -1,0 +1,47 @@
+:root {
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #121212;
+  --color-ink: #f5f0e8;
+  --color-ink-soft: rgba(245, 240, 232, 0.72);
+  --color-mute: rgba(245, 240, 232, 0.48);
+  --color-gold: #c9a227;
+  --color-gold-light: #e8d48a;
+  --color-gold-dark: #8a6f18;
+  --gradient-gold: linear-gradient(
+    135deg,
+    var(--color-gold-dark) 0%,
+    var(--color-gold-light) 45%,
+    var(--color-gold) 70%,
+    var(--color-gold-dark) 100%
+  );
+  --gradient-gold-btn: linear-gradient(
+    180deg,
+    #e2c96a 0%,
+    #c9a227 42%,
+    #9a7b1a 100%
+  );
+  --color-line: rgba(201, 162, 39, 0.35);
+  --color-line-faint: rgba(201, 162, 39, 0.12);
+
+  --font-display: "Cinzel", "Times New Roman", serif;
+  --font-sans: "Karla", "Segoe UI", sans-serif;
+
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+  --space-9: 7rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.35rem, 2.5vw, 1.85rem);
+  --text-xl: clamp(2rem, 4.5vw, 3.25rem);
+  --text-hero: clamp(2.4rem, 5.5vw, 4rem);
+
+  --page: min(1120px, calc(100% - 2.5rem));
+  --ease: cubic-bezier(0.25, 0.8, 0.25, 1);
+  --dur: 240ms;
+}

@@ -1,0 +1,20 @@
+:root {
+  --night: #0c1222;
+  --night-soft: #141c32;
+  --sand: #e8c49a;
+  --sand-dim: rgba(232, 196, 154, 0.65);
+  --mist: #c5d0e8;
+  --font-display: "Cormorant", Georgia, serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --max: 70rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

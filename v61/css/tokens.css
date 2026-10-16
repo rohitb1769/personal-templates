@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #f7f4ef;
+  --color-ink: #2a3344;
+  --color-muted: #5c6578;
+  --color-indigo: rgba(72, 82, 120, 0.35);
+  --color-teal: rgba(88, 140, 132, 0.32);
+  --color-sand: rgba(196, 168, 130, 0.38);
+  --color-accent: #4a6b8a;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --max: 68rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+  --radius: 2px;
+  --focus: #3d5a73;
+}

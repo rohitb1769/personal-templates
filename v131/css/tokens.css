@@ -1,0 +1,10 @@
+:root {
+  --bg: #1e1e28;
+  --surface: #2a2a36;
+  --ink: #f0f0f5;
+  --muted: #9898a8;
+  --accent: #7c6cf0;
+  --font: "Rubik", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--accent);
+}

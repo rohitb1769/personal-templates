@@ -1,0 +1,26 @@
+:root {
+  --color-desk: #e7e2d9;
+  --color-ink: #2a2825;
+  --color-mute: #6b665e;
+  --color-note-yellow: #fff9a8;
+  --color-note-pink: #ffd6e8;
+  --color-note-mint: #c8f5e4;
+  --color-pin: #c45c26;
+
+  --font-hand: "Patrick Hand", cursive;
+  --font-sans: "DM Sans", "Segoe UI", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.35rem, 2.8vw, 2rem);
+  --text-xl: clamp(2.1rem, 5.5vw, 3.5rem);
+
+  --max: 74rem;
+}

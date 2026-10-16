@@ -1,0 +1,26 @@
+:root {
+  --color-bg: #0b1026;
+  --color-bg-panel: #0f1635;
+  --color-ink: #ffffff;
+  --color-ink-soft: rgba(255, 255, 255, 0.78);
+  --color-mute: rgba(255, 255, 255, 0.52);
+  --color-accent: #6b8cff;
+  --color-accent-soft: rgba(107, 140, 255, 0.18);
+  --color-line: rgba(255, 255, 255, 0.12);
+
+  --font-sans: "DM Sans", "Segoe UI", sans-serif;
+
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.5rem, 3vw, 2.25rem);
+  --text-xl: clamp(2.5rem, 5vw, 4rem);
+
+  --panel-pad: clamp(1.5rem, 4vw, 4rem);
+  --bp-stack: 800px;
+  --dur: 220ms;
+}

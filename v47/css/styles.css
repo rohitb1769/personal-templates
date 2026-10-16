@@ -1,0 +1,163 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background: var(--color-bg);
+}
+
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-indigo); outline-offset: 3px; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 1rem; z-index: 200;
+  padding: 0.5rem 1rem; background: var(--color-indigo); color: #fff; font-weight: 600;
+}
+.skip-link:focus { left: 1rem; }
+
+.version-chip {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 150;
+  padding: 0.4rem 0.75rem; font-size: 0.7rem; text-decoration: none;
+  border: 1px solid var(--color-line); color: var(--color-muted); background: #fff;
+}
+
+.site-header {
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: var(--max); margin: 0 auto; padding: var(--space-5);
+}
+
+.brand { font-family: var(--font-display); font-weight: 700; }
+.nav { display: flex; gap: var(--space-5); font-size: 0.95rem; }
+.nav a { text-decoration: none; color: var(--color-muted); }
+
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-5);
+}
+
+.hero__brand {
+  margin: 0 0 var(--space-5);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.hero h1 {
+  margin: 0 0 var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  max-width: 14ch;
+}
+
+.word-rotator {
+  display: inline-block;
+  vertical-align: bottom;
+  height: var(--word-h);
+  overflow: hidden;
+  color: var(--color-indigo);
+}
+
+.word-rotator__inner {
+  display: flex;
+  flex-direction: column;
+  animation: word-cycle 9s ease-in-out infinite;
+}
+
+.word-rotator__inner span {
+  height: var(--word-h);
+  line-height: var(--word-h);
+}
+
+.hero__lead { margin: 0 0 var(--space-6); color: var(--color-muted); max-width: 40ch; }
+
+.btn-indigo {
+  display: inline-block;
+  padding: 0.75rem 1.35rem;
+  background: var(--color-indigo);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+#offer, #approach, .contact {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-5);
+  border-top: 1px solid var(--color-line);
+}
+
+#offer h2, #approach h2, .contact h2 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 var(--space-6);
+}
+
+.offer-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+}
+
+.offer-strip h3 { font-family: var(--font-display); margin: 0 0 var(--space-5); }
+.offer-strip p { margin: 0; color: var(--color-muted); }
+
+.approach-line {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  animation: drift 6s ease-in-out infinite alternate;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.contact a { font-weight: 600; color: var(--color-indigo); text-decoration: none; }
+.contact p { margin: var(--space-5) 0 0; color: var(--color-muted); }
+
+.site-footer {
+  text-align: center;
+  padding: var(--space-6);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+@keyframes word-cycle {
+  0%, 22% { transform: translateY(0); }
+  33%, 55% { transform: translateY(calc(-1 * var(--word-h))); }
+  66%, 88% { transform: translateY(calc(-2 * var(--word-h))); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes drift {
+  from { letter-spacing: -0.01em; }
+  to { letter-spacing: 0.02em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .word-rotator__inner { animation: none; transform: translateY(0); }
+  .approach-line { animation: none; }
+}

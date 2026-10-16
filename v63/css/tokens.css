@@ -1,0 +1,10 @@
+:root {
+  --color-bg: #0a0a0c;
+  --color-ink: #f5f0e6;
+  --color-gold: #c9b896;
+  --color-gold-dim: rgba(201, 184, 150, 0.45);
+  --font-display: "Poiret One", cursive;
+  --font-body: "Lato", system-ui, sans-serif;
+  --max: 66rem;
+  --focus: #c9b896;
+}

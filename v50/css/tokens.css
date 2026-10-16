@@ -1,0 +1,19 @@
+:root {
+  --color-wine: #2a0a14;
+  --color-wine-deep: #1a060d;
+  --color-cream: #f5e6d3;
+  --color-muted: #c4a898;
+  --color-coral: #ff6b4a;
+  --color-line: rgba(245, 230, 211, 0.15);
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
+
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+
+  --text-xl: clamp(2.25rem, 5vw, 3.25rem);
+  --max: 62rem;
+}

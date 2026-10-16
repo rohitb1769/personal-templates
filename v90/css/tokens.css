@@ -1,0 +1,10 @@
+:root {
+--color-lav: #e8e0f4;
+  --color-mint: #d4f0e8;
+  --color-ink: #3d3a45;
+  --color-muted: #6b6574;
+  --font-flourish: "Great Vibes", cursive;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --max: 68rem;
+  --focus: #7c6ba8;
+}

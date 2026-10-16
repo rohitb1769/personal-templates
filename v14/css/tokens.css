@@ -1,0 +1,30 @@
+:root {
+  --color-cover-start: #1a3d2e;
+  --color-cover-mid: #0f2419;
+  --color-cover-end: #050806;
+  --color-ink: #f8f6f2;
+  --color-ink-soft: rgba(248, 246, 242, 0.82);
+  --color-mute: rgba(248, 246, 242, 0.55);
+  --color-paper: #f4f2ed;
+  --color-paper-ink: #1c1c1a;
+  --color-paper-mute: #5c5a54;
+  --color-line: rgba(28, 28, 26, 0.12);
+
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
+
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.35rem, 2.2vw, 1.75rem);
+  --text-cover-num: clamp(6rem, 22vw, 14rem);
+  --text-cover-head: clamp(2.8rem, 7vw, 5.5rem);
+
+  --page: min(960px, calc(100% - 2rem));
+  --dur: 260ms;
+}

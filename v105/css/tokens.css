@@ -1,0 +1,10 @@
+:root {
+  --color-paper: #faf9f6;
+  --color-ink: #0d0d0d;
+  --color-muted: #4a4a4a;
+  --color-electric: #0066ff;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Archivo Black", system-ui, sans-serif;
+  --max: 80rem;
+  --focus: var(--color-electric);
+}

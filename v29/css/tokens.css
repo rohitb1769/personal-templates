@@ -1,0 +1,11 @@
+:root {
+  --font-serif: "EB Garamond", Georgia, serif;
+  --font-sans: "Karla", system-ui, sans-serif;
+  --color-desk: #c4a574;
+  --color-kraft: #e8dcc8;
+  --color-paper: #faf6ef;
+  --color-ink: #2c2419;
+  --color-muted: #5c5348;
+  --shadow-paper: 2px 3px 8px rgba(44, 36, 25, 0.18), 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  --motion-settle: 5s ease-in-out infinite;
+}

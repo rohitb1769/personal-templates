@@ -1,0 +1,12 @@
+:root {
+  --font-display: "Bangers", system-ui, sans-serif;
+  --font-body: "Rubik", system-ui, sans-serif;
+  --color-cyan: #00bcd4;
+  --color-magenta: #e91e8c;
+  --color-yellow: #ffeb3b;
+  --color-black: #111;
+  --color-paper: #fafafa;
+  --stroke: 3px;
+  --motion-pop: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --motion-wiggle: 4s ease-in-out infinite;
+}

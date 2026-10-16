@@ -1,0 +1,123 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 1rem; z-index: 200;
+  padding: 0.5rem 1rem; background: var(--build); color: var(--bg);
+}
+.skip-link:focus { left: 1rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.version-chip {
+  position: fixed; right: 0; top: 50%; z-index: 150;
+  transform: translateY(-50%) rotate(-90deg); transform-origin: right center;
+  padding: 0.5rem 1rem; font-family: var(--font-mono); font-size: 0.6rem;
+  letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  color: var(--bg); background: var(--prod);
+}
+
+.site-header { padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); }
+.nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.nav a { color: var(--muted); text-decoration: none; }
+
+.hero { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.5rem; }
+.hero h1 { font-size: clamp(1.75rem, 5vw, 2.75rem); margin: 0 0 0.5rem; }
+.hero__tag { color: var(--muted); max-width: 42ch; }
+
+.pipeline {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stage {
+  flex: 1 1 8rem;
+  min-width: 7rem;
+  max-width: 11rem;
+  background: var(--panel);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0.35;
+  transition: opacity 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+.stage.is-active {
+  opacity: 1;
+  transform: scale(1.03);
+  box-shadow: 0 0 24px rgba(88, 166, 255, 0.25);
+}
+.stage[data-step="build"].is-active { border-color: var(--build); box-shadow: 0 0 24px rgba(88, 166, 255, 0.35); }
+.stage[data-step="test"].is-active { border-color: var(--test); box-shadow: 0 0 24px rgba(163, 113, 247, 0.35); }
+.stage[data-step="staging"].is-active { border-color: var(--stage); box-shadow: 0 0 24px rgba(210, 153, 34, 0.35); }
+.stage[data-step="production"].is-active { border-color: var(--prod); box-shadow: 0 0 28px rgba(63, 185, 80, 0.45); }
+.stage.is-celebrate { animation: pulse-prod 0.6s ease 2; }
+
+@keyframes pulse-prod {
+  0%, 100% { transform: scale(1.03); }
+  50% { transform: scale(1.08); }
+}
+
+.stage__icon { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); }
+.stage h2 { font-size: 1rem; margin: 0.35rem 0; }
+
+.connector {
+  flex: 0 0 2.5rem;
+  align-self: center;
+  height: 4px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.connector__fill {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: linear-gradient(90deg, var(--build), var(--prod));
+  transition: width 0.5s ease;
+}
+.connector.is-filled .connector__fill { width: 100%; }
+
+.section { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1px solid var(--border); }
+.section h2 { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.15em; }
+
+.map-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.map-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+.map-card.is-lit { border-color: var(--prod); background: rgba(63, 185, 80, 0.08); transition: background 0.4s, border-color 0.4s; }
+.map-card h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+
+.approach { text-align: center; padding: 2rem; color: var(--muted); }
+.contact-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.contact-links a { color: var(--build); }
+
+.site-footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .stage { opacity: 1; transform: none; transition: none; }
+  .stage.is-celebrate { animation: none; }
+  .connector__fill { width: 100% !important; transition: none; }
+}

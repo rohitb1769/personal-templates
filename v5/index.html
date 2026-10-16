@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snehith Infra — v5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="mesh" aria-hidden="true">
+      <div class="mesh__blob mesh__blob--a"></div>
+      <div class="mesh__blob mesh__blob--b"></div>
+      <div class="mesh__blob mesh__blob--c"></div>
+      <div class="mesh__noise"></div>
+    </div>
+
+    <nav class="version-chip" aria-label="Design version">
+      <a href="../versions.html">All</a>
+      <a href="../v4/">v4</a>
+      <a class="is-active" href="./index.html" aria-current="page">v5</a>
+      <a href="../v6/">v6</a>
+    </nav>
+
+    <nav class="dock" aria-label="Primary">
+      <a class="dock__brand" href="#">
+        Snehith Infra
+        <span>Software</span>
+      </a>
+      <div class="dock__nav">
+        <a href="#work">Work</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="dock__cta" href="#contact">Book a consultation</a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        data-menu-toggle
+        aria-label="Open menu"
+      >
+        <span aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-hidden="true">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact">Book a consultation</a>
+    </nav>
+
+    <main id="main">
+      <section class="hero" aria-label="Introduction">
+        <p class="hero__meta">
+          <b>Software company</b>, Hyderabad
+        </p>
+        <h1 class="hero__title">
+          Build. Staff. Maintain.
+        </h1>
+        <p class="hero__lede">
+          Snehith Infra is a software company that ships products, embeds
+          engineering talent, and keeps production systems healthy.
+        </p>
+      </section>
+
+      <section class="kinetic" id="work" aria-label="What we offer">
+        <div>
+          <button
+            class="kinetic__line"
+            type="button"
+            aria-expanded="true"
+            aria-controls="panel-build"
+            data-kinetic="build"
+          >
+            <strong>Build</strong>
+            <em>Products</em>
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="kinetic__panel is-open" id="panel-build" data-panel="build">
+            <p>
+              Custom software products end to end: architecture, interfaces,
+              APIs, and release cadence. We ship systems users can run, not demos
+              that stall after the first sprint.
+            </p>
+            <a href="#contact">Talk about a product</a>
+          </div>
+        </div>
+
+        <div>
+          <button
+            class="kinetic__line"
+            type="button"
+            aria-expanded="false"
+            aria-controls="panel-staff"
+            data-kinetic="staff"
+          >
+            <strong>Staff</strong>
+            <em>Services</em>
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="kinetic__panel" id="panel-staff" data-panel="staff" hidden>
+            <p>
+              Engineering services: code review, staff augmentation, and
+              consultancy. Senior software engineers join your repo and leave
+              commits, not slide decks.
+            </p>
+            <a href="#contact">Ask about services</a>
+          </div>
+        </div>
+
+        <div>
+          <button
+            class="kinetic__line"
+            type="button"
+            aria-expanded="false"
+            aria-controls="panel-maintain"
+            data-kinetic="maintain"
+          >
+            <strong>Maintain</strong>
+            <em>Maintenance</em>
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="kinetic__panel" id="panel-maintain" data-panel="maintain" hidden>
+            <p>
+              Software maintenance for live applications: monitoring, patches,
+              incidents, and steady evolution with a named engineer on call.
+            </p>
+            <a href="#contact">Plan maintenance</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof" id="approach" aria-labelledby="approach-title">
+        <div>
+          <h2 id="approach-title">How a software company should feel to hire.</h2>
+          <p>
+            Clear scopes, honest timelines, and people who write the fix.
+          </p>
+        </div>
+        <ul>
+          <li>
+            <strong>Review before regret</strong>
+            <span>Severity-ranked findings with a path to fix.</span>
+          </li>
+          <li>
+            <strong>Hands in the repo</strong>
+            <span>Advice that becomes pull requests.</span>
+          </li>
+          <li>
+            <strong>Ownership after launch</strong>
+            <span>Maintenance that answers at 2 a.m.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <h2 id="contact-title">Start with one clear conversation.</h2>
+          <p>
+            Tell us what you are building or what needs care. We reply with a
+            next step, not a pitch deck.
+          </p>
+        </div>
+        <div class="contact__actions">
+          <a class="btn btn--volt" href="mailto:contact@snehithinfra.com"
+            >contact@snehithinfra.com</a
+          >
+          <a class="btn btn--ghost" href="tel:+918341888566">+91 83418 88566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <div class="footer__brand">Snehith Infra Private Limited</div>
+        <div>Software company, Hyderabad</div>
+      </div>
+      <div>Sample v5 · Runway</div>
+    </footer>
+
+    <script>
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const toggle = document.querySelector("[data-menu-toggle]");
+      const mobileNav = document.querySelector("[data-mobile-nav]");
+      const lines = [...document.querySelectorAll("[data-kinetic]")];
+      const panels = [...document.querySelectorAll("[data-panel]")];
+
+      const open = (name) => {
+        lines.forEach((line) => {
+          const on = line.dataset.kinetic === name;
+          line.setAttribute("aria-expanded", String(on));
+        });
+        panels.forEach((panel) => {
+          const on = panel.dataset.panel === name;
+          panel.classList.toggle("is-open", on);
+          panel.hidden = !on;
+        });
+      };
+
+      lines.forEach((line) => {
+        line.addEventListener("click", () => {
+          const name = line.dataset.kinetic;
+          const already = line.getAttribute("aria-expanded") === "true";
+          if (already) {
+            line.setAttribute("aria-expanded", "false");
+            const panel = document.querySelector(`[data-panel="${name}"]`);
+            panel?.classList.remove("is-open");
+            if (panel) panel.hidden = true;
+            return;
+          }
+          open(name);
+        });
+      });
+
+      toggle?.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!isOpen));
+        mobileNav.classList.toggle("is-open", !isOpen);
+        mobileNav.setAttribute("aria-hidden", String(isOpen));
+        document.body.style.overflow = isOpen ? "" : "hidden";
+      });
+
+      mobileNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggle.setAttribute("aria-expanded", "false");
+          mobileNav.classList.remove("is-open");
+          mobileNav.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        });
+      });
+
+      if (reduce) {
+        document.querySelectorAll(".mesh__blob").forEach((el) => {
+          el.style.animation = "none";
+        });
+      }
+    </script>
+      <script src="../version-nav.js" defer></script>
+  </body>
+</html>

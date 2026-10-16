@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra — Lighthouse score motion, Hyderabad." />
+    <title>Snehith Infra — Lighthouse 100 v134</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="version-chip" href="../versions.html">Versions</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Introduction">
+        <h1 class="hero__brand">Snehith Infra</h1>
+        <p class="hero__lede">Hyderabad · We obsess over scores so users don't—Performance, Accessibility, Best Practices climbing while you read this sentence.</p>
+
+        <div class="gauge-row" aria-label="Lighthouse-style scores">
+          <div class="gauge gauge--perf">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="gauge__track" cx="50" cy="50" r="45" />
+              <circle class="gauge__fill" id="fill-perf" cx="50" cy="50" r="45" />
+            </svg>
+            <div class="gauge__value"><span id="val-perf">0</span></div>
+            <div class="gauge__label">Performance</div>
+          </div>
+          <div class="gauge gauge--a11y">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="gauge__track" cx="50" cy="50" r="45" />
+              <circle class="gauge__fill" id="fill-a11y" cx="50" cy="50" r="45" />
+            </svg>
+            <div class="gauge__value"><span id="val-a11y">0</span></div>
+            <div class="gauge__label">Accessibility</div>
+          </div>
+          <div class="gauge gauge--bp">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="gauge__track" cx="50" cy="50" r="45" />
+              <circle class="gauge__fill" id="fill-bp" cx="50" cy="50" r="45" />
+            </svg>
+            <div class="gauge__value"><span id="val-bp">0</span></div>
+            <div class="gauge__label">Best Practices</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Offer</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Products</h3>
+            <p>Core Web Vitals as a feature, not a post-launch apology tour.</p>
+          </article>
+          <article class="card">
+            <h3>Services</h3>
+            <p>Audits that end in PRs, not PDFs that collect dust.</p>
+          </article>
+          <article class="card">
+            <h3>Maintenance</h3>
+            <p>Regressions caught before Lighthouse sends a sad emoji.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Approach</h2>
+        <p>Written scope · Budget perf early · Semantic HTML by default · CI gates on what users feel</p>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a href="tel:+918341888566">+91 8341888566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Snehith Infra · Sample v134 Lighthouse 100</footer>
+
+    <script>
+      (function () {
+        var C = 283;
+        var gauges = [
+          { fill: "fill-perf", val: "val-perf", delay: 0 },
+          { fill: "fill-a11y", val: "val-a11y", delay: 120 },
+          { fill: "fill-bp", val: "val-bp", delay: 240 }
+        ];
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var duration = reduced ? 0 : 1800;
+
+        function setScore(g, score) {
+          var fillEl = document.getElementById(g.fill);
+          var valEl = document.getElementById(g.val);
+          var offset = C - (score / 100) * C;
+          fillEl.style.strokeDashoffset = offset;
+          valEl.textContent = Math.round(score);
+        }
+
+        if (reduced) {
+          gauges.forEach(function (g) { setScore(g, 100); });
+          return;
+        }
+
+        var start = null;
+        function frame(t) {
+          if (!start) start = t;
+          var elapsed = t - start;
+          gauges.forEach(function (g) {
+            var local = Math.max(0, elapsed - g.delay);
+            var p = Math.min(local / duration, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            setScore(g, eased * 100);
+          });
+          if (elapsed < duration + 300) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      })();
+    </script>
+    <script src="../version-nav.js" defer></script>
+  </body>
+</html>

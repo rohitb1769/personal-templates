@@ -1,0 +1,14 @@
+:root {
+  --blush: #f3d9d0;
+  --cream: #faf6f3;
+  --sage: #7d9b8a;
+  --sage-deep: #5a7768;
+  --ink: #3d322c;
+  --muted: #6b5f58;
+  --radius-lg: 32px;
+  --radius-xl: 48px;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+  --max: 74rem;
+  --shadow-soft: 0 20px 50px rgba(125, 155, 138, 0.15);
+}

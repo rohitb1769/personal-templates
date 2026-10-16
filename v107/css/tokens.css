@@ -1,0 +1,15 @@
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --border: #30363d;
+  --text: #f0f6fc;
+  --muted: #8b949e;
+  --build: #58a6ff;
+  --test: #a371f7;
+  --stage: #d29922;
+  --prod: #3fb950;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --max: 76rem;
+  --focus: #58a6ff;
+}

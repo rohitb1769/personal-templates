@@ -1,0 +1,17 @@
+:root {
+  --paper: #fafafa;
+  --grid: rgba(29, 78, 216, 0.12);
+  --grid-strong: rgba(29, 78, 216, 0.22);
+  --margin-red: #dc2626;
+  --ballpoint: #1d4ed8;
+  --ink: #1e293b;
+  --font-note: "Caveat", cursive;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --max: 52rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

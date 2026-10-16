@@ -1,0 +1,21 @@
+:root {
+  --color-bg: #111111;
+  --color-ink: #ececec;
+  --color-muted: #8a8a8a;
+  --color-line: #2a2a2a;
+  --color-lime: #c8f542;
+
+  --font-sans: "DM Sans", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+
+  --text-base: 1.05rem;
+  --text-xl: clamp(2rem, 4.5vw, 3rem);
+  --metric: clamp(3.5rem, 12vw, 7rem);
+
+  --max: 64rem;
+}

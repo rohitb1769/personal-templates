@@ -1,0 +1,13 @@
+:root {
+  --color-plaster: #f4efe6;
+  --color-cobalt: #1e4d8c;
+  --color-ochre: #c17f24;
+  --color-teal: #2a7f7a;
+  --color-tile-white: #faf8f4;
+  --color-ink: #2c2824;
+  --color-muted: #5c554c;
+  --font-display: "Alegreya", Georgia, serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--color-cobalt);
+}

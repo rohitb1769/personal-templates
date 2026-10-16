@@ -1,0 +1,24 @@
+:root {
+  --color-deep: #031a0f;
+  --color-phosphor: #3dff8a;
+  --color-phosphor-dim: rgba(61, 255, 138, 0.15);
+  --color-ink: #c8f5dc;
+  --color-mute: #5a8f72;
+
+  --font-mono: "Fira Code", "Consolas", monospace;
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.3rem, 2.5vw, 1.85rem);
+  --text-xl: clamp(2rem, 5vw, 3.25rem);
+
+  --max: 72rem;
+}

@@ -1,0 +1,44 @@
+:root {
+  /* Cool technical paper — not warm cream #F4F1EA kit */
+  --color-paper: #e9ecef;
+  --color-paper-deep: #dde2e6;
+  --color-ink: #101418;
+  --color-ink-soft: #2c333c;
+  --color-mute: #5a6570;
+  --color-line: rgba(16, 20, 24, 0.12);
+  --color-line-strong: rgba(16, 20, 24, 0.22);
+  /* Oxide teal — infra, used sparsely */
+  --color-accent: #0a5c56;
+  --color-accent-soft: rgba(10, 92, 86, 0.1);
+  --color-hero: #0e1418;
+  --color-hero-mist: #1a2a2c;
+  --color-on-hero: #eef1f3;
+
+  --font-display: "Syne", "Arial Narrow", sans-serif;
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.2rem;
+  --text-lg: clamp(1.4rem, 2.2vw, 1.75rem);
+  --text-xl: clamp(2.1rem, 4.2vw, 3.4rem);
+  --text-hero: clamp(2.6rem, 6.4vw, 4.6rem);
+  --text-mark: clamp(4.5rem, 18vw, 14rem);
+
+  --page: min(1080px, calc(100% - 2rem));
+  --radius: 4px;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur-med: 280ms;
+}

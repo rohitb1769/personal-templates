@@ -1,0 +1,182 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  line-height: 1.6;
+  background: var(--color-desk);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(255, 255, 255, 0.15), transparent 50%),
+    linear-gradient(180deg, #b8956a 0%, var(--color-desk) 30%, #a88858 100%);
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute; top: -100%; left: 1rem; z-index: 100;
+  padding: 0.5rem 1rem; background: var(--color-ink); color: var(--color-paper);
+}
+.skip-link:focus { top: 1rem; }
+
+.version-chip {
+  position: fixed; top: 1rem; right: 1rem; z-index: 50;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--color-paper);
+  box-shadow: var(--shadow-paper);
+  transform: rotate(1deg);
+}
+.version-chip a { color: var(--color-muted); }
+
+.desk {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 4vw, 2rem) 4rem;
+}
+
+.site-header {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.brand {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.nav a {
+  margin-left: 1rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.nav a:hover { color: var(--color-ink); }
+
+.sheet {
+  background: var(--color-paper);
+  padding: 2.5rem clamp(1.5rem, 4vw, 3rem);
+  box-shadow: var(--shadow-paper);
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.sheet--hero {
+  transform: rotate(-0.8deg);
+  animation: settle var(--motion-settle);
+  z-index: 3;
+}
+.sheet--offer {
+  transform: rotate(0.6deg);
+  background: var(--color-kraft);
+  margin-top: -0.5rem;
+  z-index: 2;
+}
+.sheet--approach {
+  transform: rotate(-0.4deg);
+  z-index: 1;
+}
+@keyframes settle {
+  0%, 100% { transform: rotate(-0.8deg) translateY(0); }
+  50% { transform: rotate(-0.6deg) translateY(-2px); }
+}
+
+.sheet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  height: 1px;
+  background: rgba(44, 36, 25, 0.08);
+  box-shadow: 0 28px 0 rgba(44, 36, 25, 0.04), 0 56px 0 rgba(44, 36, 25, 0.04);
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+.hero p { color: var(--color-muted); margin: 0 0 1.5rem; max-width: 38ch; }
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--color-paper);
+  background: var(--color-ink);
+  text-decoration: none;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-label {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-muted);
+  margin: 0 0 0.5rem;
+}
+h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin: 0 0 1.25rem;
+}
+
+.stationery-list {
+  display: grid;
+  gap: 1rem;
+}
+.stationery-list article {
+  padding: 1rem 1rem 1rem 1.25rem;
+  background: rgba(250, 246, 239, 0.7);
+  border-left: 3px solid var(--color-desk);
+  box-shadow: 1px 2px 4px rgba(44, 36, 25, 0.08);
+}
+.stationery-list h3 {
+  font-family: var(--font-serif);
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+}
+.stationery-list p { margin: 0; font-size: 0.95rem; color: var(--color-muted); }
+
+.approach ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--color-muted);
+}
+.approach li { margin-bottom: 0.65rem; }
+.approach strong { color: var(--color-ink); font-family: var(--font-serif); }
+
+.contact {
+  transform: rotate(0.3deg);
+  background: #fffef9;
+  border: 1px solid rgba(44, 36, 25, 0.12);
+}
+.contact dl { margin: 1rem 0 0; display: grid; gap: 0.85rem; }
+.contact dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+}
+.contact dd { margin: 0.15rem 0 0; font-family: var(--font-serif); font-size: 1.15rem; }
+.contact a { color: var(--color-ink); }
+
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(44, 36, 25, 0.5);
+  margin-top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet--hero { animation: none; }
+}
+
+@media (max-width: 600px) {
+  .nav a { margin-left: 0.75rem; }
+}

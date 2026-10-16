@@ -1,0 +1,13 @@
+:root {
+  --color-bg: #1a120b;
+  --color-brass: #c4a35a;
+  --color-brass-dim: #8a7340;
+  --color-panel: #2a1f14;
+  --color-ink: #e8dcc8;
+  --color-muted: #a89878;
+  --font-display: "Cinzel", Georgia, serif;
+  --font-accent: "UnifrakturCook", cursive;
+  --font-body: "Roboto Slab", Georgia, serif;
+  --max: 72rem;
+  --focus: var(--color-brass);
+}

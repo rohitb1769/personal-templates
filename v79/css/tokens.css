@@ -1,0 +1,23 @@
+:root {
+  --void: #0a0a0c;
+  --void-soft: #141418;
+  --text: #ececf2;
+  --muted: #9898a8;
+  --holo: linear-gradient(
+    120deg,
+    #ff6ec7 0%,
+    #7af0ff 35%,
+    #ffe566 55%,
+    #b388ff 75%,
+    #ff6ec7 100%
+  );
+  --font-display: "Orbitron", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --max: 68rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

@@ -1,0 +1,15 @@
+:root {
+  --gray-warm: #e8e4e0;
+  --mauve: #b8a4b0;
+  --sage: #8fae8b;
+  --ink: #3d3639;
+  --font-serif: "Libre Baskerville", Georgia, serif;
+  --font-sans: "Figtree", system-ui, sans-serif;
+  --max: 68rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

@@ -1,0 +1,9 @@
+:root {
+  --color-pink: #ff2d7a;
+  --color-ink: #0a0a0a;
+  --color-paper: #fff5f8;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--color-ink);
+  --shadow-brutal: 6px 6px 0 var(--color-ink);
+}

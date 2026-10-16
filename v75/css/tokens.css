@@ -1,0 +1,16 @@
+:root {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #f0f0f0;
+  --muted: #9a9a9a;
+  --volt: #3dff8a;
+  --font-head: "Archivo Black", system-ui, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --max: 72rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

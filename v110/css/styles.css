@@ -1,0 +1,98 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 1rem; z-index: 200;
+  padding: 0.5rem 1rem; background: var(--accent); color: #fff;
+}
+.skip-link:focus { left: 1rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.version-chip {
+  position: fixed; right: 0; top: 50%; z-index: 150;
+  transform: translateY(-50%) rotate(-90deg); transform-origin: right center;
+  padding: 0.5rem 1rem; font-size: 0.65rem; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none;
+  color: #fff; background: var(--accent);
+}
+
+.site-header { padding: 1rem 1.5rem; }
+.nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
+
+.hero { max-width: var(--max); margin: 0 auto; padding: 2rem 1.5rem; }
+.hero h1 { font-size: clamp(1.75rem, 5vw, 2.75rem); margin: 0 0 0.35rem; }
+.hero .micro { color: var(--accent); font-weight: 700; font-style: italic; }
+.hero p { color: var(--muted); }
+
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+  min-height: 12rem;
+}
+
+@media (max-width: 640px) {
+  .kanban { grid-template-columns: 1fr; }
+}
+
+.kanban-col {
+  background: var(--board);
+  border-radius: 14px;
+  padding: 0.75rem;
+  border: 2px dashed rgba(0, 0, 0, 0.06);
+  min-height: 10rem;
+  position: relative;
+}
+.kanban-col[data-col="todo"] { background: var(--col-todo); }
+.kanban-col[data-col="doing"] { background: var(--col-doing); }
+.kanban-col[data-col="done"] { background: var(--col-done); }
+
+.kanban-col h2 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+.ticket {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  font-weight: 600;
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  transition: top 0.65s cubic-bezier(0.34, 1.2, 0.64, 1), transform 0.65s ease, opacity 0.4s;
+}
+.ticket.is-moving { transform: scale(1.02); box-shadow: 0 8px 24px rgba(224, 86, 160, 0.2); }
+
+.section { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1px solid rgba(0, 0, 0, 0.06); }
+.grid-3 { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.approach { text-align: center; padding: 2rem; color: var(--muted); }
+.contact-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.contact-links a { color: var(--accent); font-weight: 600; }
+.site-footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ticket { position: static; margin-bottom: 0.5rem; transition: none; }
+  .kanban-col { min-height: auto; }
+}

@@ -1,0 +1,38 @@
+@import "./tokens.css";
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:var(--font);color:var(--fg);background:var(--bg)}
+.skip-link{position:absolute;left:-999px;top:1rem;z-index:400;padding:.5rem 1rem;background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none}
+.skip-link:focus{left:1rem}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.version-chip{position:fixed;right:0;top:50%;z-index:200;transform:translateY(-50%) rotate(-90deg);transform-origin:right center;padding:.5rem 1rem;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--chip-fg);background:var(--chip-bg)}
+.site-header{padding:1rem 1.5rem}
+.nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.nav a:hover{color:var(--fg)}
+.hero{padding:2.5rem 1.5rem 1.5rem;max-width:var(--max);margin:0 auto}
+.hero__brand{margin:0;font-size:clamp(2rem,8vw,3.5rem);line-height:1.05}
+.hero__tag{margin:.5rem 0 0;color:var(--muted);max-width:34rem;line-height:1.55}
+.section{padding:2rem 1.5rem;max-width:var(--max);margin:0 auto}
+.section h2{margin:0 0 1.25rem}
+.cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}
+.card{padding:1.1rem;border-radius:var(--radius,10px);background:var(--card)}
+.card h3{margin:0 0 .4rem;font-size:1.05rem}
+.card p{margin:0;font-size:.92rem;line-height:1.5;color:var(--muted)}
+.approach{padding:2rem 1.5rem;text-align:center;max-width:var(--max);margin:0 auto}
+.approach h2{margin:0 0 .5rem}
+.approach p{margin:0;color:var(--muted)}
+.contact{padding:2rem 1.5rem 3rem;max-width:var(--max);margin:0 auto}
+.contact a{color:var(--accent);font-weight:600;text-decoration:none;margin-right:1.5rem}
+.contact a:hover{text-decoration:underline}
+.site-footer{padding:2rem;text-align:center;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+.hero__brand{font-family:var(--sticker);font-size:clamp(2.5rem,9vw,4rem);letter-spacing:.04em;color:var(--accent);transform:rotate(-2deg)}
+.desk{position:relative;min-height:280px;margin-top:1rem;background:linear-gradient(180deg,#fff 0%,#eee 100%);border-radius:12px;border:1px solid #ddd;overflow:hidden}
+.sticker{position:absolute;padding:.35rem .75rem;font-family:var(--sticker);font-size:clamp(1rem,3vw,1.35rem);letter-spacing:.06em;border-radius:4px;box-shadow:3px 3px 0 rgba(0,0,0,.15);animation:floaty 5s ease-in-out infinite;will-change:transform}
+.sticker--lgtm{background:#fef08a;color:#854d0e;transform:rotate(-12deg);left:8%;top:15%}
+.sticker--ship{background:#fda4af;color:#881337;transform:rotate(8deg);right:10%;top:22%;animation-delay:-1.2s}
+.sticker--time{background:#a7f3d0;color:#065f46;transform:rotate(-4deg);left:35%;bottom:28%;animation-delay:-2.5s}
+.sticker--regret{background:#c4b5fd;color:#4c1d95;transform:rotate(14deg);right:28%;bottom:18%;animation-delay:-3.8s}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -10px}}

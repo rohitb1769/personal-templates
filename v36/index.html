@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra â€” software products, services, and maintenance from Hyderabad." />
+    <title>Snehith Infra â€” Sunset Mesh (v36)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=League+Spartan:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="version-chip" aria-label="Design version">
+      <a href="../versions.html">All versions</a>
+      <span aria-current="page">v36</span>
+    </nav>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#">Snehith Infra</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#offer">Offer</a>
+          <a href="#approach">Approach</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" data-mobile-nav aria-hidden="true">
+      <a href="#offer">Offer</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="mesh" aria-hidden="true"></div>
+        <div class="mesh-blob mesh-blob--1" aria-hidden="true"></div>
+        <div class="mesh-blob mesh-blob--2" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <h1 id="hero-title">Snehith Infra</h1>
+          <p class="hero__lede">Warm, energetic software from Hyderabad â€” products that launch, services that scale, maintenance that lasts.</p>
+          <div class="hero__actions">
+            <a class="btn btn--dark" href="#contact">Start a project</a>
+            <a class="btn btn--light" href="#offer">See our offer</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">What we do</h2>
+        <p class="section__sub">Three ways to partner â€” one startup-ready team.</p>
+        <div class="offer-grid">
+          <article class="offer-item">
+            <h3>Products</h3>
+            <p>From idea to production â€” custom platforms built with momentum and polish.</p>
+          </article>
+          <article class="offer-item">
+            <h3>Services</h3>
+            <p>Embedded engineers and fast integration when your roadmap heats up.</p>
+          </article>
+          <article class="offer-item">
+            <h3>Maintenance</h3>
+            <p>Keep the glow after launch â€” monitoring, patches, and steady improvements.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="approach" aria-labelledby="approach-title">
+        <div class="approach">
+          <h2 id="approach-title">Our approach</h2>
+          <p class="section__sub">Sunset energy, sunrise discipline.</p>
+          <ol>
+            <li><strong>Align fast.</strong> We clarify scope and stack in the first week â€” no endless discovery.</li>
+            <li><strong>Ship weekly.</strong> Visible milestones keep stakeholders warm and informed.</li>
+            <li><strong>Stay invested.</strong> Handoffs, runbooks, and maintenance options from day one.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <h2 id="contact-title">Contact</h2>
+          <p class="section__sub">Reach Snehith Infra in Hyderabad.</p>
+        </div>
+        <dl>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a></dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+918341888566">+91 8341888566</a></dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Hyderabad, India</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <p class="site-footer">Â© Snehith Infra Private Limited</p>
+
+    <script>
+      document.querySelector("[data-menu-toggle]")?.addEventListener("click", function () {
+        const nav = document.querySelector("[data-mobile-nav]");
+        const open = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", String(!open));
+        nav.classList.toggle("is-open", !open);
+      });
+    </script>
+      <script src="../version-nav.js" defer></script>
+  </body>
+</html>

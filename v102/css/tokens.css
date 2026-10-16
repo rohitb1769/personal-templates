@@ -1,0 +1,11 @@
+:root {
+  --color-pcb: #0b3d2e;
+  --color-pcb-light: #0f4d3a;
+  --color-trace: #c9a227;
+  --color-silk: #e8e4dc;
+  --color-muted: #7a9a8a;
+  --font-mono: "Share Tech Mono", monospace;
+  --font-display: "Rajdhani", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--color-trace);
+}

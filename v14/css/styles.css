@@ -1,0 +1,255 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-paper-ink);
+  background: var(--color-paper);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cover-start);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--color-ink);
+  color: var(--color-cover-start);
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+.version-chip {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 90;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(5, 8, 6, 0.85);
+  color: var(--color-ink);
+  border: 1px solid rgba(248, 246, 242, 0.25);
+}
+
+.cover {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  color: var(--color-ink);
+  background: linear-gradient(
+    165deg,
+    var(--color-cover-start) 0%,
+    var(--color-cover-mid) 45%,
+    var(--color-cover-end) 100%
+  );
+  overflow: hidden;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 70% 20%,
+    rgba(255, 255, 255, 0.06),
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+.cover > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cover__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: var(--text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cover__issue {
+  font-family: var(--font-display);
+  font-size: var(--text-cover-num);
+  font-weight: 700;
+  line-height: 0.85;
+  opacity: 0.92;
+  margin: -0.05em 0 0;
+}
+
+.cover__masthead {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-indent: 0.35em;
+}
+
+.cover__headline {
+  margin: 0 0 1rem;
+  max-width: 12ch;
+  font-family: var(--font-display);
+  font-size: var(--text-cover-head);
+  font-weight: 600;
+  line-height: 1.05;
+  font-style: italic;
+}
+
+.cover__deck {
+  margin: 0;
+  max-width: 28rem;
+  font-size: var(--text-lg);
+  color: var(--color-ink-soft);
+}
+
+.cover__barcode {
+  align-self: end;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--color-mute);
+}
+
+.editorial {
+  max-width: var(--page);
+  margin-inline: auto;
+  padding: var(--space-8) var(--space-4);
+}
+
+.editorial nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: var(--space-7);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-line);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.columns {
+  display: grid;
+  gap: var(--space-7);
+}
+
+@media (min-width: 768px) {
+  .columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .columns--triple {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.col h2 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.col p {
+  margin: 0 0 var(--space-4);
+  color: var(--color-paper-mute);
+}
+
+.col ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-paper-mute);
+  font-size: var(--text-sm);
+}
+
+.dropcap::first-letter {
+  float: left;
+  margin: 0.08em 0.12em 0 0;
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  line-height: 0.85;
+  color: var(--color-cover-start);
+}
+
+.approach-band {
+  margin-block: var(--space-8);
+  padding: var(--space-6);
+  background: var(--color-cover-end);
+  color: var(--color-ink);
+}
+
+.approach-band h2 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.approach-band ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--color-ink-soft);
+}
+
+.contact-row {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-6) 0;
+  border-top: 2px solid var(--color-paper-ink);
+}
+
+@media (min-width: 600px) {
+  .contact-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-row a {
+  font-weight: 600;
+  color: var(--color-cover-start);
+}
+
+.site-footer {
+  padding: var(--space-5);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-paper-mute);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra â€” software products, services, and maintenance from Hyderabad." />
+    <title>Snehith Infra â€” Duotone Split (v30)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="version-chip" aria-label="Design version">
+      <a href="../versions.html">All versions</a>
+      <span aria-current="page">v30</span>
+    </nav>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <span class="visually-hidden">Snehith Infra</span>
+        <nav class="nav" aria-label="Primary">
+          <a href="#offer">Offer</a>
+          <a href="#approach">Approach</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-hidden="true">
+      <a href="#offer">Offer</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__split" aria-hidden="true">
+          <div class="hero__split-left"></div>
+          <div class="hero__split-right"></div>
+        </div>
+        <div class="hero__seam" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <h1 class="hero__brand" id="hero-title">
+            <span class="warm">Snehith</span><span class="cold"> Infra</span>
+          </h1>
+          <p class="hero__tagline">Hyderabad software company â€” products, engineering services, and production maintenance.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">Talk to us</a>
+            <a class="btn btn--ghost" href="#offer">What we offer</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <div class="section__inner">
+          <p class="section__label">Offer</p>
+          <h2 id="offer-title">Three lanes. One team.</h2>
+          <div class="offer-grid">
+            <article class="offer-item">
+              <h3>Products</h3>
+              <p>Custom platforms and internal tools â€” architecture through release, built for real users in Hyderabad and beyond.</p>
+            </article>
+            <article class="offer-item">
+              <h3>Services</h3>
+              <p>Embedded engineers, integrations, and delivery sprints when you need senior capacity without hiring lag.</p>
+            </article>
+            <article class="offer-item">
+              <h3>Maintenance</h3>
+              <p>Monitoring, patches, and steady improvements so production stays calm long after launch day.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <div class="approach__inner">
+          <h2 id="approach-title">Poster-bold delivery</h2>
+          <ol>
+            <li><strong>Scope in plain language.</strong> No mystery milestones â€” you see what ships each week.</li>
+            <li><strong>Engineers who commit.</strong> Reviews become pull requests, not slide decks.</li>
+            <li><strong>Maintenance with a name.</strong> A dedicated contact when production needs attention.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__inner">
+          <div>
+            <h2 id="contact-title">Contact</h2>
+            <p>Reach the team behind Snehith Infra.</p>
+          </div>
+          <dl>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a></dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+918341888566">+91 8341888566</a></dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Hyderabad, India</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <p class="site-footer">Â© Snehith Infra Private Limited</p>
+
+    <script>
+      const toggle = document.querySelector("[data-menu-toggle]");
+      const mobileNav = document.querySelector("[data-mobile-nav]");
+      toggle?.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!open));
+        mobileNav.classList.toggle("is-open", !open);
+        mobileNav.setAttribute("aria-hidden", String(open));
+      });
+      mobileNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggle.setAttribute("aria-expanded", "false");
+          mobileNav.classList.remove("is-open");
+          mobileNav.setAttribute("aria-hidden", "true");
+        });
+      });
+    </script>
+      <script src="../version-nav.js" defer></script>
+  </body>
+</html>

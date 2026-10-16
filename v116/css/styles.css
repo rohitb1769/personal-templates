@@ -1,0 +1,81 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-height: 100vh; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+.skip-link {
+  position: absolute; left: -999px; top: 1rem; z-index: 300;
+  padding: 0.5rem 1rem; font-weight: 600; text-decoration: none;
+  background: var(--foam); color: var(--ocean-deep);
+}
+.skip-link:focus { left: 1rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.version-chip {
+  position: fixed; right: 0; top: 50%; z-index: 200;
+  transform: translateY(-50%) rotate(-90deg); transform-origin: right center;
+  padding: 0.5rem 1rem; font-size: 0.65rem; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--chip-fg, #fff); background: var(--chip-bg, #111);
+}
+.site-header { padding: 1rem 1.5rem; }
+.nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.nav a { text-decoration: none; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.nav a:hover { color: var(--fg); }
+.section { padding: 2.5rem 1.5rem; max-width: var(--max); margin: 0 auto; }
+.section__title { margin: 0 0 1.5rem; font-size: clamp(1.25rem, 3vw, 1.75rem); }
+.offer-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.offer-card { padding: 1.25rem; border-radius: var(--radius, 8px); background: var(--card-bg, rgba(255,255,255,0.06)); }
+.offer-card h3 { margin: 0 0 0.5rem; }
+.offer-card p { margin: 0; font-size: 0.95rem; line-height: 1.5; color: var(--muted); }
+.approach { padding: 2rem 1.5rem; text-align: center; max-width: var(--max); margin: 0 auto; }
+.approach h2 { margin: 0 0 0.75rem; }
+.approach p { margin: 0; color: var(--muted); }
+.contact { padding: 2rem 1.5rem 3rem; max-width: var(--max); margin: 0 auto; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
+.contact-links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.contact-links a:hover { text-decoration: underline; }
+.site-footer { padding: 2rem 1.5rem; text-align: center; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+body { font-family: var(--font); color: var(--fg); background: linear-gradient(180deg, var(--ocean-deep) 0%, var(--ocean) 45%, #1a7a9e 100%); }
+.hero { padding: 3rem 1.5rem 1rem; max-width: var(--max); margin: 0 auto; }
+.hero__brand { font-family: var(--font-narrow); font-size: clamp(2.5rem, 10vw, 4.5rem); font-weight: 700; margin: 0; letter-spacing: 0.02em; text-transform: uppercase; }
+.hero__lede { margin: 0.75rem 0 0; max-width: 32rem; line-height: 1.6; color: var(--muted); }
+.ferry-stage { position: relative; margin: 2rem 0 0; padding: 0 0 4rem; overflow: hidden; min-height: 220px; }
+.ferry-stage::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 48%;
+  background: linear-gradient(180deg, transparent, rgba(5,50,74,0.5));
+  pointer-events: none; z-index: 2;
+}
+.ferry { position: absolute; left: 50%; bottom: 18%; transform: translateX(-50%); width: min(420px, 85vw); height: 90px; z-index: 3; }
+.ferry__hull {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 55px;
+  background: var(--sand); border-radius: 4px 4px 12px 12px;
+  clip-path: polygon(0 30%, 8% 0, 92% 0, 100% 30%, 100% 100%, 0 100%);
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.15);
+}
+.ferry__deck { position: absolute; bottom: 28px; left: 10%; right: 10%; height: 8px; background: #c9a66b; border-radius: 2px; }
+.ferry__cabin { position: absolute; bottom: 36px; left: 62%; width: 28%; height: 32px; background: #fff8e7; border-radius: 3px 3px 0 0; }
+.conveyor { position: absolute; bottom: 52%; left: 0; right: 0; height: 72px; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.conveyor__track { display: flex; gap: 1.25rem; width: max-content; animation: ferry-roll 22s linear infinite; }
+@keyframes ferry-roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.pkg {
+  flex-shrink: 0; width: 64px; height: 52px; background: var(--container);
+  border: 2px solid #94a3b8; border-radius: 3px; display: grid; place-items: center;
+  font-family: var(--font-narrow); font-size: 0.65rem; font-weight: 700; color: var(--ocean-deep);
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+.waves { position: absolute; bottom: 0; left: 0; right: 0; height: 24px; background: repeating-linear-gradient(90deg, var(--foam) 0 20px, transparent 20px 40px); opacity: 0.35; animation: wave-shift 4s linear infinite; }
+@keyframes wave-shift { to { background-position: 40px 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

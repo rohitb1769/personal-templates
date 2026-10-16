@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snehith Infra — All design versions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0c0e12;
+        --card: #161a22;
+        --ink: #f2f4f8;
+        --mute: #9aa3b2;
+        --line: rgba(242, 244, 248, 0.1);
+        --accent: #7dd3fc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "IBM Plex Sans", system-ui, sans-serif;
+        background: radial-gradient(900px 500px at 10% -10%, #1a2740, transparent),
+          var(--bg);
+        color: var(--ink);
+        line-height: 1.5;
+      }
+      main {
+        width: min(1100px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 3rem 0 4rem;
+      }
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        letter-spacing: -0.03em;
+      }
+      .lede {
+        margin: 0 0 2rem;
+        color: var(--mute);
+        max-width: 40rem;
+      }
+      .grid {
+        display: grid;
+        gap: 0.85rem;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      }
+      a.card {
+        display: grid;
+        gap: 0.35rem;
+        padding: 1.15rem 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--card);
+        color: inherit;
+        text-decoration: none;
+        transition: border-color 0.15s ease, transform 0.15s ease;
+      }
+      a.card:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+      }
+      a.card:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+      .tag {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: 0.04em;
+      }
+      .name {
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+      .desc {
+        font-size: 0.88rem;
+        color: var(--mute);
+      }
+      .swatch {
+        display: flex;
+        gap: 0.35rem;
+        margin-top: 0.35rem;
+      }
+      .swatch i {
+        width: 0.85rem;
+        height: 0.85rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Snehith Infra — design versions</h1>
+      <p class="lede">
+        One hundred thirty-five distinct visual systems for a Hyderabad software company
+        (products, services, maintenance). Each is intentionally different —
+        layout, type, palette, and interaction. Prior versions kept intact;
+        v106–v135 are motion-first ship/deploy/playful interactions.
+      </p>
+      <div class="grid">
+        <a class="card" href="./index.html">
+          <span class="tag">v1</span>
+          <span class="name">Teal editorial</span>
+          <span class="desc">Dark chalk plane, Syne wordmark, precision type.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0e1418"></i><i style="background:#0b6e6a"></i><i style="background:#e9ecef"></i></span>
+        </a>
+        <a class="card" href="./v2/">
+          <span class="tag">v2</span>
+          <span class="name">Signal bay</span>
+          <span class="desc">Light split hero, copper accent, pointer light panel.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f3f5f7"></i><i style="background:#e85d04"></i><i style="background:#0a0c10"></i></span>
+        </a>
+        <a class="card" href="./v3/">
+          <span class="tag">v3</span>
+          <span class="name">Soft studio</span>
+          <span class="desc">Cool mist SaaS, teal CTAs, app-window visual + tabs.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#eef2f6"></i><i style="background:#0f766e"></i><i style="background:#0b1220"></i></span>
+        </a>
+        <a class="card" href="./v4/">
+          <span class="tag">v4</span>
+          <span class="name">Maison</span>
+          <span class="desc">Porcelain atelier, Cormorant serif, wine lookbook chapters.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f3f2ee"></i><i style="background:#7a2f35"></i><i style="background:#121212"></i></span>
+        </a>
+        <a class="card" href="./v5/">
+          <span class="tag">v5</span>
+          <span class="name">Runway dock</span>
+          <span class="desc">Dark mesh, bottom dock, volt Build/Staff/Maintain.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#07080b"></i><i style="background:#d6ff4b"></i><i style="background:#1b2a4a"></i></span>
+        </a>
+        <a class="card" href="./v6/">
+          <span class="tag">v6</span>
+          <span class="name">Neo-brutal</span>
+          <span class="desc">Butter yellow, hard black borders, offset shadows.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ffe566"></i><i style="background:#000"></i><i style="background:#fff"></i></span>
+        </a>
+        <a class="card" href="./v7/">
+          <span class="tag">v7</span>
+          <span class="name">Aurora glass</span>
+          <span class="desc">Night glass, cyan/coral aurora, frosted panels.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#05070f"></i><i style="background:#22d3ee"></i><i style="background:#fb7185"></i></span>
+        </a>
+        <a class="card" href="./v8/">
+          <span class="tag">v8</span>
+          <span class="name">Swiss poster</span>
+          <span class="desc">White canvas, swiss red, mega type, hairline grid.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff"></i><i style="background:#e30613"></i><i style="background:#111"></i></span>
+        </a>
+        <a class="card" href="./v9/">
+          <span class="tag">v9</span>
+          <span class="name">Soft clay</span>
+          <span class="desc">Blush + sage pastel, Fraunces, pillowy bento.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f3d9d0"></i><i style="background:#7d9b8a"></i><i style="background:#fff"></i></span>
+        </a>
+        <a class="card" href="./v10/">
+          <span class="tag">v10</span>
+          <span class="name">Amber CRT</span>
+          <span class="desc">Black terminal, amber phosphor, scanlines, mono.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#000"></i><i style="background:#ffb000"></i><i style="background:#1a1200"></i></span>
+        </a>
+        <a class="card" href="./v11/">
+          <span class="tag">v11</span>
+          <span class="name">Gold obsidian</span>
+          <span class="desc">Luxury black + champagne gold, Cinzel display.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#c9a227"></i><i style="background:#f5e6b8"></i></span>
+        </a>
+        <a class="card" href="./v12/">
+          <span class="tag">v12</span>
+          <span class="name">Memphis maximal</span>
+          <span class="desc">Collage shapes, sticker labels, high-energy Rubik.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ff6b6b"></i><i style="background:#4ecdc4"></i><i style="background:#5b5fff"></i></span>
+        </a>
+        <a class="card" href="./v13/">
+          <span class="tag">v13</span>
+          <span class="name">Horizontal scroll</span>
+          <span class="desc">Indigo snap panels sideways (stack on mobile).</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0b1026"></i><i style="background:#fff"></i><i style="background:#3b82f6"></i></span>
+        </a>
+        <a class="card" href="./v14/">
+          <span class="tag">v14</span>
+          <span class="name">Magazine cover</span>
+          <span class="desc">Forest cover story, giant issue no., editorial columns.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0b1f14"></i><i style="background:#14532d"></i><i style="background:#f8fafc"></i></span>
+        </a>
+        <a class="card" href="./v15/">
+          <span class="tag">v15</span>
+          <span class="name">Chrome Y2K</span>
+          <span class="desc">Ice blue, silver chrome frames, Orbitron accents.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#e8f4ff"></i><i style="background:#c0c8d4"></i><i style="background:#7dd3fc"></i></span>
+        </a>
+        <a class="card" href="./v16/">
+          <span class="tag">v16</span>
+          <span class="name">Console Premium</span>
+          <span class="desc">Dark ops shell, sidebar, KPI sparklines, quiet chrome.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0b0d12"></i><i style="background:#6366f1"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v17/">
+          <span class="tag">v17</span>
+          <span class="name">Ledger Calm</span>
+          <span class="desc">Light fintech calm, mint tabular stats, DM Sans.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fafafa"></i><i style="background:#0d9488"></i><i style="background:#0a0a0a"></i></span>
+        </a>
+        <a class="card" href="./v18/">
+          <span class="tag">v18</span>
+          <span class="name">Soft Extrude</span>
+          <span class="desc">Neumorphic gray, extruded brand block, slate-blue.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#e8ecef"></i><i style="background:#3d5a80"></i><i style="background:#fff"></i></span>
+        </a>
+        <a class="card" href="./v19/">
+          <span class="tag">v19</span>
+          <span class="name">Cyber HUD</span>
+          <span class="desc">Navy wireframe grid, cyan HUD readouts only.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#020617"></i><i style="background:#22d3ee"></i><i style="background:#f8fafc"></i></span>
+        </a>
+        <a class="card" href="./v20/">
+          <span class="tag">v20</span>
+          <span class="name">Bauhaus Blocks</span>
+          <span class="desc">Primary shapes poster, Archivo Black geometry.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff"></i><i style="background:#e63946"></i><i style="background:#457b9d"></i></span>
+        </a>
+        <a class="card" href="./v21/">
+          <span class="tag">v21</span>
+          <span class="name">Ink Ma</span>
+          <span class="desc">Rice-paper minimal, sumi ink, vermillion seal.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f7f4ef"></i><i style="background:#1a1a1a"></i><i style="background:#c23b22"></i></span>
+        </a>
+        <a class="card" href="./v22/">
+          <span class="tag">v22</span>
+          <span class="name">Pixel Frame</span>
+          <span class="desc">8-bit stepped borders, Press Start / VT323.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f4f0e6"></i><i style="background:#3d8b40"></i><i style="background:#c026d3"></i></span>
+        </a>
+        <a class="card" href="./v23/">
+          <span class="tag">v23</span>
+          <span class="name">Liquid Mesh</span>
+          <span class="desc">Coral/peach/teal morphing blobs, Sora type.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff8f5"></i><i style="background:#ff6b4a"></i><i style="background:#2dd4bf"></i></span>
+        </a>
+        <a class="card" href="./v24/">
+          <span class="tag">v24</span>
+          <span class="name">Blueprint</span>
+          <span class="desc">Navy cyan construction grid, Special Elite stamps.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a1628"></i><i style="background:#5ec8ff"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v25/">
+          <span class="tag">v25</span>
+          <span class="name">Fashion lookbook</span>
+          <span class="desc">Stark B/W runway type, Bodoni overlap.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#000"></i><i style="background:#fff"></i><i style="background:#c0c0c0"></i></span>
+        </a>
+        <a class="card" href="./v26/">
+          <span class="tag">v26</span>
+          <span class="name">Canopy</span>
+          <span class="desc">Sage eco field, CSS leaves, Literata calm.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#dce8d4"></i><i style="background:#1e3a2f"></i><i style="background:#4d7c5a"></i></span>
+        </a>
+        <a class="card" href="./v27/">
+          <span class="tag">v27</span>
+          <span class="name">Control Tower</span>
+          <span class="desc">Fintech navy ops desk, mint KPI metrics.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0f172a"></i><i style="background:#5eead4"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v28/">
+          <span class="tag">v28</span>
+          <span class="name">Pop Panel</span>
+          <span class="desc">Halftone comic panels, speech-bubble CTA.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff"></i><i style="background:#ff00aa"></i><i style="background:#00c2ff"></i></span>
+        </a>
+        <a class="card" href="./v29/">
+          <span class="tag">v29</span>
+          <span class="name">Paper Stack</span>
+          <span class="desc">Cork desk, rotated kraft sheets, stationery.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#c4a574"></i><i style="background:#e8dcc8"></i><i style="background:#1a1a1a"></i></span>
+        </a>
+        <a class="card" href="./v30/">
+          <span class="tag">v30</span>
+          <span class="name">Duotone Split</span>
+          <span class="desc">Orange/blue full-bleed seam, Bebas poster.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ea580c"></i><i style="background:#1e3a8a"></i><i style="background:#fff"></i></span>
+        </a>
+        <a class="card" href="./v31/">
+          <span class="tag">v31</span>
+          <span class="name">Type Only</span>
+          <span class="desc">Black-on-white modular type, zero imagery.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff"></i><i style="background:#111"></i><i style="background:#94a3b8"></i></span>
+        </a>
+        <a class="card" href="./v32/">
+          <span class="tag">v32</span>
+          <span class="name">Isometric Deck</span>
+          <span class="desc">Cool gray + teal CSS 3D tilt panels.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#eef1f5"></i><i style="background:#0f766e"></i><i style="background:#0f172a"></i></span>
+        </a>
+        <a class="card" href="./v33/">
+          <span class="tag">v33</span>
+          <span class="name">Sheet Stack</span>
+          <span class="desc">Frosted notification sheets, sky accent.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f8fafc"></i><i style="background:#0284c7"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v34/">
+          <span class="tag">v34</span>
+          <span class="name">Geo Night</span>
+          <span class="desc">Dark lat/long grid, lime pin on Hyderabad.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0c1222"></i><i style="background:#a3e635"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v35/">
+          <span class="tag">v35</span>
+          <span class="name">Clay Soft UI</span>
+          <span class="desc">Flat soft-gray clay, pastel coral accents.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f0f2f5"></i><i style="background:#ff8a7a"></i><i style="background:#1e293b"></i></span>
+        </a>
+        <a class="card" href="./v36/">
+          <span class="tag">v36</span>
+          <span class="name">Sunset Mesh</span>
+          <span class="desc">Orange-pink-gold mesh hero, warm startup.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ff7a59"></i><i style="background:#ff4d8d"></i><i style="background:#fbbf24"></i></span>
+        </a>
+        <a class="card" href="./v37/">
+          <span class="tag">v37</span>
+          <span class="name">Trust Blue</span>
+          <span class="desc">Enterprise navy, blue CTAs, Merriweather trust.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0b1f3a"></i><i style="background:#2563eb"></i><i style="background:#fff"></i></span>
+        </a>
+        <a class="card" href="./v38/">
+          <span class="tag">v38</span>
+          <span class="name">Doc Mono</span>
+          <span class="desc">README/docs paper, code fences, green accent.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f5f5f4"></i><i style="background:#16a34a"></i><i style="background:#171717"></i></span>
+        </a>
+        <a class="card" href="./v39/">
+          <span class="tag">v39</span>
+          <span class="name">Day Glass</span>
+          <span class="desc">Sky-gradient light glass, Fraunces brand.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#dbeafe"></i><i style="background:#fff"></i><i style="background:#0284c7"></i></span>
+        </a>
+        <a class="card" href="./v40/">
+          <span class="tag">v40</span>
+          <span class="name">Kinetic Marquee</span>
+          <span class="desc">Black field, safety yellow, infinite marquees.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#facc15"></i><i style="background:#fff"></i></span>
+        </a>
+        <a class="card" href="./v41/">
+          <span class="tag">v41</span>
+          <span class="name">Bento Product</span>
+          <span class="desc">Ramp-style asymmetric product bento, sky accent.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fafafa"></i><i style="background:#0ea5e9"></i><i style="background:#0a0a0a"></i></span>
+        </a>
+        <a class="card" href="./v42/">
+          <span class="tag">v42</span>
+          <span class="name">Ember Ray</span>
+          <span class="desc">Near-black, single hot orange-red accent ownership.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#ff5c35"></i><i style="background:#f5f5f5"></i></span>
+        </a>
+        <a class="card" href="./v43/">
+          <span class="tag">v43</span>
+          <span class="name">Lime Mercury</span>
+          <span class="desc">Dark charcoal, electric lime metric accent.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#111"></i><i style="background:#c8f542"></i><i style="background:#e5e5e5"></i></span>
+        </a>
+        <a class="card" href="./v44/">
+          <span class="tag">v44</span>
+          <span class="name">Cyan Product Frame</span>
+          <span class="desc">Dark product-first fake app window, cyan trim.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#050505"></i><i style="background:#22d3ee"></i><i style="background:#f8fafc"></i></span>
+        </a>
+        <a class="card" href="./v45/">
+          <span class="tag">v45</span>
+          <span class="name">Stone Editorial</span>
+          <span class="desc">Warm stone + olive, Newsreader trust editorial.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f3efe6"></i><i style="background:#556b2f"></i><i style="background:#1c1917"></i></span>
+        </a>
+        <a class="card" href="./v46/">
+          <span class="tag">v46</span>
+          <span class="name">Dark-then-Light</span>
+          <span class="desc">Black hero flip to white body, teal accent.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#fff"></i><i style="background:#14b8a6"></i></span>
+        </a>
+        <a class="card" href="./v47/">
+          <span class="tag">v47</span>
+          <span class="name">Kinetic Words</span>
+          <span class="desc">Cycling Build/Staff/Maintain headline, Syne.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff"></i><i style="background:#2563eb"></i><i style="background:#0f172a"></i></span>
+        </a>
+        <a class="card" href="./v48/">
+          <span class="tag">v48</span>
+          <span class="name">Mesh Stripe</span>
+          <span class="desc">Surgical mesh behind wordmark, soft infra calm.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f6f9fc"></i><i style="background:#635bff"></i><i style="background:#0a2540"></i></span>
+        </a>
+        <a class="card" href="./v49/">
+          <span class="tag">v49</span>
+          <span class="name">Capsule Nav</span>
+          <span class="desc">Sticky oval nav, centered hero, coral CTA.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff1f2"></i><i style="background:#f43f5e"></i><i style="background:#1e293b"></i></span>
+        </a>
+        <a class="card" href="./v50/">
+          <span class="tag">v50</span>
+          <span class="name">Wine Serif Dark</span>
+          <span class="desc">Maroon dark, cream Fraunces, coral CTA.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#2a0a14"></i><i style="background:#f5e6d3"></i><i style="background:#fb7185"></i></span>
+        </a>
+        <a class="card" href="./v51/">
+          <span class="tag">v51</span>
+          <span class="name">Hot Pink Ops</span>
+          <span class="desc">Near-black ops console, hot pink accent.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#f02e65"></i><i style="background:#f5f5f5"></i></span>
+        </a>
+        <a class="card" href="./v52/">
+          <span class="tag">v52</span>
+          <span class="name">Chartreuse Stark</span>
+          <span class="desc">Austere black, chartreuse only on CTA + word.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#000"></i><i style="background:#d4ff00"></i><i style="background:#e5e5e5"></i></span>
+        </a>
+        <a class="card" href="./v53/">
+          <span class="tag">v53</span>
+          <span class="name">Plum Glow</span>
+          <span class="desc">Plum field, magenta glow, frosted hero panel.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#1a0b1e"></i><i style="background:#e879f9"></i><i style="background:#f5e6d3"></i></span>
+        </a>
+        <a class="card" href="./v54/">
+          <span class="tag">v54</span>
+          <span class="name">Pastel Pace</span>
+          <span class="desc">Peach→sky B2B pastel, brick accent pacing.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ffe8d6"></i><i style="background:#d9ecff"></i><i style="background:#c2410c"></i></span>
+        </a>
+        <a class="card" href="./v55/">
+          <span class="tag">v55</span>
+          <span class="name">Concrete Brutal</span>
+          <span class="desc">Raw concrete gray brutalism, mono labels.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#8a8680"></i><i style="background:#2b2b2b"></i><i style="background:#f5f5f5"></i></span>
+        </a>
+        <a class="card" href="./v56/">
+          <span class="tag">v56</span>
+          <span class="name">Birch Scandi</span>
+          <span class="desc">Pale birch Nordic studio, muted rust.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f7f3eb"></i><i style="background:#b85c38"></i><i style="background:#2a2a2a"></i></span>
+        </a>
+        <a class="card" href="./v57/">
+          <span class="tag">v57</span>
+          <span class="name">Phosphor Green</span>
+          <span class="desc">Deep green terminal luxury, refined phosphor.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#031a0f"></i><i style="background:#3dff8a"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v58/">
+          <span class="tag">v58</span>
+          <span class="name">Departures Board</span>
+          <span class="desc">Airport split-flap rows for the three offers.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#f5c518"></i><i style="background:#222"></i></span>
+        </a>
+        <a class="card" href="./v59/">
+          <span class="tag">v59</span>
+          <span class="name">Sticky Collab</span>
+          <span class="desc">Desk wall of sticky-note offer tiles.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#e7e2d9"></i><i style="background:#fef08a"></i><i style="background:#f9a8d4"></i></span>
+        </a>
+        <a class="card" href="./v60/">
+          <span class="tag">v60</span>
+          <span class="name">Letterbox Film</span>
+          <span class="desc">Cinema bars, grain, cold teal movie title.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0d1b1e"></i><i style="background:#c0c0c0"></i><i style="background:#000"></i></span>
+        </a>
+        <a class="card" href="./v61/">
+          <span class="tag">v61</span>
+          <span class="name">Wash Studio</span>
+          <span class="desc">Watercolor washes, Cormorant gallery calm.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f8f6f1"></i><i style="background:#5b7c8d"></i><i style="background:#c4b5a0"></i></span>
+        </a>
+        <a class="card" href="./v62/">
+          <span class="tag">v62</span>
+          <span class="name">Metro Tiles</span>
+          <span class="desc">Bold flat Metro-color offer tiles.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f0f0f0"></i><i style="background:#0078d4"></i><i style="background:#ff8c00"></i></span>
+        </a>
+        <a class="card" href="./v63/">
+          <span class="tag">v63</span>
+          <span class="name">Deco Line</span>
+          <span class="desc">Black + champagne Deco geometry lines.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#d4af37"></i><i style="background:#f5f5f5"></i></span>
+        </a>
+        <a class="card" href="./v64/">
+          <span class="tag">v64</span>
+          <span class="name">Contour Topo</span>
+          <span class="desc">Topographic contour lines, forest teal.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f4f7f5"></i><i style="background:#0f766e"></i><i style="background:#1e293b"></i></span>
+        </a>
+        <a class="card" href="./v65/">
+          <span class="tag">v65</span>
+          <span class="name">Arcade Neon</span>
+          <span class="desc">Structured neon maximal on purple-black.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#120018"></i><i style="background:#ff2d95"></i><i style="background:#39ff14"></i></span>
+        </a>
+        <a class="card" href="./v66/">
+          <span class="tag">v66</span>
+          <span class="name">Half Tone Split</span>
+          <span class="desc">50/50 light/dark poster seam, Anton type.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f5f5f5"></i><i style="background:#111"></i><i style="background:#888"></i></span>
+        </a>
+        <a class="card" href="./v67/">
+          <span class="tag">v67</span>
+          <span class="name">Terminal Light</span>
+          <span class="desc">Light Bloomberg desk panels, blue links.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#e8eaed"></i><i style="background:#1a73e8"></i><i style="background:#202124"></i></span>
+        </a>
+        <a class="card" href="./v68/">
+          <span class="tag">v68</span>
+          <span class="name">Claymo Soft 3D</span>
+          <span class="desc">Inflated pastel claymorphism blocks.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#efe8ff"></i><i style="background:#b8f0d8"></i><i style="background:#ffd6c9"></i></span>
+        </a>
+        <a class="card" href="./v69/">
+          <span class="tag">v69</span>
+          <span class="name">Orbit Rings</span>
+          <span class="desc">Space ops rings, ice accent, Orbitron.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#070b14"></i><i style="background:#7dd3fc"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v70/">
+          <span class="tag">v70</span>
+          <span class="name">Monolith Raw</span>
+          <span class="desc">Architectural stacked type, charcoal/umber.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#2c2825"></i><i style="background:#6b5344"></i><i style="background:#e8e4df"></i></span>
+        </a>
+        <a class="card" href="./v71/">
+          <span class="tag">v71</span>
+          <span class="name">Nordic Frost</span>
+          <span class="desc">Icy white Alpine calm, slate hairlines.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f7fbfd"></i><i style="background:#64748b"></i><i style="background:#0f172a"></i></span>
+        </a>
+        <a class="card" href="./v72/">
+          <span class="tag">v72</span>
+          <span class="name">Sahara Night</span>
+          <span class="desc">Indigo night + warm sand dune accents.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0c1222"></i><i style="background:#e8c49a"></i><i style="background:#f8fafc"></i></span>
+        </a>
+        <a class="card" href="./v73/">
+          <span class="tag">v73</span>
+          <span class="name">Abyss Ocean</span>
+          <span class="desc">Deep ocean gradients, bioluminescent pins.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#021526"></i><i style="background:#22d3ee"></i><i style="background:#e0f2fe"></i></span>
+        </a>
+        <a class="card" href="./v74/">
+          <span class="tag">v74</span>
+          <span class="name">Candy Diagonal</span>
+          <span class="desc">Structured pink/mint candy stripe atmosphere.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff5f8"></i><i style="background:#ff6b9d"></i><i style="background:#7af0c2"></i></span>
+        </a>
+        <a class="card" href="./v75/">
+          <span class="tag">v75</span>
+          <span class="name">Verge Dark News</span>
+          <span class="desc">Dark tech magazine, electric green accent.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#121212"></i><i style="background:#3dff8a"></i><i style="background:#f5f5f5"></i></span>
+        </a>
+        <a class="card" href="./v76/">
+          <span class="tag">v76</span>
+          <span class="name">Dusty Mauve</span>
+          <span class="desc">Mauve + sage fashion-tech on warm gray.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ebe6e8"></i><i style="background:#b8a4b0"></i><i style="background:#8fae8b"></i></span>
+        </a>
+        <a class="card" href="./v77/">
+          <span class="tag">v77</span>
+          <span class="name">Patina Copper</span>
+          <span class="desc">Oxidized copper + verdigris on charcoal.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#1c1917"></i><i style="background:#b87333"></i><i style="background:#2a9d8f"></i></span>
+        </a>
+        <a class="card" href="./v78/">
+          <span class="tag">v78</span>
+          <span class="name">Graph Notebook</span>
+          <span class="desc">Graph paper, red margin, ballpoint blue.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fafafa"></i><i style="background:#1d4ed8"></i><i style="background:#ef4444"></i></span>
+        </a>
+        <a class="card" href="./v79/">
+          <span class="tag">v79</span>
+          <span class="name">Holo Foil</span>
+          <span class="desc">Iridescent holographic foil on dark ground.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#ff9ecd"></i><i style="background:#67e8f9"></i></span>
+        </a>
+        <a class="card" href="./v80/">
+          <span class="tag">v80</span>
+          <span class="name">Blue Monochrome</span>
+          <span class="desc">Full blue-scale Pantone world, no other hues.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a1628"></i><i style="background:#3b82f6"></i><i style="background:#dbeafe"></i></span>
+        </a>
+        <a class="card" href="./v81/">
+          <span class="tag">v81</span>
+          <span class="name">Redacted File</span>
+          <span class="desc">Manilla dossier, CLASSIFIED stamps, bars.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f0e6d3"></i><i style="background:#b91c1c"></i><i style="background:#111"></i></span>
+        </a>
+        <a class="card" href="./v82/">
+          <span class="tag">v82</span>
+          <span class="name">Zen Rake</span>
+          <span class="desc">Raked sand garden lines, charcoal stone.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#efe6d5"></i><i style="background:#1c1917"></i><i style="background:#a8a29e"></i></span>
+        </a>
+        <a class="card" href="./v83/">
+          <span class="tag">v83</span>
+          <span class="name">Synthwave Grid</span>
+          <span class="desc">80s vanishing grid, sunset, pink/cyan neon.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#12001f"></i><i style="background:#ff2bd6"></i><i style="background:#00f0ff"></i></span>
+        </a>
+        <a class="card" href="./v84/">
+          <span class="tag">v84</span>
+          <span class="name">Clinical Care</span>
+          <span class="desc">Healthcare white + medical teal trust.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff"></i><i style="background:#0d9488"></i><i style="background:#ccfbf1"></i></span>
+        </a>
+        <a class="card" href="./v85/">
+          <span class="tag">v85</span>
+          <span class="name">LED Scoreboard</span>
+          <span class="desc">Stadium LED amber/red digit rows.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#f59e0b"></i><i style="background:#ef4444"></i></span>
+        </a>
+        <a class="card" href="./v86/">
+          <span class="tag">v86</span>
+          <span class="name">Botanical Ink</span>
+          <span class="desc">Ivory paper, fine botanical line strokes.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#faf8f5"></i><i style="background:#1a1a1a"></i><i style="background:#3f6212"></i></span>
+        </a>
+        <a class="card" href="./v87/">
+          <span class="tag">v87</span>
+          <span class="name">Oil Slick</span>
+          <span class="desc">Dark iridescent oil-slick sheen motion.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#050505"></i><i style="background:#a855f7"></i><i style="background:#22d3ee"></i></span>
+        </a>
+        <a class="card" href="./v88/">
+          <span class="tag">v88</span>
+          <span class="name">Peach Modern</span>
+          <span class="desc">Soft peach + charcoal, rounded Outfit UI.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ffd8c2"></i><i style="background:#fff"></i><i style="background:#1c1917"></i></span>
+        </a>
+        <a class="card" href="./v89/">
+          <span class="tag">v89</span>
+          <span class="name">Hazard Stripe</span>
+          <span class="desc">Yellow/black caution bands, safety orange.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#1c1917"></i><i style="background:#facc15"></i><i style="background:#ea580c"></i></span>
+        </a>
+        <a class="card" href="./v90/">
+          <span class="tag">v90</span>
+          <span class="name">Dream Blur</span>
+          <span class="desc">Soft-focus orbs, frosted dreamy panels.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f5f0ff"></i><i style="background:#d9f99d"></i><i style="background:#c4b5fd"></i></span>
+        </a>
+        <a class="card" href="./v91/">
+          <span class="tag">v91</span>
+          <span class="name">Diff IDE</span>
+          <span class="desc">Git-diff green/red gutters on dark IDE.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#1e1e1e"></i><i style="background:#22c55e"></i><i style="background:#ef4444"></i></span>
+        </a>
+        <a class="card" href="./v92/">
+          <span class="tag">v92</span>
+          <span class="name">Museum Wall</span>
+          <span class="desc">Gallery white, wall labels, thin frames.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f5f5f5"></i><i style="background:#111"></i><i style="background:#a3a3a3"></i></span>
+        </a>
+        <a class="card" href="./v93/">
+          <span class="tag">v93</span>
+          <span class="name">Velvet Noir</span>
+          <span class="desc">Velvet burgundy spotlight theatre luxury.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#3b0a1a"></i><i style="background:#f5e6d3"></i><i style="background:#7f1d1d"></i></span>
+        </a>
+        <a class="card" href="./v94/">
+          <span class="tag">v94</span>
+          <span class="name">Ultra White</span>
+          <span class="desc">Hyperclean white, hairlines, massive space.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fcfcfc"></i><i style="background:#e5e5e5"></i><i style="background:#0a0a0a"></i></span>
+        </a>
+        <a class="card" href="./v95/">
+          <span class="tag">v95</span>
+          <span class="name">Mosaic Med</span>
+          <span class="desc">Mediterranean tesserae on warm plaster.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f4efe6"></i><i style="background:#1d4ed8"></i><i style="background:#d97706"></i></span>
+        </a>
+        <a class="card" href="./v96/">
+          <span class="tag">v96</span>
+          <span class="name">Brassworks</span>
+          <span class="desc">Riveted brass steampunk-lite on deep brown.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#1a120b"></i><i style="background:#c4a35a"></i><i style="background:#f5e6c8"></i></span>
+        </a>
+        <a class="card" href="./v97/">
+          <span class="tag">v97</span>
+          <span class="name">Soft Dashboard</span>
+          <span class="desc">Pale soft product panels, sky accent.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f6f9fc"></i><i style="background:#0ea5e9"></i><i style="background:#0f172a"></i></span>
+        </a>
+        <a class="card" href="./v98/">
+          <span class="tag">v98</span>
+          <span class="name">Rain Pane</span>
+          <span class="desc">Rain streaks, foggy glass, blue-gray mood.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#1e293b"></i><i style="background:#64748b"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v99/">
+          <span class="tag">v99</span>
+          <span class="name">Neon Noir</span>
+          <span class="desc">Grayscale noir + one magenta neon sign.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#ff00aa"></i><i style="background:#e5e5e5"></i></span>
+        </a>
+        <a class="card" href="./v100/">
+          <span class="tag">v100</span>
+          <span class="name">Confetti Launch</span>
+          <span class="desc">White stage, geometric confetti celebration.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff"></i><i style="background:#f472b6"></i><i style="background:#38bdf8"></i></span>
+        </a>
+        <a class="card" href="./v101/">
+          <span class="tag">v101</span>
+          <span class="name">Lodge Timber</span>
+          <span class="desc">Warm timber cabin tech, forest green.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#6b4423"></i><i style="background:#f5f0e6"></i><i style="background:#166534"></i></span>
+        </a>
+        <a class="card" href="./v102/">
+          <span class="tag">v102</span>
+          <span class="name">Circuit Board</span>
+          <span class="desc">PCB green with gold hardware traces.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0b3d2e"></i><i style="background:#d4af37"></i><i style="background:#bbf7d0"></i></span>
+        </a>
+        <a class="card" href="./v103/">
+          <span class="tag">v103</span>
+          <span class="name">Cloud Soft</span>
+          <span class="desc">Fluffy CSS clouds on soft sky panels.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#e0f2fe"></i><i style="background:#fff"></i><i style="background:#0284c7"></i></span>
+        </a>
+        <a class="card" href="./v104/">
+          <span class="tag">v104</span>
+          <span class="name">Brutal Pink</span>
+          <span class="desc">Hot-pink neo-brutal, hard black borders.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ff2d7a"></i><i style="background:#000"></i><i style="background:#fff"></i></span>
+        </a>
+        <a class="card" href="./v105/">
+          <span class="tag">v105</span>
+          <span class="name">Twin Type</span>
+          <span class="desc">Split serif/sans giant type experiment.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fafafa"></i><i style="background:#111"></i><i style="background:#2563eb"></i></span>
+        </a>
+        <a class="card" href="./v106/">
+          <span class="tag">v106</span>
+          <span class="name">Boot Deploy</span>
+          <span class="desc">Typewriter terminal boot → brand reveal.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a0a"></i><i style="background:#22c55e"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v107/">
+          <span class="tag">v107</span>
+          <span class="name">Live Pipeline</span>
+          <span class="desc">Looping CI Build→Test→Stage→Prod.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0f172a"></i><i style="background:#6366f1"></i><i style="background:#22c55e"></i></span>
+        </a>
+        <a class="card" href="./v108/">
+          <span class="tag">v108</span>
+          <span class="name">Ship Stats</span>
+          <span class="desc">Count-up KPIs: shipped, on-time, uptime.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f8fafc"></i><i style="background:#2563eb"></i><i style="background:#0f172a"></i></span>
+        </a>
+        <a class="card" href="./v109/">
+          <span class="tag">v109</span>
+          <span class="name">Rocket Go</span>
+          <span class="desc">3-2-1 countdown + rocket launch particles.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#050510"></i><i style="background:#f97316"></i><i style="background:#fde68a"></i></span>
+        </a>
+        <a class="card" href="./v110/">
+          <span class="tag">v110</span>
+          <span class="name">Kanban Motion</span>
+          <span class="desc">Tickets auto-slide Spec→Build→Ship.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fef3c7"></i><i style="background:#a7f3d0"></i><i style="background:#bfdbfe"></i></span>
+        </a>
+        <a class="card" href="./v111/">
+          <span class="tag">v111</span>
+          <span class="name">Merge Party</span>
+          <span class="desc">Fake PR merge button + confetti burst.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f6f8fa"></i><i style="background:#1f883d"></i><i style="background:#0969da"></i></span>
+        </a>
+        <a class="card" href="./v112/">
+          <span class="tag">v112</span>
+          <span class="name">Sprint Clock</span>
+          <span class="desc">Giant sprint timer, still-on-time reset.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#111"></i><i style="background:#facc15"></i><i style="background:#fff"></i></span>
+        </a>
+        <a class="card" href="./v113/">
+          <span class="tag">v113</span>
+          <span class="name">Commit Garden</span>
+          <span class="desc">Heatmap cells light like live commits.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0d1117"></i><i style="background:#239a3b"></i><i style="background:#39d353"></i></span>
+        </a>
+        <a class="card" href="./v114/">
+          <span class="tag">v114</span>
+          <span class="name">Toast Storm</span>
+          <span class="desc">Deploy toast stack, funny last notice.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0b0f19"></i><i style="background:#34d399"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v115/">
+          <span class="tag">v115</span>
+          <span class="name">Bug Squash</span>
+          <span class="desc">Crawl bugs, click to squash debt score.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ecfdf5"></i><i style="background:#10b981"></i><i style="background:#064e3b"></i></span>
+        </a>
+        <a class="card" href="./v116/">
+          <span class="tag">v116</span>
+          <span class="name">Container Ferry</span>
+          <span class="desc">Containers roll onto ferry — ship metaphor.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0c4a6e"></i><i style="background:#38bdf8"></i><i style="background:#fbbf24"></i></span>
+        </a>
+        <a class="card" href="./v117/">
+          <span class="tag">v117</span>
+          <span class="name">Ping Radar</span>
+          <span class="desc">Radar sweep, Hyderabad latency pings.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#020617"></i><i style="background:#a3e635"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v118/">
+          <span class="tag">v118</span>
+          <span class="name">All Green</span>
+          <span class="desc">Status cascade flips everything green.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f8fafc"></i><i style="background:#22c55e"></i><i style="background:#ef4444"></i></span>
+        </a>
+        <a class="card" href="./v119/">
+          <span class="tag">v119</span>
+          <span class="name">Glyph Cursor</span>
+          <span class="desc">Cursor leaves fading code-glyph trail.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0c0a14"></i><i style="background:#6ee7b7"></i><i style="background:#e2e8f0"></i></span>
+        </a>
+        <a class="card" href="./v120/">
+          <span class="tag">v120</span>
+          <span class="name">Flip Deploy</span>
+          <span class="desc">3D flip cards slam SHIPPED stamps.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#e8dcc8"></i><i style="background:#b91c1c"></i><i style="background:#1c1917"></i></span>
+        </a>
+        <a class="card" href="./v121/">
+          <span class="tag">v121</span>
+          <span class="name">Triple Race</span>
+          <span class="desc">Quality/Speed/Care bars photo-finish.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#0a0a12"></i><i style="background:#f0abfc"></i><i style="background:#22d3ee"></i></span>
+        </a>
+        <a class="card" href="./v122/">
+          <span class="tag">v122</span>
+          <span class="name">Spec Type</span>
+          <span class="desc">Living typed approach spec on paper.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f5f5f4"></i><i style="background:#171717"></i><i style="background:#57534e"></i></span>
+        </a>
+        <a class="card" href="./v123/">
+          <span class="tag">v123</span>
+          <span class="name">Log Stream</span>
+          <span class="desc">Continuous deploy log with green checks.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#111827"></i><i style="background:#4ade80"></i><i style="background:#93c5fd"></i></span>
+        </a>
+        <a class="card" href="./v124/">
+          <span class="tag">v124</span>
+          <span class="name">Sticker Bomb</span>
+          <span class="desc">LGTM/SHIPPED stickers + mouse parallax.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff"></i><i style="background:#f472b6"></i><i style="background:#facc15"></i></span>
+        </a>
+        <a class="card" href="./v125/">
+          <span class="tag">v125</span>
+          <span class="name">Path Morph</span>
+          <span class="desc">SVG morph Idea → Code → Cloud.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#eef2ff"></i><i style="background:#6366f1"></i><i style="background:#0f172a"></i></span>
+        </a>
+        <a class="card" href="./v126/">
+          <span class="tag">v126</span>
+          <span class="name">Slot Book</span>
+          <span class="desc">Calendar slots fill; free slots toast ping.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#eff6ff"></i><i style="background:#2563eb"></i><i style="background:#1e3a8a"></i></span>
+        </a>
+        <a class="card" href="./v127/">
+          <span class="tag">v127</span>
+          <span class="name">Uptime Glow</span>
+          <span class="desc">99.99% flicker that never drops.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#000"></i><i style="background:#22c55e"></i><i style="background:#bbf7d0"></i></span>
+        </a>
+        <a class="card" href="./v128/">
+          <span class="tag">v128</span>
+          <span class="name">Springy Links</span>
+          <span class="desc">Bouncy spring hover on nav & CTAs.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#ffedd5"></i><i style="background:#fb7185"></i><i style="background:#1c1917"></i></span>
+        </a>
+        <a class="card" href="./v129/">
+          <span class="tag">v129</span>
+          <span class="name">Magnetic CTA</span>
+          <span class="desc">Button magnetically follows the cursor.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#1c1917"></i><i style="background:#f43f5e"></i><i style="background:#fafafa"></i></span>
+        </a>
+        <a class="card" href="./v130/">
+          <span class="tag">v130</span>
+          <span class="name">Chapter Scroll</span>
+          <span class="desc">Brief→Build→Ship→Care scroll story.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#111827"></i><i style="background:#f5e6d3"></i><i style="background:#38bdf8"></i></span>
+        </a>
+        <a class="card" href="./v131/">
+          <span class="tag">v131</span>
+          <span class="name">Win Wall</span>
+          <span class="desc">Emoji reaction particles for ship wins.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#1e1b2e"></i><i style="background:#fbbf24"></i><i style="background:#34d399"></i></span>
+        </a>
+        <a class="card" href="./v132/">
+          <span class="tag">v132</span>
+          <span class="name">Rubber Duck</span>
+          <span class="desc">Nodding duck debug jokes → solutions.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#bae6fd"></i><i style="background:#facc15"></i><i style="background:#0f172a"></i></span>
+        </a>
+        <a class="card" href="./v133/">
+          <span class="tag">v133</span>
+          <span class="name">Air Drop</span>
+          <span class="desc">Parachute package opens to reveal brand.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#7dd3fc"></i><i style="background:#fff"></i><i style="background:#b45309"></i></span>
+        </a>
+        <a class="card" href="./v134/">
+          <span class="tag">v134</span>
+          <span class="name">Lighthouse 100</span>
+          <span class="desc">Perf/A11y/BP gauges climb to 100.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#fff"></i><i style="background:#0cce6b"></i><i style="background:#ffa400"></i></span>
+        </a>
+        <a class="card" href="./v135/">
+          <span class="tag">v135</span>
+          <span class="name">Metronome Beat</span>
+          <span class="desc">Pendulum rhythm pulses on-time UI.</span>
+          <span class="swatch" aria-hidden="true"><i style="background:#f5f0e6"></i><i style="background:#6b4423"></i><i style="background:#1c1917"></i></span>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+:root {
+--color-bg: #ffffff;
+  --color-teal: #0d9488;
+  --color-mint: #ecfdf5;
+  --color-mint-deep: #ccfbf1;
+  --color-ink: #134e4a;
+  --color-body: #334155;
+  --color-muted: #64748b;
+  --font-display: "Merriweather", Georgia, serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --max: 68rem;
+  --focus: var(--color-teal);
+}

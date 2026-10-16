@@ -1,0 +1,11 @@
+:root {
+  --color-bg: #1a2332;
+  --color-glass: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --color-ink: #e8eef5;
+  --color-muted: #8fa3b8;
+  --font-display: "Josefin Sans", system-ui, sans-serif;
+  --font-body: "Lora", Georgia, serif;
+  --max: 72rem;
+  --focus: #9ec5e8;
+}

@@ -1,0 +1,45 @@
+:root {
+  --color-ice: #e8f4ff;
+  --color-ice-deep: #d4e8fc;
+  --color-sky: #b8dcff;
+  --color-ink: #1a2a3a;
+  --color-mute: #4a6278;
+  --color-chrome-light: #ffffff;
+  --color-chrome-mid: #c8d4e0;
+  --color-chrome-dark: #8a9aad;
+  --gradient-chrome: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #d8e4ef 35%,
+    #a8b8c8 50%,
+    #e8f0f8 65%,
+    #ffffff 100%
+  );
+  --gradient-chrome-btn: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #c5d3e0 45%,
+    #9aacbe 55%,
+    #e0eaf2 100%
+  );
+  --shadow-soft: 0 8px 32px rgba(26, 42, 58, 0.12);
+  --shadow-inner: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  --font-display: "Orbitron", "Segoe UI", sans-serif;
+  --font-sans: "Exo 2", "Segoe UI", sans-serif;
+
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.4rem, 2.8vw, 2rem);
+  --text-xl: clamp(2rem, 4.5vw, 3.2rem);
+
+  --page: min(1100px, calc(100% - 2rem));
+  --radius-bubble: 999px;
+  --dur: 220ms;
+}

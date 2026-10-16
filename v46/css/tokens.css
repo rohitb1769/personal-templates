@@ -1,0 +1,20 @@
+:root {
+  --color-dark-bg: #0c0c0f;
+  --color-dark-ink: #f4f4f5;
+  --color-dark-muted: #a1a1aa;
+  --color-light-bg: #ffffff;
+  --color-light-ink: #18181b;
+  --color-light-muted: #52525b;
+  --color-teal: #14b8a6;
+  --color-line: #e4e4e7;
+
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+
+  --text-xl: clamp(2.25rem, 5vw, 3.25rem);
+  --max: 70rem;
+}

@@ -1,0 +1,226 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: calc(var(--max) + 3rem);
+  margin: 0 auto;
+  min-height: 100vh;
+  background:
+    linear-gradient(90deg, transparent 2.75rem, rgba(220, 38, 38, 0.35) 2.75rem 2.8rem, transparent 2.8rem),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 100% 100%, 24px 24px, 24px 24px;
+  background-color: var(--paper);
+  padding-left: 3.25rem;
+  padding-right: 1rem;
+  box-shadow: inset 0 0 80px rgba(29, 78, 216, 0.04);
+}
+
+.skip-link {
+  position: absolute;
+  left: 4rem;
+  top: -3rem;
+  background: var(--ballpoint);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.version-chip {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 50;
+  font-family: var(--font-note);
+  font-size: 1rem;
+  color: var(--ballpoint);
+  text-decoration: none;
+  border: 2px solid var(--grid-strong);
+  padding: 0.2rem 0.6rem;
+  background: rgba(250, 250, 250, 0.9);
+  transform: rotate(-2deg);
+}
+
+.notebook-header {
+  padding: 1.5rem 0 0.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav a {
+  color: var(--ballpoint);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline wavy rgba(29, 78, 216, 0.4);
+}
+
+.hero {
+  padding: 3rem 0 2rem;
+  animation: jot 0.8s ease-out both;
+}
+
+@keyframes jot {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    animation: none;
+  }
+}
+
+.hero__brand {
+  font-family: var(--font-note);
+  font-size: clamp(2.75rem, 8vw, 4.25rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--ballpoint);
+  line-height: 1;
+}
+
+.note {
+  font-family: var(--font-note);
+  font-size: 1.45rem;
+  color: var(--ink);
+  max-width: 28rem;
+  margin: 0;
+}
+
+.ruled {
+  padding: 2rem 0;
+  border-top: 2px solid var(--grid-strong);
+}
+
+.label {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--margin-red);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist li {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed var(--grid-strong);
+}
+
+.check {
+  font-family: var(--font-note);
+  font-size: 1.5rem;
+  color: var(--ballpoint);
+  line-height: 1;
+  animation: tick 4s ease-in-out infinite;
+}
+
+.checklist li:nth-child(2) .check {
+  animation-delay: 1.2s;
+}
+
+.checklist li:nth-child(3) .check {
+  animation-delay: 2.4s;
+}
+
+@keyframes tick {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .check {
+    animation: none;
+  }
+}
+
+.checklist h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.checklist p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(30, 41, 59, 0.78);
+}
+
+.approach__line {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.contact-block {
+  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--font-note);
+  font-size: 1.35rem;
+}
+
+.contact-block a {
+  color: var(--ballpoint);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(30, 41, 59, 0.55);
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-left: 2.5rem;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,20 @@
+:root {
+  --color-stone: #f3efe6;
+  --color-ink: #1c1917;
+  --color-muted: #57534e;
+  --color-olive: #556b2f;
+  --color-line: rgba(28, 25, 23, 0.12);
+
+  --font-display: "Newsreader", "Georgia", serif;
+  --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
+
+  --space-6: 2rem;
+  --space-7: 3.5rem;
+  --space-8: 6rem;
+  --space-9: 8rem;
+
+  --text-base: 1.125rem;
+  --text-display: clamp(2.75rem, 6vw, 4.5rem);
+
+  --max: 42rem;
+}

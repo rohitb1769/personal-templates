@@ -1,0 +1,179 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background: var(--color-bg);
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+a { color: var(--color-sky); }
+.skip-link {
+  position: absolute; left: -999px; top: 1rem; z-index: 200;
+  padding: 0.5rem 1rem; background: var(--color-sky); color: #fff;
+}
+.skip-link:focus { left: 1rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.version-chip {
+  position: fixed; right: 0; top: 50%; z-index: 150;
+  transform: translateY(-50%) rotate(-90deg); transform-origin: right center;
+  padding: 0.5rem 1rem; font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+  color: #fff; background: var(--color-ink);
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.nav { display: flex; gap: 1.5rem; }
+.nav a {
+  font-size: 0.875rem; font-weight: 500; text-decoration: none; color: var(--color-muted);
+}
+.nav a:hover { color: var(--color-sky); }
+
+.hero {
+  padding: 2.5rem 1.5rem 3.5rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.hero__card {
+  padding: 2.5rem 2rem;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  animation: dash-lift 0.8s ease-out both;
+}
+
+@keyframes dash-lift {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero__brand {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.hero__brand span { color: var(--color-sky); }
+
+.hero__lede {
+  margin: 1rem 0 0;
+  max-width: 36rem;
+  font-size: 1.05rem;
+  color: var(--color-muted);
+}
+
+.section {
+  padding: 0 1.5rem 2.5rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.section__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 1rem;
+}
+
+.panel-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.dash-panel {
+  padding: 1.5rem;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  animation: dash-lift 0.6s ease both;
+}
+.dash-panel:nth-child(2) { animation-delay: 0.06s; }
+.dash-panel:nth-child(3) { animation-delay: 0.12s; }
+
+.dash-panel h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.dash-panel p { margin: 0; font-size: 0.925rem; color: var(--color-muted); }
+
+.approach-band {
+  margin: 0 1.5rem 2.5rem;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: 1.75rem 2rem;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.approach-band h2 { margin: 0 0 0.35rem; font-size: 1.25rem; font-weight: 600; }
+.approach-band p { margin: 0; font-size: 0.9rem; color: var(--color-muted); }
+
+.contact-strip {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.contact-strip a {
+  display: block;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--color-ink);
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.contact-strip a:hover {
+  border-color: var(--color-sky);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.site-footer {
+  padding: 2rem 1.5rem;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero__card, .dash-panel { animation: none; }
+}

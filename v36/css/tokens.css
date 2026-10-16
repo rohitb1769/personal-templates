@@ -1,0 +1,18 @@
+:root {
+  --mesh-a: #ff7a59;
+  --mesh-b: #ff4d8d;
+  --mesh-c: #fbbf24;
+  --ink: #1a0a0f;
+  --ink-on-mesh: #ffffff;
+  --ink-soft: rgba(26, 10, 15, 0.72);
+  --section-bg: #fff8f5;
+
+  --font-display: "League Spartan", sans-serif;
+  --font-body: "DM Sans", "Segoe UI", sans-serif;
+
+  --page: min(1100px, calc(100% - 2.5rem));
+  --radius: 18px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 180ms;
+  --med: 500ms;
+}

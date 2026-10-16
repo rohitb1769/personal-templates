@@ -1,0 +1,15 @@
+:root {
+  --manilla: #f0e6d3;
+  --manilla-dark: #e2d4bc;
+  --ink: #1a1a1a;
+  --stamp: #b91c1c;
+  --font-type: "Special Elite", "Courier New", monospace;
+  --font-mono: "Courier Prime", "Courier New", monospace;
+  --max: 44rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

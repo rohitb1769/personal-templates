@@ -1,0 +1,16 @@
+:root {
+  --sand: #efe6d5;
+  --sand-deep: #e0d4c0;
+  --charcoal: #2c2c2c;
+  --charcoal-soft: rgba(44, 44, 44, 0.72);
+  --rake: rgba(44, 44, 44, 0.08);
+  --font-serif: "Shippori Mincho", Georgia, serif;
+  --font-sans: "Noto Sans", system-ui, sans-serif;
+  --max: 64rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

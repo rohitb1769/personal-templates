@@ -1,0 +1,15 @@
+:root {
+  --ocean: #0a4d68;
+  --ocean-deep: #05324a;
+  --foam: #88cfe0;
+  --sand: #f4e4bc;
+  --container: #e8eef2;
+  --fg: #f0f9fc;
+  --muted: #a8d4e6;
+  --accent: #ffd166;
+  --focus: var(--foam);
+  --max: 72rem;
+  --font: "Cabin", system-ui, sans-serif;
+  --font-narrow: "Cabin Condensed", "Cabin", sans-serif;
+  --chip-bg: var(--ocean-deep);
+}

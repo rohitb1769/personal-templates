@@ -1,0 +1,10 @@
+:root {
+  --color-bg: #070b14;
+  --color-ink: #e2e8f0;
+  --color-muted: #94a3b8;
+  --color-ice: #7dd3fc;
+  --font-display: "Orbitron", system-ui, sans-serif;
+  --font-body: "Exo 2", system-ui, sans-serif;
+  --max: 70rem;
+  --focus: var(--color-ice);
+}

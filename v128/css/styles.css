@@ -1,0 +1,117 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 1rem; z-index: 200;
+  padding: 0.5rem 1rem; background: var(--peach-deep); color: #fff;
+}
+.skip-link:focus { left: 1rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.version-chip {
+  position: fixed; right: 0; top: 50%; z-index: 150;
+  transform: translateY(-50%) rotate(-90deg); transform-origin: right center;
+  padding: 0.5rem 1rem; font-size: 0.65rem; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--ink); background: var(--peach);
+}
+
+.site-header { padding: 1rem 1.5rem; }
+.nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.spring-link {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 800;
+  transform: scale(1);
+  transition: transform 0.35s var(--spring), color 0.2s ease;
+}
+.spring-link:hover,
+.spring-link:focus-visible {
+  color: var(--ink);
+  transform: scale(1.12);
+}
+.spring-link.is-springing {
+  transition: none;
+}
+
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+}
+.hero__brand {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.25rem, 7vw, 3.5rem);
+  font-weight: 900;
+}
+.hero__lede { margin: 0 auto 1.5rem; max-width: 32rem; color: var(--muted); font-weight: 600; }
+
+.btn-spring {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 999px;
+  transform: scale(1);
+  transition: transform 0.4s var(--spring), background 0.2s;
+}
+.btn-spring:hover { background: var(--peach-deep); color: #fff; }
+
+.section { max-width: var(--max); margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+.grid-3 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+.card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 1.35rem;
+  box-shadow: 0 8px 24px rgba(255, 180, 162, 0.35);
+}
+.card h3 { margin: 0 0 0.5rem; }
+.card p { margin: 0; color: var(--muted); }
+
+.approach {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--peach);
+  color: var(--ink);
+}
+.approach p { max-width: 34rem; margin: 0.75rem auto 0; font-weight: 600; }
+
+.contact-links { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+.contact-links a {
+  font-weight: 800;
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 0.35s var(--spring);
+}
+
+.site-footer { text-align: center; padding: 2rem; font-size: 0.75rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .spring-link, .btn-spring, .contact-links a { transition: color 0.2s, background 0.2s; }
+}

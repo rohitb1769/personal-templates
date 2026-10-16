@@ -1,0 +1,20 @@
+:root {
+  --bg: #f0f6ff;
+  --surface: #ffffff;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --accent: #3b82f6;
+  --accent-soft: #dbeafe;
+  --slot-free: #e2e8f0;
+  --slot-discovery: #6366f1;
+  --slot-build: #0ea5e9;
+  --slot-review: #22c55e;
+  --font: "Plus Jakarta Sans", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--accent);
+  --radius: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --motion: 0; }
+}

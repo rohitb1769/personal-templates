@@ -1,0 +1,12 @@
+:root {
+  --color-linen: #f5f0e8;
+  --color-timber: #6b4423;
+  --color-timber-dark: #4a2f18;
+  --color-forest: #2d5016;
+  --color-ink: #2a2218;
+  --color-muted: #6b5d4f;
+  --font-display: "Merriweather", Georgia, serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--color-forest);
+}

@@ -1,0 +1,246 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+a {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-out);
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+.version-chip {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 90;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-out);
+  text-decoration: none;
+}
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    600px 400px at 15% 20%,
+    rgba(61, 90, 128, 0.08),
+    transparent 60%
+  );
+  animation: ambient-shift 12s ease-in-out infinite alternate;
+}
+
+@keyframes ambient-shift {
+  to {
+    transform: translate(3%, 2%);
+  }
+}
+
+.header {
+  width: var(--page);
+  margin: 0 auto;
+  padding: var(--space-5) 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-5);
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--ink-muted);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-btn);
+  transition: box-shadow var(--dur), color var(--dur);
+}
+
+.nav a:hover {
+  color: var(--accent);
+  box-shadow: var(--shadow-in);
+}
+
+main {
+  width: var(--page);
+  margin: 0 auto;
+  padding: var(--space-6) 0 var(--space-7);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--space-7);
+}
+
+.brand-block {
+  position: relative;
+  display: inline-block;
+  padding: var(--space-6) var(--space-7);
+  margin-bottom: var(--space-5);
+  border-radius: var(--radius);
+  background: var(--bg);
+  box-shadow: var(--shadow-out);
+  animation: float-soft 5s ease-in-out infinite;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.brand-glow {
+  position: absolute;
+  inset: 12%;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  filter: blur(24px);
+  z-index: 0;
+}
+
+.brand-block h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: var(--text-hero);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.hero-text {
+  margin: 0 auto var(--space-5);
+  max-width: 32rem;
+  color: var(--ink-muted);
+}
+
+.btn-extrude {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--bg-light);
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+  box-shadow: 6px 6px 12px rgba(45, 55, 72, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.7);
+  transition: transform var(--dur), box-shadow var(--dur);
+}
+
+.btn-extrude:hover {
+  transform: translateY(-2px);
+}
+
+.btn-extrude:active {
+  box-shadow: var(--shadow-in);
+  transform: translateY(0);
+}
+
+.panel-section {
+  margin-bottom: var(--space-6);
+}
+
+.panel-section h2 {
+  margin: 0 0 var(--space-4);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.offer-panels {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.neo-panel {
+  padding: var(--space-5);
+  border-radius: var(--radius);
+  background: var(--bg);
+  box-shadow: var(--shadow-out);
+}
+
+.neo-panel h3 {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+}
+
+.neo-panel p {
+  margin: 0;
+  color: var(--ink-muted);
+}
+
+.approach-panel ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--ink-muted);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact-panel {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-panel a {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.contact-panel p {
+  margin: var(--space-3) 0 0;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 600px) {
+  .brand-block {
+    padding: var(--space-5) var(--space-4);
+  }
+}

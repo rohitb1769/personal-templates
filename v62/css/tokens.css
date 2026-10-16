@@ -1,0 +1,15 @@
+:root {
+  --color-bg: #fafafa;
+  --color-ink: #1a1a1a;
+  --color-muted: #555;
+  --tile-blue: #0078d4;
+  --tile-orange: #d83b01;
+  --tile-green: #107c10;
+  --tile-magenta: #881798;
+  --tile-teal: #008272;
+  --font-display: "Open Sans Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Cabin", system-ui, sans-serif;
+  --max: 72rem;
+  --radius: 2px;
+  --focus: #0078d4;
+}

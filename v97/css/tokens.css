@@ -1,0 +1,12 @@
+:root {
+  --color-bg: #f6f9fc;
+  --color-panel: #ffffff;
+  --color-border: #e3e8ef;
+  --color-ink: #1a1f36;
+  --color-muted: #697386;
+  --color-sky: #0ea5e9;
+  --font-body: "Sora", system-ui, sans-serif;
+  --max: 68rem;
+  --focus: var(--color-sky);
+  --shadow-soft: 0 4px 24px rgba(15, 23, 42, 0.06);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra — springy link micro-interactions, Hyderabad." />
+    <title>Snehith Infra — Springy Links v128</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="version-chip spring-link" href="../versions.html">Versions</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="spring-link" href="#offer">Offer</a>
+        <a class="spring-link" href="#approach">Approach</a>
+        <a class="spring-link" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Introduction">
+        <h1 class="hero__brand">Snehith Infra</h1>
+        <p class="hero__lede">Hyderabad · Every link overshoots just a little—like a handshake with enthusiasm. Products, services, and maintenance that bounce back when you poke them.</p>
+        <a class="btn-spring spring-link" href="#contact">Boing into contact</a>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Offer</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Products</h3>
+            <p>UI that feels tactile—because dead clicks are so 2019.</p>
+          </article>
+          <article class="card">
+            <h3>Services</h3>
+            <p>Squads who prototype motion before the slide deck is finished.</p>
+          </article>
+          <article class="card">
+            <h3>Maintenance</h3>
+            <p>Performance tuning with the same playful rigor as launch week.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Approach</h2>
+        <p>Written scope · Micro-interaction audits · Spring physics, not gimmicks · Ship delight that respects reduced motion</p>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-links">
+          <a class="spring-link" href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a class="spring-link" href="tel:+918341888566">+91 8341888566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Snehith Infra · Sample v128 Springy Links</footer>
+
+    <script>
+      (function () {
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduced) return;
+
+        function spring(el, from, to) {
+          var start = null;
+          var overshoot = to * 1.14;
+          function frame(t) {
+            if (!start) start = t;
+            var p = Math.min((t - start) / 420, 1);
+            var s;
+            if (p < 0.55) {
+              s = from + (overshoot - from) * (p / 0.55);
+            } else {
+              s = overshoot + (to - overshoot) * ((p - 0.55) / 0.45);
+            }
+            el.style.transform = "scale(" + s + ")";
+            if (p < 1) requestAnimationFrame(frame);
+            else el.style.transform = "";
+          }
+          el.classList.add("is-springing");
+          requestAnimationFrame(frame);
+          setTimeout(function () { el.classList.remove("is-springing"); }, 450);
+        }
+
+        document.querySelectorAll(".spring-link, .btn-spring").forEach(function (el) {
+          el.addEventListener("mouseenter", function () {
+            spring(el, 1, 1.08);
+          });
+        });
+      })();
+    </script>
+    <script src="../version-nav.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra — merge party PR motion, Hyderabad." />
+    <title>Snehith Infra — Merge Party v111</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="version-chip" href="../versions.html">Versions</a>
+    <div class="confetti-wrap" id="confetti-wrap" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Pull request">
+        <h1 class="visually-hidden">Snehith Infra</h1>
+        <article class="pr" id="pr">
+          <div class="pr__head">
+            <span class="pr__status" id="pr-status">OPEN</span>
+            <button type="button" class="merge-btn" id="merge-btn">Approve &amp; merge</button>
+          </div>
+          <h2 class="pr__title">feat: ship Snehith Infra to Hyderabad prod</h2>
+          <div class="pr__body">
+            <p><strong>Snehith Infra</strong> — products, services, maintenance. This PR adds on-time delivery, fewer “quick sync?” meetings, and a changelog your PM will actually read.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-wide" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Offer</h2>
+        <div class="grid-3">
+          <article><h3>Products</h3><p>Merged to main, tagged, released.</p></article>
+          <article><h3>Services</h3><p>Reviewers included—no rubber stamps.</p></article>
+          <article><h3>Maintenance</h3><p>Dependabot vibes, human empathy.</p></article>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Approach</h2>
+        <p>Small PRs · Green CI · Celebrate merges (confetti optional, quality mandatory)</p>
+      </section>
+
+      <section class="section-wide" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a href="tel:+918341888566">+91 8341888566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Snehith Infra · Sample v111 Merge Party</footer>
+
+    <script>
+      (function () {
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var btn = document.getElementById("merge-btn");
+        var status = document.getElementById("pr-status");
+        var wrap = document.getElementById("confetti-wrap");
+        var merged = false;
+
+        function confetti() {
+          if (reduced) return;
+          var colors = ["#8250df", "#1a7f37", "#0969da", "#bf3989", "#fb8500"];
+          for (var i = 0; i < 60; i++) {
+            var c = document.createElement("span");
+            c.className = "confetti";
+            c.style.left = Math.random() * 100 + "%";
+            c.style.background = colors[i % colors.length];
+            c.style.animationDelay = Math.random() * 0.8 + "s";
+            c.style.animationDuration = 2 + Math.random() * 2 + "s";
+            wrap.appendChild(c);
+            (function (node) {
+              setTimeout(function () { node.remove(); }, 4500);
+            })(c);
+          }
+        }
+
+        function merge() {
+          if (merged) return;
+          merged = true;
+          status.textContent = "MERGED";
+          status.classList.add("is-merged");
+          btn.disabled = true;
+          btn.textContent = "Merged ✓";
+          confetti();
+        }
+
+        btn.addEventListener("click", merge);
+        if (!reduced) setTimeout(merge, 6500);
+        else merge();
+      })();
+    </script>
+    <script src="../version-nav.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+:root {
+  --bg: #f8fafc;
+  --sheet: rgba(255, 255, 255, 0.72);
+  --sheet-border: rgba(148, 163, 184, 0.35);
+  --ink: #0f172a;
+  --ink-soft: #64748b;
+  --sky: #0284c7;
+  --sky-soft: rgba(2, 132, 199, 0.12);
+
+  --font-sans: "Public Sans", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --page: min(960px, calc(100% - 2rem));
+  --radius: 14px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 180ms;
+  --med: 450ms;
+}

@@ -1,0 +1,26 @@
+:root {
+  --color-field: #0a0a0a;
+  --color-yellow: #facc15;
+  --color-yellow-dim: #ca8a04;
+  --color-ink: #fafafa;
+  --color-mute: #a3a3a3;
+  --color-line: rgba(250, 204, 21, 0.25);
+
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-sans: "Work Sans", "Segoe UI", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.5rem, 3vw, 2.25rem);
+  --text-xl: clamp(3rem, 11vw, 7rem);
+  --text-marquee: clamp(1.25rem, 2.5vw, 1.75rem);
+
+  --max: 76rem;
+}

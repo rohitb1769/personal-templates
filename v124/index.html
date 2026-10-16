@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Snehith Infra — Sticker Bomb."/>
+<title>Snehith Infra — Sticker Bomb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body class="v124">
+<a class="skip-link" href="#main">Skip to content</a>
+<a class="version-chip" href="../versions.html">Versions</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a href="#offer">Offer</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav></header><main id="main"><section class="hero"><h1 class="hero__brand">Snehith Infra</h1><p class="hero__tag">Hyderabad · Stickers everywhere—LGTM energy for products, services, and maintenance.</p><div class="desk" id="desk" aria-hidden="true"><span class="sticker sticker--lgtm" data-parallax>LGTM</span><span class="sticker sticker--ship" data-parallax>SHIPPED</span><span class="sticker sticker--time" data-parallax>ON TIME</span><span class="sticker sticker--regret" data-parallax>NO REGRETS</span></div></section><section class="section" id="offer" aria-labelledby="of"><h2 id="of">Offer</h2><div class="cards"><article class="card"><h3>Products</h3><p>Platforms built to spec and deployed on rhythm.</p></article><article class="card"><h3>Services</h3><p>Embedded teams with clear lanes and owners.</p></article><article class="card"><h3>Maintenance</h3><p>Watchers on duty after the fanfare fades.</p></article></div></section><section class="approach" id="approach"><h2>Approach</h2><p>Peel, stick, ship · Agency joy · Zero boring standups</p></section><section class="contact" id="contact" aria-labelledby="ct"><h2 id="ct">Contact</h2><a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a><a href="tel:+918341888566">+91 8341888566</a></section></main>
+<footer class="site-footer">© Snehith Infra · Sample v124 Sticker Bomb</footer>
+<script>
+(function(){
+  var desk=document.getElementById("desk");
+  var stickers=document.querySelectorAll("[data-parallax]");
+  var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(!desk||reduced)return;
+  desk.addEventListener("mousemove",function(e){
+    var r=desk.getBoundingClientRect();
+    var x=(e.clientX-r.left)/r.width-.5;
+    var y=(e.clientY-r.top)/r.height-.5;
+    stickers.forEach(function(s,i){
+      var f=(i+1)*6;
+      s.style.translate=(x*f)+"px "+(y*f)+"px";
+    });
+  });
+})();
+</script>
+<script src="../version-nav.js" defer></script>
+</body>
+</html>

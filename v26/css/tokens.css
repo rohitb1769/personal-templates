@@ -1,0 +1,11 @@
+:root {
+  --font-serif: "Literata", Georgia, serif;
+  --font-sans: "Figtree", system-ui, sans-serif;
+  --color-sage: #dce8d4;
+  --color-sage-deep: #c5d4b8;
+  --color-forest: #1e3a2f;
+  --color-leaf: #4a7c59;
+  --color-ink-muted: #3d5a4a;
+  --motion-sway: 7s ease-in-out infinite;
+  --motion-drift: 14s ease-in-out infinite;
+}

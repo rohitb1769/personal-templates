@@ -1,0 +1,10 @@
+:root {
+  --color-sky: #e0f2fe;
+  --color-cloud: #ffffff;
+  --color-ink: #0c4a6e;
+  --color-muted: #0369a1;
+  --font-display: "Quicksand", system-ui, sans-serif;
+  --font-body: "Mulish", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: #0284c7;
+}

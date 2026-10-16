@@ -1,0 +1,27 @@
+:root {
+  --color-bg: #0d0d0f;
+  --color-surface: #141418;
+  --color-ink: #ececef;
+  --color-mute: #8b8b95;
+  --color-pink: #f02e65;
+  --color-pink-dim: rgba(240, 46, 101, 0.35);
+  --color-line: rgba(255, 255, 255, 0.08);
+
+  --font-display: "League Spartan", "Arial Narrow", sans-serif;
+  --font-sans: "DM Sans", "Segoe UI", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.35rem, 2.8vw, 2rem);
+  --text-xl: clamp(2.25rem, 6vw, 3.75rem);
+
+  --max: 72rem;
+  --radius: 12px;
+}

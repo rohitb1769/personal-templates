@@ -1,0 +1,10 @@
+:root {
+--color-velvet: #3b0a1a;
+  --color-velvet-deep: #1a050c;
+  --color-cream: #f5efe6;
+  --color-muted: #c4b5a8;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Karla", system-ui, sans-serif;
+  --max: 66rem;
+  --focus: var(--color-cream);
+}

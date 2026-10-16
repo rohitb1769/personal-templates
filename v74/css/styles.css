@@ -1,0 +1,251 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: -1;
+  background: repeating-linear-gradient(
+    -52deg,
+    var(--pink) 0 28px,
+    var(--mint) 28px 56px,
+    var(--cream) 56px 84px
+  );
+  opacity: 0.22;
+  animation: stripe-slide 40s linear infinite;
+}
+
+@keyframes stripe-slide {
+  to {
+    transform: translate(56px, 56px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  z-index: 100;
+  text-decoration: none;
+  border-radius: 999px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.version-chip {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 50;
+  background: rgba(255, 248, 239, 0.92);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 2px solid var(--pink);
+}
+
+.site-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+}
+
+.nav a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.nav a:hover {
+  background: rgba(122, 240, 194, 0.45);
+}
+
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4rem 1rem 3rem;
+  animation: pop-in 0.7s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    animation: none;
+  }
+}
+
+.hero__brand {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.hero__lede {
+  max-width: 32rem;
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.striped-section {
+  padding: 2rem 1rem;
+}
+
+.striped-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  background: rgba(255, 248, 239, 0.94);
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 8px 8px 0 var(--mint);
+}
+
+.striped-inner h2 {
+  font-family: var(--font-display);
+  margin: 0 0 1.25rem;
+  font-size: 1.75rem;
+}
+
+.offer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.offer-list li {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 0;
+  border-top: 2px dashed rgba(45, 36, 56, 0.15);
+}
+
+.offer-list li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.offer-list strong {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--pink);
+}
+
+.approach-band {
+  max-width: var(--max);
+  margin: 1rem auto 2rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(90deg, var(--pink), var(--mint));
+  color: var(--ink);
+  border-radius: 16px;
+  animation: wiggle 6s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-0.4deg);
+  }
+  50% {
+    transform: rotate(0.4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .approach-band {
+    animation: none;
+  }
+}
+
+.approach-band h2 {
+  font-family: var(--font-display);
+  margin: 0 0 0.5rem;
+}
+
+.approach-band p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.contact-block {
+  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+.contact-block a {
+  color: var(--ink);
+}
+
+.contact-block span {
+  opacity: 0.75;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    justify-content: center;
+  }
+}

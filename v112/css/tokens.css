@@ -1,0 +1,10 @@
+:root {
+  --bg: #0d0d0d;
+  --yellow: #ffd100;
+  --text: #ffffff;
+  --muted: #b3b3b3;
+  --font-display: "Oswald", system-ui, sans-serif;
+  --font-body: "Work Sans", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: #ffd100;
+}

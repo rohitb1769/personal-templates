@@ -1,0 +1,248 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background: var(--color-bg);
+}
+
+a {
+  color: var(--color-gold);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+:focus-visible {
+  outline: 1px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.version-chip {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 150;
+  padding: 0.35rem 0.7rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  color: var(--color-bg);
+  border: 1px solid var(--color-gold-dim);
+  background: rgba(10, 10, 12, 0.9);
+}
+
+.deco-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  color: var(--color-gold-dim);
+  opacity: 0.35;
+  animation: deco-shift 40s linear infinite;
+}
+
+.deco-svg {
+  width: 120%;
+  height: 120%;
+  margin: -10%;
+}
+
+@keyframes deco-shift {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-3%, 2%);
+  }
+}
+
+.site-header {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav a {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-gold);
+  transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 0.75;
+}
+
+.hero {
+  position: relative;
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+  text-align: center;
+}
+
+.hero__fan {
+  width: 180px;
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  background: repeating-conic-gradient(
+    from 180deg at 50% 100%,
+    transparent 0deg 8deg,
+    var(--color-gold-dim) 8deg 9deg
+  );
+  mask: radial-gradient(ellipse 100% 100% at 50% 100%, #000 60%, transparent 61%);
+  animation: fan-breathe 6s ease-in-out infinite;
+}
+
+@keyframes fan-breathe {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero__city {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.hero__tag {
+  max-width: 28rem;
+  margin: 0 auto;
+  color: rgba(245, 240, 230, 0.75);
+}
+
+main section {
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--color-gold-dim);
+}
+
+h2 {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.chevron {
+  color: var(--color-gold);
+  margin-right: 0.35rem;
+}
+
+.offer-cols {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.offer-cols h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+  color: var(--color-gold);
+}
+
+.offer-cols p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(245, 240, 230, 0.7);
+}
+
+.approach-deco {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.approach-deco li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(201, 184, 150, 0.2);
+  letter-spacing: 0.04em;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-row a {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.site-footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 230, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .deco-bg,
+  .hero__fan {
+    animation: none;
+  }
+}

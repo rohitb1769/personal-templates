@@ -1,0 +1,39 @@
+:root {
+  --bay: #f3f5f7;
+  --bay-deep: #e6eaef;
+  --ink: #0a0c10;
+  --ink-soft: #1c222b;
+  --mute: #5c6773;
+  --line: rgba(10, 12, 16, 0.1);
+  --line-strong: rgba(10, 12, 16, 0.18);
+  --signal: #e85d04;
+  --signal-deep: #c44a00;
+  --signal-soft: rgba(232, 93, 4, 0.12);
+  --panel: #ffffff;
+  --panel-ink: #0a0c10;
+
+  --font: "Space Grotesk", "Segoe UI", sans-serif;
+
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.2rem;
+  --text-xl: clamp(2.2rem, 5vw, 3.75rem);
+  --text-hero: clamp(2.8rem, 7.2vw, 5.4rem);
+
+  --page: min(1180px, calc(100% - 2rem));
+  --radius: 18px;
+  --radius-sm: 10px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 160ms;
+  --med: 320ms;
+}

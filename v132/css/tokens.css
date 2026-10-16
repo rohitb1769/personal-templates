@@ -1,0 +1,12 @@
+:root {
+  --sky: #87ceeb;
+  --sky-deep: #5eb8e8;
+  --duck: #ffd93d;
+  --duck-beak: #ff9f1c;
+  --ink: #2d3436;
+  --muted: #4a5568;
+  --font-display: "Comic Neue", cursive;
+  --font-body: "Karla", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: #0984e3;
+}

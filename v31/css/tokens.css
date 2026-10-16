@@ -1,0 +1,15 @@
+:root {
+  --bg: #fafafa;
+  --ink: #0a0a0a;
+  --gray: #6b7280;
+  --line: #0a0a0a;
+  --line-soft: rgba(10, 10, 10, 0.12);
+
+  --font-display: "Syne", sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
+
+  --page: min(1080px, calc(100% - 2.5rem));
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 160ms;
+  --med: 500ms;
+}

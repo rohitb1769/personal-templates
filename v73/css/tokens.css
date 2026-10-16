@@ -1,0 +1,16 @@
+:root {
+  --abyss: #021526;
+  --abyss-mid: #032a45;
+  --foam: #a8e8ef;
+  --bio: #2ee6c5;
+  --bio-dim: rgba(46, 230, 197, 0.55);
+  --text: #d4eef5;
+  --font: "Sora", system-ui, sans-serif;
+  --max: 68rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

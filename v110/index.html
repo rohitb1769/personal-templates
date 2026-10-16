@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra — kanban motion board, Hyderabad." />
+    <title>Snehith Infra — Kanban Motion v110</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="version-chip" href="../versions.html">Versions</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Kanban board">
+        <h1>Snehith Infra</h1>
+        <p class="micro">Moving tickets so you don't have to.</p>
+        <p>Hyderabad · Watch work glide from Spec → Build → Ship while you sip chai.</p>
+
+        <div class="kanban" id="kanban" aria-live="polite">
+          <div class="kanban-col" data-col="todo"><h2>To Do</h2></div>
+          <div class="kanban-col" data-col="doing"><h2>Doing</h2></div>
+          <div class="kanban-col" data-col="done"><h2>Done</h2></div>
+        </div>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Offer</h2>
+        <div class="grid-3">
+          <article><h3>Products</h3><p>Spec column: clear PRDs, sane backlogs.</p></article>
+          <article><h3>Services</h3><p>Doing column: builders who actually commit.</p></article>
+          <article><h3>Maintenance</h3><p>Done column: until the next sprint—then we drag again.</p></article>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Approach</h2>
+        <p>Visible boards · WIP limits · Demo-driven delivery</p>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a href="tel:+918341888566">+91 8341888566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Snehith Infra · Sample v110 Kanban Motion</footer>
+
+    <script>
+      (function () {
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var cols = {
+          todo: document.querySelector('[data-col="todo"]'),
+          doing: document.querySelector('[data-col="doing"]'),
+          done: document.querySelector('[data-col="done"]')
+        };
+        var labels = ["Spec", "Build", "Ship"];
+        var tickets = labels.map(function (label, idx) {
+          var el = document.createElement("div");
+          el.className = "ticket";
+          el.textContent = label;
+          el.dataset.stage = "0";
+          el.dataset.index = String(idx);
+          cols.todo.appendChild(el);
+          return el;
+        });
+
+        var order = [0, 1, 2];
+        var stage = 0;
+
+        function placeTicket(ticket, colName, slot) {
+          var col = cols[colName];
+          if (!col.contains(ticket)) col.appendChild(ticket);
+          var top = 2.5 + slot * 3.25;
+          ticket.style.top = top + "rem";
+        }
+
+        if (reduced) {
+          tickets.forEach(function (t, i) {
+            t.style.position = "static";
+            cols.done.appendChild(t);
+          });
+          return;
+        }
+
+        tickets.forEach(function (t, i) { placeTicket(t, "todo", i); });
+
+        function advance() {
+          order.forEach(function (ti, slot) {
+            var ticket = tickets[ti];
+            ticket.classList.add("is-moving");
+            var colName = stage === 0 ? "todo" : stage === 1 ? "doing" : "done";
+            placeTicket(ticket, colName, slot);
+            setTimeout(function () { ticket.classList.remove("is-moving"); }, 650);
+          });
+          stage = (stage + 1) % 3;
+          if (stage === 0) {
+            order.push(order.shift());
+          }
+        }
+
+        setInterval(advance, 3200);
+        setTimeout(advance, 800);
+      })();
+    </script>
+    <script src="../version-nav.js" defer></script>
+  </body>
+</html>

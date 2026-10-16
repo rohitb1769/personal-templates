@@ -1,0 +1,26 @@
+:root {
+  --color-teal: #0d1b1e;
+  --color-teal-light: #152a30;
+  --color-silver: #c8d0d4;
+  --color-mute: #7a9098;
+  --color-accent: #5eb8c9;
+
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-sans: "Libre Franklin", "Segoe UI", sans-serif;
+
+  --letterbox: clamp(3rem, 8vh, 5.5rem);
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.4rem, 2.8vw, 2.2rem);
+  --text-xl: clamp(3rem, 10vw, 6.5rem);
+
+  --max: 78rem;
+}

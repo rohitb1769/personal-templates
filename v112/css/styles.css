@@ -1,0 +1,80 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 1rem; z-index: 200;
+  padding: 0.5rem 1rem; background: var(--yellow); color: var(--bg);
+}
+.skip-link:focus { left: 1rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.version-chip {
+  position: fixed; right: 0; top: 50%; z-index: 150;
+  transform: translateY(-50%) rotate(-90deg); transform-origin: right center;
+  padding: 0.5rem 1rem; font-family: var(--font-display); font-size: 0.65rem;
+  letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+  color: var(--bg); background: var(--yellow);
+}
+
+.site-header { padding: 1rem 1.5rem; border-bottom: 4px solid var(--yellow); }
+.nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.nav a { color: var(--muted); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.06em;
+}
+
+.sprint-clock {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 18vw, 9rem);
+  color: var(--yellow);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 4px 4px 0 rgba(255, 209, 0, 0.25);
+}
+
+.sprint-label {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin: 0.75rem 0 0;
+  min-height: 1.5em;
+}
+
+.sprint-label.is-win { color: var(--yellow); font-weight: 700; font-size: 1.35rem; }
+
+.section { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 2px solid #222; }
+.section h2 { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.1em; color: var(--yellow); }
+.grid-3 { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.approach { text-align: center; padding: 2rem; color: var(--muted); }
+.contact-links { display: flex; flex-wrap: wrap; gap: 1.25rem; justify-content: center; }
+.contact-links a { color: var(--yellow); font-weight: 700; }
+.site-footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

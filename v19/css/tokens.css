@@ -1,0 +1,21 @@
+:root {
+  --bg: #020617;
+  --panel: rgba(15, 23, 42, 0.85);
+  --ink: #f1f5f9;
+  --ink-muted: #94a3b8;
+  --cyan: #22d3ee;
+  --cyan-dim: rgba(34, 211, 238, 0.35);
+  --line: rgba(34, 211, 238, 0.25);
+
+  --font-display: "Rajdhani", "Segoe UI", sans-serif;
+  --font-mono: "Share Tech Mono", ui-monospace, monospace;
+
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+  --space-7: 3.5rem;
+  --text-base: 1rem;
+  --text-hero: clamp(2.5rem, 6vw, 4rem);
+  --page: min(1080px, calc(100% - 2rem));
+  --dur: 240ms;
+}

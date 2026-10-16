@@ -1,0 +1,24 @@
+:root {
+  --color-bg: #000000;
+  --color-ink: #e8e8e8;
+  --color-mute: #6b6b6b;
+  --color-chartreuse: #d4ff00;
+  --color-line: rgba(255, 255, 255, 0.12);
+
+  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-sans: "Barlow", "Segoe UI", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-xl: clamp(2.5rem, 7vw, 4.5rem);
+
+  --max: 68rem;
+}

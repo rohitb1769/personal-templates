@@ -1,0 +1,14 @@
+:root {
+  --bg: #0d1117;
+  --cell-empty: #161b22;
+  --cell-1: #0e4429;
+  --cell-2: #006d32;
+  --cell-3: #26a641;
+  --cell-4: #39d353;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: #39d353;
+}

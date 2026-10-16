@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snehith Infra â€” v9 Soft Clay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="clay-shell">
+      <header class="clay-nav">
+        <a class="brand" href="#">
+          Snehith Infra
+          <span>Warm software from Hyderabad</span>
+        </a>
+        <nav aria-label="Primary">
+          <a href="#bento">What we do</a>
+          <a href="#approach">Approach</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="pill-cta" href="#contact">Say hello</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">
+          Menu
+        </button>
+      </header>
+      <nav class="mobile-clay" data-mobile-nav aria-hidden="true">
+        <a href="#bento">What we do</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <main id="main">
+        <section class="hero-clay" aria-label="Introduction">
+          <h1>Software with room to breathe.</h1>
+          <p>
+            Snehith Infra is a software company building products, pairing with
+            your team on services, and caring for systems through thoughtful
+            maintenanceâ€”based in Hyderabad, working globally.
+          </p>
+          <div class="hero-clay__actions">
+            <a class="pill-cta" href="#contact">Book a consultation</a>
+            <a class="ghost-soft" href="#bento">Explore offerings</a>
+          </div>
+        </section>
+
+        <section class="bento" id="bento" aria-labelledby="bento-title">
+          <h2 id="bento-title">What we do</h2>
+          <div class="bento-grid">
+            <article class="clay-card">
+              <h3>Products</h3>
+              <p>
+                From first sketch to stable releases: web apps, internal tools,
+                and integrations designed for the people who use them every day.
+              </p>
+            </article>
+            <article class="clay-card clay-card--sage">
+              <h3>Services</h3>
+              <p>
+                Engineers who join your ritualsâ€”planning, reviews, demosâ€”and
+                leave the codebase clearer than they found it.
+              </p>
+            </article>
+            <article class="clay-card">
+              <h3>Maintenance</h3>
+              <p>
+                Monitoring, upgrades, and gentle performance work so production
+                stays calm long after launch confetti settles.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="steps" id="approach" aria-labelledby="approach-title">
+          <h2 id="approach-title">Our approach</h2>
+          <dl>
+            <div>
+              <dt>Listen first</dt>
+              <dd>We map goals, constraints, and existing systems before proposing stacks.</dd>
+            </div>
+            <div>
+              <dt>Ship in slices</dt>
+              <dd>Each increment is demo-ready and measurableâ€”not a mystery at the end.</dd>
+            </div>
+            <div>
+              <dt>Stay kind to ops</dt>
+              <dd>Documentation and handoffsâ€”or ongoing maintenance when you want a partner.</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="contact-clay" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p>Share what you are building or what needs steady care.</p>
+          <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a href="tel:+918341888566">+91 8341888566</a>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        Snehith Infra Private Limited Â· Sample v9 Â· Soft Clay
+      </footer>
+    </div>
+
+    <nav class="version-chip" aria-label="Design version">
+      <a href="../versions.html">All</a>
+      <a href="../v8/">v8</a>
+      <a class="is-active" href="./index.html" aria-current="page">v9</a>
+      <a href="../v10/">v10</a>
+    </nav>
+
+    <script>
+      const toggle = document.querySelector("[data-menu-toggle]");
+      const mobile = document.querySelector("[data-mobile-nav]");
+      toggle?.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!open));
+        mobile.classList.toggle("is-open", !open);
+        mobile.setAttribute("aria-hidden", String(open));
+      });
+    </script>
+      <script src="../version-nav.js" defer></script>
+  </body>
+</html>

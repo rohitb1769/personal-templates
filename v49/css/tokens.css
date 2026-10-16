@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #fafafa;
+  --color-ink: #171717;
+  --color-muted: #737373;
+  --color-line: #e5e5e5;
+  --color-coral: #f43f5e;
+
+  --font-sans: "Outfit", "Segoe UI", sans-serif;
+
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+
+  --text-xl: clamp(2.5rem, 5vw, 3.5rem);
+  --max: 40rem;
+  --content-max: 52rem;
+}

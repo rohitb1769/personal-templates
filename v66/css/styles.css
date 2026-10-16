@@ -1,0 +1,267 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-ink-light);
+  background: var(--color-light);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  z-index: 300;
+  padding: 0.5rem 1rem;
+  background: var(--color-dark);
+  color: var(--color-ink-dark);
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.version-chip {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 200;
+  transform: translateX(-50%);
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: var(--color-ink-dark);
+  background: var(--color-dark);
+  mix-blend-mode: difference;
+}
+
+.split-shell {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+}
+
+.split {
+  flex: 1;
+}
+
+.split--light {
+  background: var(--color-light);
+  background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.split--dark {
+  background: var(--color-dark);
+  background-image: radial-gradient(circle, #333 1px, transparent 1px);
+  background-size: 8px 8px;
+  animation: halftone-pan 20s linear infinite;
+}
+
+@keyframes halftone-pan {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 8px 8px;
+  }
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem 1.25rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav--light {
+  justify-content: flex-start;
+}
+
+.nav--dark {
+  justify-content: flex-end;
+}
+
+.nav a {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.nav--light a {
+  color: var(--color-ink-light);
+}
+
+.nav--dark a {
+  color: var(--color-ink-dark);
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+}
+
+.hero__title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 14vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.15em;
+}
+
+.half {
+  display: inline-block;
+  padding: 0 0.05em;
+}
+
+.half--light {
+  color: var(--color-ink-light);
+  background: linear-gradient(90deg, var(--color-light) 50%, transparent 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: seam-pulse 5s ease-in-out infinite;
+}
+
+.half--dark {
+  color: var(--color-ink-dark);
+  mix-blend-mode: difference;
+}
+
+@keyframes seam-pulse {
+  0%,
+  100% {
+    letter-spacing: 0.02em;
+  }
+  50% {
+    letter-spacing: 0.06em;
+  }
+}
+
+.hero__meta {
+  margin: 0 0 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+  color: #888;
+}
+
+.hero__copy {
+  max-width: 28rem;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  mix-blend-mode: difference;
+  color: #666;
+}
+
+main section {
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+main h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.poster-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.poster-list strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+  padding-bottom: 4rem;
+}
+
+.contact h2 {
+  width: 100%;
+}
+
+.contact a {
+  font-weight: 600;
+  color: inherit;
+}
+
+.site-footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  mix-blend-mode: difference;
+  color: #777;
+}
+
+@media (max-width: 640px) {
+  .split-shell {
+    flex-direction: column;
+  }
+  .site-header {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .nav--light,
+  .nav--dark {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .split--dark,
+  .half--light {
+    animation: none;
+  }
+}

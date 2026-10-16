@@ -1,0 +1,19 @@
+:root {
+  --color-bg: #f6f9fc;
+  --color-ink: #0a2540;
+  --color-muted: #425466;
+  --color-line: #d6dee6;
+  --color-mesh-a: #635bff;
+  --color-mesh-b: #00d4ff;
+  --color-mesh-c: #80e9ff;
+
+  --font-sans: "Sora", "Segoe UI", sans-serif;
+
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-xl: clamp(2.5rem, 6vw, 3.75rem);
+  --max: 68rem;
+}

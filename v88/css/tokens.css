@@ -1,0 +1,11 @@
+:root {
+--color-peach: #ffd8c2;
+  --color-bg: #fffaf7;
+  --color-white: #ffffff;
+  --color-charcoal: #2d2d2d;
+  --color-muted: #6b6b6b;
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --max: 68rem;
+  --focus: var(--color-charcoal);
+}

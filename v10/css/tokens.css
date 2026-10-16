@@ -1,0 +1,9 @@
+:root {
+  --bg: #000000;
+  --phosphor: #ffb000;
+  --phosphor-dim: #cc8c00;
+  --phosphor-glow: rgba(255, 176, 0, 0.35);
+  --frame: #3a3018;
+  --font: "IBM Plex Mono", ui-monospace, monospace;
+  --max: 68rem;
+}

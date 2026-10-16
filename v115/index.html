@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra — bug squash maintenance game, Hyderabad." />
+    <title>Snehith Infra — Bug Squash v115</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="version-chip" href="../versions.html">Versions</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Bug squash">
+        <h1>Snehith Infra</h1>
+        <p>Hyderabad · Maintenance means squashing tech debt before it invites friends. Hover or tap the crawlers—we'll keep score.</p>
+        <p class="score" id="score" aria-live="polite">Debt cleared: 0</p>
+        <div class="bug-field" id="bug-field" aria-label="Interactive bug field"></div>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Offer</h2>
+        <div class="grid-3">
+          <article><h3>Products</h3><p>Ship clean—fewer bugs at launch.</p></article>
+          <article><h3>Services</h3><p>Teams who chase root cause, not symptoms.</p></article>
+          <article><h3>Maintenance</h3><p>Splat the backlog: patches, perf, peace of mind.</p></article>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Approach</h2>
+        <p>Repro steps · Fix + test · Changelog your wins</p>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a href="tel:+918341888566">+91 8341888566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Snehith Infra · Sample v115 Bug Squash</footer>
+
+    <script>
+      (function () {
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var field = document.getElementById("bug-field");
+        var scoreEl = document.getElementById("score");
+        var score = 0;
+        var bugs = [];
+
+        function updateScore() {
+          scoreEl.textContent = "Debt cleared: " + score;
+        }
+
+        function splat(x, y) {
+          if (reduced) return;
+          var s = document.createElement("span");
+          s.className = "splat";
+          s.style.left = x - 24 + "px";
+          s.style.top = y - 24 + "px";
+          field.appendChild(s);
+          setTimeout(function () { s.remove(); }, 600);
+        }
+
+        function squash(bug) {
+          if (bug.classList.contains("is-squashed")) return;
+          bug.classList.add("is-squashed");
+          score++;
+          updateScore();
+          var rect = bug.getBoundingClientRect();
+          var fr = field.getBoundingClientRect();
+          splat(rect.left - fr.left + 18, rect.top - fr.top + 14);
+          setTimeout(function () {
+            bug.remove();
+            var i = bugs.indexOf(bug);
+            if (i >= 0) bugs.splice(i, 1);
+            if (bugs.length < 5 && !reduced) spawnBug();
+          }, 400);
+        }
+
+        function spawnBug() {
+          var bug = document.createElement("button");
+          bug.type = "button";
+          bug.className = "bug";
+          bug.setAttribute("aria-label", "Squash bug");
+          var fw = field.clientWidth || 300;
+          var fh = field.clientHeight || 160;
+          var x = Math.random() * (fw - 40);
+          var y = Math.random() * (fh - 40);
+          bug.style.left = x + "px";
+          bug.style.top = y + "px";
+          var vx = (Math.random() - 0.5) * (reduced ? 0 : 0.6);
+          var vy = (Math.random() - 0.5) * (reduced ? 0 : 0.4);
+          bug.dataset.vx = String(vx);
+          bug.dataset.vy = String(vy);
+          bug.addEventListener("click", function () { squash(bug); });
+          bug.addEventListener("mouseenter", function () { if (!reduced) squash(bug); });
+          field.appendChild(bug);
+          bugs.push(bug);
+        }
+
+        for (var b = 0; b < 5; b++) spawnBug();
+
+        if (!reduced) {
+          function crawl() {
+            var fw = field.clientWidth;
+            var fh = field.clientHeight;
+            bugs.forEach(function (bug) {
+              if (bug.classList.contains("is-squashed")) return;
+              var x = parseFloat(bug.style.left) || 0;
+              var y = parseFloat(bug.style.top) || 0;
+              var vx = parseFloat(bug.dataset.vx) || 0.3;
+              var vy = parseFloat(bug.dataset.vy) || 0.2;
+              x += vx;
+              y += vy;
+              if (x <= 0 || x >= fw - 36) { vx = -vx; bug.dataset.vx = String(vx); x = Math.max(0, Math.min(fw - 36, x)); }
+              if (y <= 0 || y >= fh - 28) { vy = -vy; bug.dataset.vy = String(vy); y = Math.max(0, Math.min(fh - 28, y)); }
+              bug.style.left = x + "px";
+              bug.style.top = y + "px";
+            });
+            requestAnimationFrame(crawl);
+          }
+          requestAnimationFrame(crawl);
+        }
+      })();
+    </script>
+    <script src="../version-nav.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+:root {
+--color-bg: #0a0014;
+  --color-neon-pink: #ff2a6d;
+  --color-neon-cyan: #00f0ff;
+  --color-ink: #e8e0f0;
+  --color-muted: #9d8cb8;
+  --font-display: "Audiowide", system-ui, sans-serif;
+  --font-body: "Exo 2", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--color-neon-cyan);
+}

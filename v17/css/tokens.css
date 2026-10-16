@@ -1,0 +1,22 @@
+:root {
+  --bg: #fafafa;
+  --bg-subtle: #f3f4f6;
+  --ink: #0a0a0a;
+  --ink-muted: #52525b;
+  --line: rgba(10, 10, 10, 0.08);
+  --mint: #0d9488;
+  --mint-soft: rgba(13, 148, 136, 0.12);
+
+  --font-sans: "DM Sans", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+  --space-7: 4rem;
+  --text-base: 1.0625rem;
+  --text-stat: clamp(3rem, 12vw, 7.5rem);
+  --text-hero: clamp(2rem, 4vw, 3rem);
+  --page: min(980px, calc(100% - 2rem));
+  --dur: 260ms;
+}

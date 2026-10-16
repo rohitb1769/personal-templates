@@ -1,0 +1,10 @@
+:root {
+  --font-display: "Bodoni Moda", Georgia, serif;
+  --font-ui: "Manrope", system-ui, sans-serif;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-silver: #c0c0c0;
+  --space-section: clamp(4rem, 12vw, 8rem);
+  --motion-marquee: 22s linear infinite;
+  --motion-reveal: 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

@@ -1,0 +1,26 @@
+:root {
+  --bg: #e8ecef;
+  --bg-light: #eef1f4;
+  --ink: #2d3748;
+  --ink-muted: #5a6578;
+  --accent: #3d5a80;
+  --accent-soft: rgba(61, 90, 128, 0.18);
+
+  --shadow-out: 8px 8px 16px #c5c9cc, -8px -8px 16px #ffffff;
+  --shadow-in: inset 6px 6px 12px #c5c9cc, inset -6px -6px 12px #ffffff;
+  --shadow-btn: 5px 5px 10px #c5c9cc, -5px -5px 10px #ffffff;
+
+  --font-sans: "Nunito Sans", "Segoe UI", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+  --space-7: 3.5rem;
+  --text-base: 1.05rem;
+  --text-hero: clamp(2.2rem, 5vw, 3.5rem);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --page: min(1040px, calc(100% - 2rem));
+  --dur: 300ms;
+}

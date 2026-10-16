@@ -1,0 +1,13 @@
+:root {
+  --bg: #fef6fb;
+  --board: #fff9fc;
+  --col-todo: #ffe8f0;
+  --col-doing: #e8f4ff;
+  --col-done: #e8ffe8;
+  --text: #2d2a32;
+  --muted: #6b6570;
+  --accent: #e056a0;
+  --font: "DM Sans", system-ui, sans-serif;
+  --max: 76rem;
+  --focus: #e056a0;
+}

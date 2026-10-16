@@ -1,0 +1,20 @@
+:root {
+  --void: #07080b;
+  --void-2: #10131a;
+  --fog: #e8ecf2;
+  --fog-dim: #9aa3b2;
+  --line: rgba(232, 236, 242, 0.12);
+  --line-strong: rgba(232, 236, 242, 0.22);
+  --volt: #d6ff4b;
+  --volt-ink: #10140a;
+  --mesh-a: #1b2a4a;
+  --mesh-b: #0d3d38;
+
+  --font: "Outfit", "Segoe UI", sans-serif;
+
+  --page: min(1100px, calc(100% - 1.75rem));
+  --dock-h: 4.75rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 160ms;
+  --med: 300ms;
+}

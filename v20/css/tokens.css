@@ -1,0 +1,20 @@
+:root {
+  --bg: #ffffff;
+  --ink: #0d0d0d;
+  --red: #e63946;
+  --blue: #457b9d;
+  --yellow: #e9c46a;
+  --mute: #3d3d3d;
+
+  --font-display: "Archivo Black", "Segoe UI", sans-serif;
+  --font-sans: "Space Grotesk", "Segoe UI", sans-serif;
+
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+  --space-7: 4rem;
+  --text-base: 1.05rem;
+  --text-hero: clamp(2.8rem, 8vw, 5.5rem);
+  --page: min(1140px, calc(100% - 1.5rem));
+  --dur: 220ms;
+}

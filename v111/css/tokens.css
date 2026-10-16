@@ -1,0 +1,13 @@
+:root {
+  --bg: #f6f8fa;
+  --surface: #ffffff;
+  --border: #d0d7de;
+  --text: #24292f;
+  --muted: #57606a;
+  --green: #1a7f37;
+  --green-bg: #dafbe1;
+  --purple: #8250df;
+  --font: "Plus Jakarta Sans", system-ui, sans-serif;
+  --max: 52rem;
+  --focus: #0969da;
+}

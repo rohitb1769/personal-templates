@@ -1,0 +1,15 @@
+:root {
+  --pink: #ff6b9d;
+  --mint: #7af0c2;
+  --cream: #fff8ef;
+  --ink: #2d2438;
+  --font-display: "Fredoka", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+  --max: 66rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

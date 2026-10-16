@@ -1,0 +1,13 @@
+:root {
+  --font-stamp: "Special Elite", ui-monospace, monospace;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --color-navy: #0a1628;
+  --color-cyan: #5ec8ff;
+  --color-cyan-dim: rgba(94, 200, 255, 0.35);
+  --color-paper: #0d1a2e;
+  --color-ink: #e8f4fc;
+  --color-muted: #8eb4cc;
+  --grid-size: 24px;
+  --motion-scan: 12s linear infinite;
+  --motion-pulse: 3s ease-in-out infinite;
+}

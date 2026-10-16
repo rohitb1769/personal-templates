@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra â€” software products, services, and maintenance from Hyderabad." />
+    <title>Snehith Infra â€” Geo Night (v34)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="version-chip" aria-label="Design version">
+      <a href="../versions.html">All versions</a>
+      <span aria-current="page">v34</span>
+    </nav>
+
+    <header class="site-header">
+      <a class="brand" href="#">Snehith Infra</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Ops</button>
+    </header>
+
+    <nav class="mobile-nav" data-mobile-nav aria-hidden="true">
+      <a href="#offer">Offer</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <h1 id="hero-title">Snehith Infra</h1>
+          <p>Operations-grade software â€” products, services, and maintenance plotted from our base in South India.</p>
+          <p class="hero__coords">lat <span>17.3850Â° N</span> Â· lon <span>78.4867Â° E</span></p>
+        </div>
+        <div class="map-pin" aria-hidden="true">
+          <span class="map-pin__dot"></span>
+          <span class="map-pin__label">Hyderabad</span>
+        </div>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Mission lanes</h2>
+        <div class="offer-grid">
+          <article class="offer-item">
+            <h3>Products</h3>
+            <p>Custom platforms engineered for uptime â€” architecture through production deploy.</p>
+          </article>
+          <article class="offer-item">
+            <h3>Services</h3>
+            <p>Embedded squads and integration work when your map expands faster than headcount.</p>
+          </article>
+          <article class="offer-item">
+            <h3>Maintenance</h3>
+            <p>24/7-aware monitoring, patches, and incident response for live systems.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section approach" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Flight plan</h2>
+        <ol>
+          <li><strong>Recon.</strong> We map stack, traffic, and constraints before writing code.</li>
+          <li><strong>Waypoint releases.</strong> Weekly coordinates you can verify â€” no drift.</li>
+          <li><strong>Standing watch.</strong> Maintenance retainers with named engineers on call.</li>
+        </ol>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Ground control</h2>
+        <dl>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a></dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+918341888566">+91 8341888566</a></dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Hyderabad, India</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <p class="site-footer">Â© Snehith Infra Private Limited</p>
+
+    <script>
+      document.querySelector("[data-menu-toggle]")?.addEventListener("click", function () {
+        const nav = document.querySelector("[data-mobile-nav]");
+        const open = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", String(!open));
+        nav.classList.toggle("is-open", !open);
+      });
+    </script>
+      <script src="../version-nav.js" defer></script>
+  </body>
+</html>

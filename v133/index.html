@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra — parachute air drop motion, Hyderabad." />
+    <title>Snehith Infra — Air Drop v133</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700&family=Mulish:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="version-chip" href="../versions.html">Versions</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Introduction">
+        <div class="airdrop" id="airdrop" aria-hidden="true">
+          <div class="parachute"></div>
+          <div class="pkg">
+            <div class="pkg__lid"></div>
+            <div class="pkg__inner">SI</div>
+          </div>
+        </div>
+
+        <div class="hero-reveal" id="hero-reveal">
+          <h1 class="hero__brand">Snehith Infra</h1>
+          <p class="hero__lede">Hyderabad · Timely handoff means your deliverable lands soft—not splats on Slack at midnight. Products, services, maintenance: packed, parachuted, opened.</p>
+        </div>
+      </section>
+
+      <section class="section" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Offer</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Products</h3>
+            <p>Boxed with docs, env files, and a bow (figuratively—we're engineers).</p>
+          </article>
+          <article class="card">
+            <h3>Services</h3>
+            <p>Drop-in teams that coordinate like air traffic control.</p>
+          </article>
+          <article class="card">
+            <h3>Maintenance</h3>
+            <p>Scheduled supply drops of patches—not emergency HALO jumps.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Approach</h2>
+        <p>Written scope · Milestone drops · Demo the unboxing · Runbooks inside the crate</p>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a href="tel:+918341888566">+91 8341888566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Snehith Infra · Sample v133 Air Drop</footer>
+
+    <script>
+      (function () {
+        var drop = document.getElementById("airdrop");
+        var reveal = document.getElementById("hero-reveal");
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function landed() {
+          drop.classList.remove("is-falling");
+          drop.classList.add("is-descended");
+          reveal.classList.add("is-visible");
+        }
+
+        if (reduced) {
+          landed();
+          return;
+        }
+
+        drop.classList.add("is-falling");
+        drop.addEventListener("animationend", landed, { once: true });
+        setTimeout(landed, 2400);
+      })();
+    </script>
+    <script src="../version-nav.js" defer></script>
+  </body>
+</html>

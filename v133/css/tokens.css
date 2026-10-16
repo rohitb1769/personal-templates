@@ -1,0 +1,13 @@
+:root {
+  --sky-top: #4facfe;
+  --sky-bot: #00f2fe;
+  --cloud: rgba(255,255,255,0.85);
+  --package: #8b6914;
+  --package-lid: #a67c00;
+  --ink: #1a2744;
+  --muted: #4a6080;
+  --font-display: "Montserrat Alternates", system-ui, sans-serif;
+  --font-body: "Mulish", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: #0077cc;
+}

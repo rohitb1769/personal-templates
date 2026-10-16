@@ -1,0 +1,21 @@
+:root {
+  --porcelain: #f3f2ee;
+  --porcelain-deep: #e7e5de;
+  --ink: #121212;
+  --ink-soft: #2a2a2a;
+  --mute: #6a6760;
+  --line: rgba(18, 18, 18, 0.12);
+  --line-strong: rgba(18, 18, 18, 0.2);
+  --night: #0e0e0e;
+  --night-lift: #1a1a1a;
+  --pearl: #f7f6f2;
+  --wine: #7a2f35;
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Sora", "Segoe UI", sans-serif;
+
+  --page: min(1080px, calc(100% - 2rem));
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 160ms;
+  --med: 320ms;
+}

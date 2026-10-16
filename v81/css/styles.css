@@ -1,0 +1,246 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-mono);
+  color: var(--ink);
+  background: #3d3a35;
+  line-height: 1.55;
+  min-height: 100vh;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.folder {
+  max-width: var(--max);
+  margin: 0 auto;
+  background: var(--manilla);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem 2.5rem;
+  position: relative;
+}
+
+.folder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, var(--manilla-dark), var(--manilla-dark) 12px, var(--manilla) 12px, var(--manilla) 24px);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1.5rem;
+  top: -3rem;
+  background: var(--stamp);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-family: var(--font-type);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.version-chip {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 50;
+  font-family: var(--font-type);
+  font-size: 0.75rem;
+  color: var(--ink);
+  text-decoration: none;
+  border: 2px dashed var(--ink);
+  padding: 0.3rem 0.55rem;
+  background: var(--manilla);
+  transform: rotate(3deg);
+}
+
+.dossier-header {
+  max-width: var(--max);
+  margin: 0 auto 0;
+  padding: 0 0 1rem;
+}
+
+.label-strip {
+  font-family: var(--font-type);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: rgba(26, 26, 26, 0.65);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.nav a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.hero {
+  position: relative;
+  padding: 1rem 0 2rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  animation: file-drop 0.7s ease-out both;
+}
+
+@keyframes file-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    animation: none;
+  }
+}
+
+.stamp {
+  display: inline-block;
+  font-family: var(--font-type);
+  color: var(--stamp);
+  border: 3px double var(--stamp);
+  padding: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  transform: rotate(-8deg);
+  margin-bottom: 0.75rem;
+  animation: stamp-in 0.5s ease-out 0.3s both;
+}
+
+@keyframes stamp-in {
+  from {
+    opacity: 0;
+    transform: rotate(-8deg) scale(1.4);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-8deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp {
+    animation: none;
+  }
+}
+
+.hero__brand {
+  font-family: var(--font-type);
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.hero__lede {
+  margin: 0;
+  font-size: 0.95rem;
+  max-width: 32rem;
+}
+
+.doc-section {
+  padding: 1.75rem 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.doc-section h2 {
+  font-family: var(--font-type);
+  font-size: 1rem;
+  margin: 0 0 1rem;
+  text-decoration: underline;
+}
+
+.redacted-list article {
+  margin-bottom: 1.25rem;
+}
+
+.redacted-list h3 {
+  font-family: var(--font-type);
+  font-size: 1rem;
+  margin: 0 0 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bar {
+  display: inline-block;
+  width: 4rem;
+  height: 0.85em;
+  background: var(--ink);
+}
+
+.redacted-list p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.memo p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.courier-label {
+  border: 2px solid var(--ink);
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.contact-block {
+  font-style: normal;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.field {
+  font-family: var(--font-type);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.35rem;
+}
+
+.contact-block a {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 0.8rem;
+  color: rgba(240, 230, 211, 0.65);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    justify-content: flex-start;
+  }
+}

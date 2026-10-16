@@ -1,0 +1,17 @@
+:root {
+  --blue-950: #0a1628;
+  --blue-900: #0f2744;
+  --blue-700: #1d4ed8;
+  --blue-500: #3b82f6;
+  --blue-200: #bfdbfe;
+  --blue-100: #dbeafe;
+  --blue-50: #eff6ff;
+  --font: "Plus Jakarta Sans", system-ui, sans-serif;
+  --max: 70rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0.01ms;
+  }
+}

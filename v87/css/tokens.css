@@ -1,0 +1,9 @@
+:root {
+--color-bg: #080808;
+  --color-ink: #f0f0f0;
+  --color-muted: #a0a0a0;
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-body: "Work Sans", system-ui, sans-serif;
+  --max: 70rem;
+  --focus: #c4b5fd;
+}

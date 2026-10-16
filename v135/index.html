@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Snehith Infra — metronome beat motion, Hyderabad." />
+    <title>Snehith Infra — Metronome Beat v135</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="version-chip" href="../versions.html">Versions</a>
+
+    <header class="site-header beat-pulse">
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero beat-pulse" aria-label="Introduction">
+        <div class="metronome" aria-hidden="true">
+          <div class="metronome__arm" id="pendulum">
+            <span class="metronome__weight"></span>
+          </div>
+          <div class="metronome__base"></div>
+        </div>
+
+        <h1 class="hero__brand">Snehith Infra</h1>
+        <p class="hero__lede">Hyderabad · On-time delivery has a rhythm—Products, Services, Maintenance in steady tempo, not chaotic freestyle.</p>
+      </section>
+
+      <section class="section beat-pulse" id="offer" aria-labelledby="offer-title">
+        <h2 id="offer-title">Offer</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Products</h3>
+            <p>Sprints that keep the downbeat—milestones you can set a watch to.</p>
+          </article>
+          <article class="card">
+            <h3>Services</h3>
+            <p>Teams that sync like a section, not a solo improvising over everyone.</p>
+          </article>
+          <article class="card">
+            <h3>Maintenance</h3>
+            <p>Scheduled care in 4/4 time—no surprise accelerando at quarter-end.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="approach beat-pulse" id="approach" aria-labelledby="approach-title">
+        <h2 id="approach-title">Approach</h2>
+        <p>Written scope · Weekly tempo checks · Demo on the beat · Handoff without rushing the finale</p>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-links beat-pulse">
+          <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+          <a href="tel:+918341888566">+91 8341888566</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Snehith Infra · Sample v135 Metronome Beat</footer>
+
+    <script>
+      (function () {
+        var arm = document.getElementById("pendulum");
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var bpm = 75;
+        var period = 60000 / bpm;
+        var start = performance.now();
+        var maxAngle = 28;
+
+        function tick(now) {
+          var t = (now - start) % period;
+          var half = period / 2;
+          var angle;
+          if (t < half) {
+            angle = -maxAngle + (2 * maxAngle * (t / half));
+          } else {
+            angle = maxAngle - (2 * maxAngle * ((t - half) / half));
+          }
+          if (!reduced && arm) {
+            arm.style.transform = "rotate(" + angle.toFixed(2) + "deg)";
+          }
+
+          var beatPhase = t < 80 || (t > half && t < half + 80);
+          document.body.classList.toggle("is-beat", beatPhase);
+
+          requestAnimationFrame(tick);
+        }
+
+        if (!reduced) requestAnimationFrame(tick);
+      })();
+    </script>
+    <script src="../version-nav.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+:root {
+  --color-bg: #eef2f0;
+  --color-ink: #1c2824;
+  --color-muted: #4a5c55;
+  --color-teal: #1a6b5c;
+  --color-teal-soft: rgba(26, 107, 92, 0.15);
+  --font-display: "Montserrat Alternates", system-ui, sans-serif;
+  --font-body: "Mulish", system-ui, sans-serif;
+  --max: 70rem;
+  --focus: #1a6b5c;
+}

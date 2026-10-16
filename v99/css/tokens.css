@@ -1,0 +1,11 @@
+:root {
+  --color-bg: #0a0a0a;
+  --color-paper: #f5f5f0;
+  --color-ink: #111;
+  --color-muted: #6b6b6b;
+  --color-neon: #ff00aa;
+  --font-display: "Bebas Neue", system-ui, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--color-neon);
+}

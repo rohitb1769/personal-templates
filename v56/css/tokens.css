@@ -1,0 +1,24 @@
+:root {
+  --color-birch: #f7f3eb;
+  --color-charcoal: #2c2c2c;
+  --color-rust: #b85c38;
+  --color-mute: #6b6560;
+  --color-line: rgba(44, 44, 44, 0.12);
+
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Karla", "Segoe UI", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.35rem, 2.6vw, 2rem);
+  --text-xl: clamp(2.1rem, 5vw, 3.4rem);
+
+  --max: 70rem;
+}

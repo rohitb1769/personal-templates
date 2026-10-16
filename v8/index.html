@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snehith Infra â€” v8 Swiss Poster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="red-bar" aria-hidden="true"></div>
+    <header class="poster-top">
+      <a href="#">Snehith Infra / Software</a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">
+        Nav
+      </button>
+      <nav aria-label="Primary" data-top-nav>
+        <a href="#program">Program</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <div class="red-bar" aria-hidden="true"></div>
+
+    <div class="wrap">
+      <main id="main">
+        <section class="mega-hero" aria-label="Introduction">
+          <h1>Build Staff Maintain</h1>
+          <p class="mega-hero__sub">
+            Snehith Infra â€” a software company in Hyderabad shipping products,
+            embedding engineers for services, and operating maintenance for
+            production systems.
+          </p>
+          <a class="mega-hero__cta" href="#contact">Book consultation</a>
+        </section>
+
+        <section class="poster-grid" id="program" aria-labelledby="program-title">
+          <div class="poster-main">
+            <h2 id="program-title">Program</h2>
+            <article class="row-item">
+              <div class="row-item__n">1</div>
+              <div>
+                <h3>Products</h3>
+                <p>
+                  End-to-end product engineering: domain modeling, interfaces,
+                  integrations, and release discipline for teams that need
+                  software in marketâ€”not perpetual beta.
+                </p>
+              </div>
+            </article>
+            <article class="row-item">
+              <div class="row-item__n">2</div>
+              <div>
+                <h3>Services</h3>
+                <p>
+                  Dedicated squads and staff augmentation aligned to your
+                  roadmap, code style, and compliance context.
+                </p>
+              </div>
+            </article>
+            <article class="row-item">
+              <div class="row-item__n">3</div>
+              <div>
+                <h3>Maintenance</h3>
+                <p>
+                  Steady-state operations: monitoring, patching, performance
+                  work, and incident response with documented runbooks.
+                </p>
+              </div>
+            </article>
+          </div>
+          <aside class="poster-rail">
+            <h2>Hyderabad</h2>
+            <ul>
+              <li>Software products</li>
+              <li>Engineering services</li>
+              <li>Managed maintenance</li>
+              <li>Enterprise &amp; growth-stage</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="approach-poster" id="approach" aria-labelledby="approach-title">
+          <h2 id="approach-title">Clarity before code.</h2>
+          <p>
+            We write down scope, risks, and owners. We prefer small, verifiable
+            releases. When launch day passes, we either transfer operations
+            cleanly or stay on as your maintenance partner.
+          </p>
+        </section>
+
+        <section class="contact-poster" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <div>
+            <a href="mailto:contact@snehithinfra.com">contact@snehithinfra.com</a>
+            <a href="tel:+918341888566">+91 8341888566</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Snehith Infra Private Limited</span>
+        <span>Sample v8 Â· Swiss Poster</span>
+      </footer>
+    </div>
+
+    <nav class="version-chip" aria-label="Design version">
+      <a href="../versions.html">All</a>
+      <a href="../v7/">v7</a>
+      <a class="is-active" href="./index.html" aria-current="page">v8</a>
+      <a href="../v9/">v9</a>
+    </nav>
+
+    <script>
+      const btn = document.querySelector("[data-menu-toggle]");
+      const nav = document.querySelector("[data-top-nav]");
+      btn?.addEventListener("click", () => {
+        const open = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!open));
+        nav?.classList.toggle("is-open", !open);
+      });
+    </script>
+      <script src="../version-nav.js" defer></script>
+  </body>
+</html>

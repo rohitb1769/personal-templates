@@ -1,0 +1,258 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-bg);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  background: var(--tile-blue);
+  color: #fff;
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.version-chip {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: var(--color-ink);
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.locale {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.hero {
+  padding: 2.5rem 1.25rem 1.5rem;
+  max-width: 40rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.metro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(140px, auto);
+  gap: 4px;
+  padding: 4px;
+  background: #e8e8e8;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  padding: 1.25rem;
+  min-height: 160px;
+  text-decoration: none;
+  color: #fff;
+  transition: filter 0.2s ease, transform 0.2s ease;
+  animation: tile-in 0.5s ease both;
+}
+
+.tile:nth-child(2) {
+  animation-delay: 0.06s;
+}
+.tile:nth-child(3) {
+  animation-delay: 0.12s;
+}
+.tile:nth-child(4) {
+  animation-delay: 0.18s;
+}
+.tile:nth-child(5) {
+  animation-delay: 0.24s;
+}
+
+@keyframes tile-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tile:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.tile--blue {
+  background: var(--tile-blue);
+}
+.tile--orange {
+  background: var(--tile-orange);
+}
+.tile--green {
+  background: var(--tile-green);
+}
+.tile--magenta {
+  background: var(--tile-magenta);
+}
+.tile--teal {
+  background: var(--tile-teal);
+}
+
+.tile--wide {
+  grid-column: 1 / -1;
+  min-height: 120px;
+}
+
+.tile--contact a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.tile__label {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.tile__desc {
+  font-size: 0.9rem;
+  opacity: 0.92;
+}
+
+.tile__list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.detail {
+  padding: 2rem 1.25rem;
+  max-width: 36rem;
+  border-top: 4px solid #eee;
+}
+
+.detail h2 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  text-transform: uppercase;
+}
+
+.detail p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.site-footer {
+  padding: 1rem 1.25rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  background: #fff;
+}
+
+@media (min-width: 720px) {
+  .metro {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .tile--wide {
+    grid-column: span 2;
+  }
+  .tile--contact {
+    grid-column: span 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .tile {
+    animation: none;
+  }
+  .tile:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,14 @@
+:root {
+  --wood: #5c4033;
+  --wood-light: #8b6914;
+  --cream: #faf6f0;
+  --cream-dark: #ebe4d8;
+  --ink: #2c2419;
+  --muted: #6b5d4f;
+  --accent: #c45c26;
+  --font-display: "Libre Baskerville", Georgia, serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--accent);
+  --beat-ms: 800;
+}

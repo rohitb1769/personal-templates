@@ -1,0 +1,210 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--gray-warm);
+  background-image: radial-gradient(circle at 20% 10%, rgba(184, 164, 176, 0.35), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(143, 174, 139, 0.28), transparent 40%);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--ink);
+  color: var(--gray-warm);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.version-chip {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 50;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mauve);
+  text-decoration: none;
+  border: 1px solid rgba(184, 164, 176, 0.6);
+  padding: 0.35rem 0.65rem;
+  background: rgba(232, 228, 224, 0.85);
+}
+
+.site-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: var(--mauve);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: var(--sage);
+}
+
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4rem 1rem 3rem;
+  animation: veil 1s ease-out both;
+}
+
+@keyframes veil {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    animation: none;
+  }
+}
+
+.hero__brand {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.hero__lede {
+  max-width: 34rem;
+  margin: 0;
+  font-size: 1.1rem;
+  color: rgba(61, 54, 57, 0.82);
+}
+
+.atelier {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+.atelier h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  margin: 0 0 1.5rem;
+  color: var(--mauve);
+}
+
+.offer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+
+.offer-columns article {
+  padding-top: 1rem;
+  border-top: 2px solid var(--sage);
+}
+
+.offer-columns h3 {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.offer-columns p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: rgba(61, 54, 57, 0.78);
+}
+
+.runway {
+  max-width: var(--max);
+  margin: 0 auto 2.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(184, 164, 176, 0.25), rgba(143, 174, 139, 0.2));
+  animation: sway 10s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .runway {
+    animation: none;
+  }
+}
+
+.runway h2 {
+  font-family: var(--font-serif);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+}
+
+.runway p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.contact-block {
+  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.contact-block a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--mauve);
+}
+
+.contact-block span {
+  color: var(--mauve);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(61, 54, 57, 0.55);
+}
+
+@media (max-width: 640px) {
+  .nav {
+    justify-content: center;
+  }
+}

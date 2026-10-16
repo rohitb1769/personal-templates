@@ -1,0 +1,20 @@
+:root {
+  --color-bg: #f8fafc;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+  --color-indigo: #2563eb;
+
+  --font-display: "Syne", "Segoe UI", sans-serif;
+  --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
+
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-xl: clamp(2.5rem, 7vw, 4.25rem);
+  --word-h: 1.15em;
+
+  --max: 68rem;
+}

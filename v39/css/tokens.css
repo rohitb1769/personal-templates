@@ -1,0 +1,33 @@
+:root {
+  --color-sky-start: #dbeafe;
+  --color-sky-end: #f0f9ff;
+  --color-glass: rgba(255, 255, 255, 0.55);
+  --color-glass-strong: rgba(255, 255, 255, 0.72);
+  --color-glass-border: rgba(255, 255, 255, 0.85);
+  --color-ink: #0c4a6e;
+  --color-ink-soft: #0369a1;
+  --color-mute: #64748b;
+  --color-accent: #0284c7;
+  --color-accent-light: #38bdf8;
+
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+
+  --blur: 18px;
+  --shadow-glass: 0 8px 32px rgba(14, 116, 144, 0.12);
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.35rem, 2.5vw, 1.85rem);
+  --text-xl: clamp(2.2rem, 5vw, 3.75rem);
+
+  --radius: 20px;
+  --max: 74rem;
+}

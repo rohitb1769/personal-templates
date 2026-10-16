@@ -1,0 +1,11 @@
+:root {
+  --color-bg: #2a2826;
+  --color-concrete: #3d3a37;
+  --color-umber: #6b5344;
+  --color-ink: #eceae6;
+  --color-muted: #a8a29e;
+  --font-display: "Anton", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--color-ink);
+}

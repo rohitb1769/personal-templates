@@ -1,0 +1,28 @@
+:root {
+  --color-bg: #1a0b1e;
+  --color-cream: #f5efe6;
+  --color-ink: #ede4f0;
+  --color-mute: #a894ad;
+  --color-magenta: #e040a0;
+  --color-glow: rgba(224, 64, 160, 0.45);
+  --color-glass: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+
+  --font-serif: "Libre Baskerville", Georgia, serif;
+  --font-sans: "Figtree", "Segoe UI", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.35rem, 2.8vw, 2rem);
+  --text-xl: clamp(2rem, 5vw, 3.25rem);
+
+  --max: 70rem;
+  --radius: 20px;
+}

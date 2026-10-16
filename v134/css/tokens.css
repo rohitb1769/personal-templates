@@ -1,0 +1,12 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f8f9fa;
+  --ink: #202124;
+  --muted: #5f6368;
+  --perf: #4285f4;
+  --a11y: #0f9d58;
+  --bp: #f9ab00;
+  --font: "DM Sans", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: var(--perf);
+}

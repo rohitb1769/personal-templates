@@ -1,0 +1,304 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  background: var(--yellow);
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+.version-chip {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 90;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.shapes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.shape {
+  position: absolute;
+  animation: shape-spin 24s linear infinite;
+}
+
+.shape.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--red);
+  top: 12%;
+  right: 8%;
+  opacity: 0.9;
+}
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 95px solid var(--yellow);
+  bottom: 18%;
+  left: 5%;
+  animation-direction: reverse;
+}
+
+.shape.rect {
+  width: 80px;
+  height: 140px;
+  background: var(--blue);
+  top: 55%;
+  right: 18%;
+  animation: none;
+}
+
+@keyframes shape-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.poster-header {
+  position: relative;
+  z-index: 1;
+  width: var(--page);
+  margin: 0 auto;
+  padding: var(--space-4) 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-5);
+  font-weight: 600;
+}
+
+.nav a {
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: border-color var(--dur);
+}
+
+.nav a:hover {
+  border-bottom-color: var(--red);
+}
+
+.poster {
+  position: relative;
+  z-index: 1;
+  width: var(--page);
+  margin: 0 auto;
+  padding: var(--space-5) 0 var(--space-7);
+  display: grid;
+  gap: var(--space-7);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-6);
+  align-items: end;
+  animation: slide-in 0.7s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.hero-sub {
+  margin: 0;
+  max-width: 22rem;
+  color: var(--mute);
+  font-size: 1.05rem;
+  padding-left: var(--space-4);
+  border-left: 6px solid var(--blue);
+}
+
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.block {
+  padding: var(--space-5);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform var(--dur);
+}
+
+.block:hover {
+  transform: translateY(-4px);
+}
+
+.block h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.block p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.block--red {
+  background: var(--red);
+  color: var(--bg);
+}
+
+.block--blue {
+  background: var(--blue);
+  color: var(--bg);
+}
+
+.block--yellow {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.approach h2 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.step {
+  padding: var(--space-4);
+  border: 3px solid var(--ink);
+  font-weight: 500;
+}
+
+.step span {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-display);
+  margin-right: 0.5rem;
+}
+
+.contact-strip {
+  background: var(--ink);
+  color: var(--bg);
+  padding: var(--space-5);
+}
+
+.contact-strip h2 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+}
+
+.contact-blocks a {
+  display: block;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-blocks p {
+  margin: var(--space-4) 0 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}

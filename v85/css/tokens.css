@@ -1,0 +1,12 @@
+:root {
+--color-bg: #050505;
+  --color-amber: #ffb000;
+  --color-red-led: #ff3333;
+  --color-dim: #3a2800;
+  --color-ink: #ffb000;
+  --color-muted: #996600;
+  --font-display: "Oswald", system-ui, sans-serif;
+  --font-body: "Share Tech Mono", monospace;
+  --max: 72rem;
+  --focus: var(--color-amber);
+}

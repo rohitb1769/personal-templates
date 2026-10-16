@@ -1,0 +1,37 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body.v92 { margin: 0; min-height: 100vh; font-family: var(--font-body); color: var(--color-ink); background: var(--color-bg); }
+.skip-link { position: absolute; left: -999px; background: var(--color-ink); color: #fff; padding: .5rem 1rem; z-index: 99; }
+.skip-link:focus { left: .5rem; top: .5rem; }
+.version-chip { position: fixed; top: .75rem; right: .75rem; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-muted); text-decoration: none; }
+.site-header { padding: 2rem 1.25rem 1rem; }
+.nav { display: flex; gap: 2rem; max-width: var(--max); margin: 0 auto; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
+.nav a { color: var(--color-ink); text-decoration: none; }
+.hero { padding: 4rem 1.25rem 5rem; max-width: var(--max); margin: 0 auto; }
+.hero__brand { margin: 0 0 .5rem; font-family: var(--font-display); font-size: clamp(2.5rem, 7vw, 3.75rem); font-weight: 500; letter-spacing: .02em; }
+.wall-label { margin: 0 0 2rem; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--color-muted); }
+.hero__lede { max-width: 26rem; margin: 0; line-height: 1.7; color: var(--color-muted); }
+.offer-gallery { padding: 2rem 1.25rem 4rem; max-width: var(--max); margin: 0 auto; }
+.offer-gallery h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; margin-bottom: 3rem; }
+.offer-list { display: grid; gap: 3rem; }
+@media (min-width: 768px) { .offer-list { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+.offer-item {
+  padding: 1.25rem; background: #fff; border: 1px solid #111;
+  box-shadow: inset 0 0 0 4px #f5f5f5, inset 0 0 0 5px #111;
+  min-height: 200px; display: flex; flex-direction: column; justify-content: flex-end;
+  transition: transform .4s ease;
+}
+.offer-item:hover { transform: translateY(-6px); }
+.offer-item h3 { margin: 0 0 .25rem; font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; }
+.offer-item p { margin: 0; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-muted); line-height: 1.5; }
+.offer-item p::before { content: "Plaque · "; }
+.approach { padding: 4rem 1.25rem; text-align: center; font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; color: var(--color-muted); animation: wall-fade 10s ease-in-out infinite; }
+.approach h2 { font-family: var(--font-display); font-size: 1.25rem; letter-spacing: normal; text-transform: none; color: var(--color-ink); font-weight: 500; }
+.contact { padding: 3rem 1.25rem 5rem; max-width: var(--max); margin: 0 auto; text-align: center; }
+.contact-links { font-size: .85rem; letter-spacing: .05em; }
+.contact-links a { color: var(--color-ink); display: block; margin: .5rem 0; }
+.site-footer { padding: 2rem; text-align: center; font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; color: var(--color-muted); }
+@keyframes wall-fade { 0%, 100% { opacity: 1; } 50% { opacity: .75; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .approach, .offer-item:hover { animation: none; transform: none; } }

@@ -1,0 +1,24 @@
+:root {
+  --color-concrete: #8a8680;
+  --color-slab: #2b2b2b;
+  --color-ink: #e6e4df;
+  --color-mute: #9a9892;
+  --color-rule: #4a4a4a;
+
+  --font-mono: "IBM Plex Mono", "Consolas", monospace;
+  --font-sans: "Archivo", "Segoe UI", sans-serif;
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.2rem, 2.5vw, 1.65rem);
+  --text-xl: clamp(2rem, 5.5vw, 3.5rem);
+
+  --max: 72rem;
+}

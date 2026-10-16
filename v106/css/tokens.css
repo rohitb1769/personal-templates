@@ -1,0 +1,18 @@
+:root {
+  --bg: #0a0e14;
+  --surface: #111820;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --green: #3fb950;
+  --cyan: #58a6ff;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --max: 72rem;
+  --focus: #58a6ff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-ok: 0;
+  }
+}

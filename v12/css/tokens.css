@@ -1,0 +1,29 @@
+:root {
+  --color-bg: #ffffff;
+  --color-ink: #1a1a1a;
+  --color-mute: #444;
+  --color-coral: #ff6b6b;
+  --color-teal: #4ecdc4;
+  --color-lemon: #ffe66d;
+  --color-indigo: #5b5fff;
+  --color-line: rgba(0, 0, 0, 0.08);
+
+  --font-sans: "Rubik", "Segoe UI", sans-serif;
+
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.05rem;
+  --text-lg: clamp(1.4rem, 3vw, 2rem);
+  --text-xl: clamp(2.2rem, 6vw, 3.8rem);
+
+  --page: min(1180px, calc(100% - 2rem));
+  --shadow-sticker: 4px 4px 0 rgba(0, 0, 0, 0.85);
+  --dur: 200ms;
+}
